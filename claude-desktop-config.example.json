@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "chase-projects": {
+      "command": "dotnet",
+      "args": ["run", "--project", "C:/Users/ChaseLandry/source/NuclearSystemChase/backend", "--", "--mcp"]
+    }
+  }
+}

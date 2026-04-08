@@ -1,0 +1,44 @@
+:root {
+  --bg: #f8f9fa;
+  --bg-card: #ffffff;
+  --bg-sidebar: #1e293b;
+  --text: #374151;
+  --text-light: #6b7280;
+  --text-heading: #111827;
+  --text-sidebar: #cbd5e1;
+  --text-sidebar-active: #ffffff;
+  --border: #e5e7eb;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --accent: #3b82f6;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 14px/1.5 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

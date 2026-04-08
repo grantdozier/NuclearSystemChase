@@ -1,0 +1,3145 @@
+# SharePoint Discovery — Chase Group Construction
+
+> Generated: 2026-03-18
+> Depth: 4 levels
+> Sites scanned: Chase Group Construction, CG Executive, CGC Operations Team
+
+---
+
+## EXECUTIVE SUMMARY
+
+### Three SharePoint Sites
+
+| Site | Purpose | Last Active |
+|------|---------|-------------|
+| **Chase Group Construction** | Main project files — preconstruction, active projects, estimating, scheduling | Feb 2026 |
+| **CG Executive** | Executive oversight — HR, IT, SOPs, real estate development, pitch decks | Feb 2026 |
+| **CGC Operations Team** | Daily operations — construction photos, daily huddles, meeting recordings | Mar 2026 (most active) |
+
+### Chase Group Construction — Master Structure
+
+```
+Chase Group Files/
+├── 1. PRECONSTRUCTION/
+│   ├── 1. BUSINESS DEVELOPMENT/     ← Leads, prospects, land deals, LOIs
+│   │   └── {Project Name}/          ← e.g., "Dr Burbank", "Woodhouse Spas", "Palmer Parc"
+│   │       ├── Plans & Specs/
+│   │       ├── Site Photos/
+│   │       ├── Pitch Deck/
+│   │       └── (varies by deal)
+│   ├── 2. ESTIMATING/               ← Bid-stage projects
+│   │   ├── 00-XXX ESTIMATE TEMPLATE/
+│   │   ├── {YY-XXX Project Name}/   ← e.g., "26-124 Woodhouse Spa"
+│   │   │   ├── Estimating Excel Sheets/
+│   │   │   ├── Plans & Specs/
+│   │   │   ├── Proposals/
+│   │   │   └── Subcontractors/
+│   │   ├── Bid Management Sheet/     ← Master tracking spreadsheet
+│   │   └── Subs & Vendors/           ← MSAs, vendor lists
+│   └── 3. SCHEDULING/               ← Gantt templates
+│
+├── 2. PROJECTS/                      ← ACTIVE + COMPLETED construction projects
+│   ├── 00-XXX PROJECT TEMPLATE/      ← Master template with standard subfolder structure
+│   └── {YY-XXX Project Name}/        ← e.g., "24-088 FPK Johnston"
+│       ├── Estimating/               ← Proposals, Takeoffs
+│       ├── Job Costs/                ← Budget, Reports, Projections
+│       ├── Owner Documents/          ← Contracts, Addendums, Invoices, Change Orders
+│       ├── Permits/                  ← Building permits, OSHA, inspections
+│       ├── Plans & Specs/            ← Plans/, Specifications/
+│       ├── Project Progress Reports/ ← PPRs, photo reports
+│       ├── Project Schedules/        ← .mpp schedules, 3-week lookaheads
+│       ├── RFIs/                     ← RFI logs and documents
+│       └── Subcontractors/           ← CSI Division folders (01-33)
+│
+├── 3. ACCOUNTING/
+│   ├── Certified Payroll/
+│   ├── Insurance/                    ← COIs, WC, GL policies
+│   ├── Job Cost Reports/
+│   └── Owner Contracts/
+│
+├── 4. SAFETY/
+│   ├── Inspection/
+│   ├── Safety Manual/
+│   └── Toolbox Talks/
+│
+└── 5. COMPANY/
+    ├── Insurance Policies/
+    ├── Logos/
+    ├── Qualifications/
+    └── Tax Documents/
+```
+
+### Project Naming Convention
+
+**`YY-XXX Project Name`** where:
+- `YY` = Year started (22, 23, 24, 25, 26)
+- `XXX` = Sequential project number
+- Examples: `24-088 FPK Johnston`, `25-110 Palmer Parc`, `26-125 Roul's Restaurant`
+
+### Lifecycle: How a Project Flows
+
+```
+1. BUSINESS DEVELOPMENT  →  2. ESTIMATING  →  2. PROJECTS (active)  →  (completed)
+   (leads, site visits)      (bidding, subs)    (construction)
+```
+
+- A lead starts as a named folder under **1. BUSINESS DEVELOPMENT**
+- When it moves to bidding, it gets a **YY-XXX** number under **2. ESTIMATING**
+- When awarded, the same numbered folder appears under **2. PROJECTS** with the full template structure
+- Some projects have shortcut .lnk files linking back to their Business Dev folder
+
+### Subcontractor Organization (CSI Divisions)
+
+Every project under `2. PROJECTS/` has a `Subcontractors/` folder with **23 standard CSI division folders**:
+01-General, 02-Existing Conditions, 03-Concrete, 04-Masonry, 05-Metals, 06-Wood/Plastics, 07-Thermal/Moisture, 08-Openings, 09-Finishes, 10-Specialties, 11-Equipment, 12-Furnishings, 13-Special Construction, 14-Conveying, 21-Fire Suppression, 22-Plumbing, 23-HVAC, 25-Integrated Automation, 25/26/27/28-Electrical, 27-Communications, 31-Earthwork, 32-Exterior Improvements, 33-Utilities
+
+### Active Projects (recently modified)
+
+| Project | Last Modified | Size | Status Indicator |
+|---------|--------------|------|-----------------|
+| 24-088 FPK Johnston | Mar 2026 | 1.8 GB | Active — schedules updating weekly |
+| 24-115 Smash (Bonin Rd.) | Mar 2026 | 5.5 GB | Punch list phase |
+| 25-105 Gifted Daycare | Mar 2026 | 90 MB | Active — photos in Operations |
+| 25-110 Palmer Parc | Mar 2026 | 1.1 GB | Active |
+| 25-115 2905 Kaliste Saloom | Feb 2026 | 1.0 GB | Active |
+| 25-116 800 E Farrel | Mar 2026 | 1.4 GB | Active — heavy photo documentation |
+| 25-117 Lormand Rd Development | Feb 2026 | 20 MB | Early stage |
+| 25-120 Caddy Shack | Mar 2026 | 1.5 GB | Active — 163 recent photos |
+| 25-121 Ryan Martin | Feb 2026 | 5 MB | Early stage |
+| 26-124 Woodhouse Spa | Feb 2026 | 560 MB | Estimating → transitioning to project |
+| 26-125 Roul's Restaurant | Feb 2026 | 52 MB | Estimating phase |
+
+### CG Executive — Structure
+
+Executive-level oversight, not project-specific:
+- **Executive Meeting/** — Bi-weekly agendas
+- **HR/** — Offers, personnel
+- **IT/** — Bluebeam, Procore, Trimble
+- **Knowledge Base/** — SOPs, protocols, training
+- **Real Estate Development/** — Land acquisition pipeline, pitch decks, development phases (00-07)
+- **Opportunities/** — Investment evaluations
+
+### CGC Operations Team — Structure
+
+Daily field operations (mostly photos + meetings):
+- **{Project Name}/** — Construction photos organized by project (FPK, Smash, 800 E Farrel, Caddy Shack, etc.)
+- **Daily Huddle/** — Meeting recordings
+- **Meetings/** — Operations meeting recordings
+
+---
+
+## FULL DIRECTORY TREE
+
+---
+
+## Chase Group Construction - Documents
+
+- **Chase Group Files/** (5 items) [22.0 GB] — last modified 2025-05-27
+  - **1. PRECONSTRUCTION/** (3 items) [3.9 GB] — last modified 2025-05-27
+    - **1. BUSINESS DEVELOPMENT/** (22 items) [633.2 MB] — last modified 2025-05-27
+      - **25-114 Roly Poly (Canceled by Owner)/** (2 items) [67.8 MB] — last modified 2025-06-20
+        - **Plans & Specs/** (4 items) [7.1 MB] — last modified 2025-06-20
+        - **Site Photos/** (67 items) [60.7 MB] — last modified 2025-06-20
+      - **2905 Kaliste Saloom (Lafayette)/** (6 items) [141.0 MB] — last modified 2025-05-27
+        - **Appraisal/** (2 items) [32.9 MB] — last modified 2025-07-01
+        - **Pitch Deck/** (4 items) [21.0 MB] — last modified 2025-12-13
+        - **Renders & Models/** (10 items) [47.7 MB] — last modified 2025-08-30
+        - **Schematic Chase Design/** (5 items) [39.3 MB] — last modified 2025-08-16
+        - **Tenants/** (1 items) [13.1 KB] — last modified 2025-12-13
+        - Deal Calcs.xlsx [25.4 KB]
+      - **800 Farrel Drive (Lafayette)/** (13 items) [25.2 MB] — last modified 2025-05-27
+        - **Inspection Report/** (2 items) [12.5 MB] — last modified 2025-06-05
+        - **LOI/** (2 items) [2.1 MB] — last modified 2025-06-05
+        - **Site Plan/** (1 items) [709.8 KB] — last modified 2025-06-05
+        - 800 E Farrel 4k add.pdf [558.3 KB]
+        - 800 E Farrel Rd Eval 7.15.25 Draft.xlsx [31.8 KB]
+        - 800 E Farrel Rd Eval 7.15.25.xlsx [31.5 KB]
+        - 800 E Farrel Rd Eval 7.23.25.xlsx [31.5 KB]
+        - 800 E Farrel Rd Eval Rev 07.04.25 Deal Options.xlsx [33.8 KB]
+        - 800 E Farrel Rd Eval Rev 07.04.25.xlsx [33.5 KB]
+        - 800 E Farrel Rd Eval Rev 5.17.25.xlsx [33.1 KB]
+        - Arch Drawing Chase Markup 08.13.25.pdf [4.5 MB]
+        - Arch Drawing Chase Markup 08.19.25 OPT 2.pdf [4.6 MB]
+        - Deal Calcs.xlsx [21.3 KB]
+      - **Camellia Ponds/** (2 items) [3.0 MB] — last modified 2025-10-27
+        - Camellia Ponds Marketing Package (Bldg E for sale or lease) (Non-Med) (3 suites).pdf [2.7 MB]
+        - Pages from Camellia Ponds Marketing Package (Bldg E for sale or lease) (Non-Med) (3 suites).pdf [303.0 KB]
+      - **Chemin Met. & Savoy (Youngsville)/** (7 items) [19.1 MB] — last modified 2025-06-05
+        - **Diana Texted Photos Evals/** (8 items) [1.4 MB] — last modified 2025-06-27
+        - **Promo Booklet/** (0 items) — last modified 2025-12-03
+        - **Purchase Spreadsheet/** (1 items) [16.8 KB] — last modified 2025-12-13
+        - **Site Plan Testfits/** (6 items) [1.2 MB] — last modified 2025-06-27
+        - 2 acre site Chemin.pdf [1.9 MB]
+        - Pages from Spec Dental Site Layouts (1, 2 & 3 building site options).pdf [781.7 KB]
+        - Spec Dental Site Layouts (1, 2 & 3 building site options).pdf [13.8 MB]
+      - **Dr Burbank/** (6 items) [4.8 MB] — last modified 2026-01-22
+        - **Building Guidelines SMP/** (2 items) [2.2 MB] — last modified 2026-02-05
+        - 2026-003 Concept Layout-FSC-2.pdf [235.3 KB]
+        - LETTER OF INTENT TO PURCHASE.docx [24.9 KB]
+        - LETTER OF INTENT TO PURCHASE.pdf [93.5 KB]
+        - Screenshot 2026-01-22 175049.png [1.2 MB]
+        - Test Fit Lot Iberia St 01.22.26.pdf [1.0 MB]
+      - **E Milton (Jimmy Hebert)/** (1 items) [1.2 MB] — last modified 2025-07-23
+        - Flood Maps overlay.png [1.2 MB]
+      - **Garcia Daycare/** (5 items) [28.0 MB] — last modified 2025-05-27
+        - **Chemin Metairie Location/** (4 items) [5.9 MB] — last modified 2025-09-26
+        - **Intro Meeting/** (3 items) [1.7 MB] — last modified 2025-09-26
+        - **Owner Contract/** (2 items) [263.4 KB] — last modified 2025-09-26
+        - **Pre Dev Estimating/** (5 items) [434.1 KB] — last modified 2025-08-20
+        - **Savoy Location/** (8 items) [19.7 MB] — last modified 2025-09-26
+      - **Gator Cove/** (4 items) [9.3 MB] — last modified 2025-10-15
+        - H.011235 I-49S at Verot - Design File.kmz [4.0 MB]
+        - Pages from H.011235_98_ Final Plans.pdf [1.1 MB]
+        - Pages from RW MAP -H011235.pdf [1.1 MB]
+        - RW MAP -H014216.pdf [3.0 MB]
+      - **Goodie Daycare (Carencro)/** (1 items) [1.4 MB] — last modified 2025-05-27
+        - Miles for Smiles.pptx [1.4 MB]
+      - **Grant Landry (Chase brother)/** (2 items) [44.0 MB] — last modified 2025-12-20
+        - 973f6028-4eed-425c-a7fb-bcefd38da1a5.pdf [43.8 MB]
+        - alans-factory-outlet-screenshot-2025-12-20 10_22_5.pdf [186.6 KB]
+      - **James Adduci (Freeport Florida)/** (3 items) [4.5 MB] — last modified 2025-06-28
+        - **House Structure Drawing Set/** (1 items) [3.8 MB] — last modified 2025-06-28
+        - chase@chasegroupcc.com - 6_28_25 18_22_42.pdf [544.6 KB]
+        - Site Plan Snapshot.png [244.3 KB]
+      - **Josh Reaves Dental/** (4 items) [1.2 MB] — last modified 2026-01-15
+        - cml takeoff markup Reaves.pdf [136.4 KB]
+        - Lafayette Dermatology Floorplan (4,561 sq. ft. ).pdf [99.3 KB]
+        - OFFICE FLOORPLAN - Jan 15 2026 - 8-46 AM.JPG [437.5 KB]
+        - OFFICE FLOORPLAN - Jan 15 2026 - 8-46 AM.pdf [561.6 KB]
+      - **Lafayette Dermatology/** (2 items) [34.9 MB] — last modified 2025-11-04
+        - Draft Presentation.pptx [34.6 MB]
+        - SD Site Plan.pdf [279.4 KB]
+      - **New folder/** (0 items) — last modified 2025-10-27
+      - **New folder (2)/** (0 items) — last modified 2025-12-03
+      - **Palmer Parc/** (8 items) [47.6 MB] — last modified 2025-06-11
+        - **Leasing & Sales/** (1 items) [293.6 KB] — last modified 2025-06-29
+        - **Promo Booklet/** (3 items) [36.1 MB] — last modified 2025-12-03
+        - **Robbie Breaux PT (Palmer Parc)/** (3 items) [2.1 MB] — last modified 2025-06-06
+        - **Subcontractors/** (1 items) [8.5 MB] — last modified 2025-05-27
+        - Covered Tennis Courts 2.pdf [174.2 KB]
+        - Covered Tennis Courts.pdf [172.3 KB]
+        - Milestones Schedule Palmer Parc.xlsx [62.9 KB]
+        - Palmer Parc Leads.xlsx [154.2 KB]
+      - **Smalls Site/** (0 items) — last modified 2025-05-27
+      - **Trader Joe's/** (1 items) [88.9 MB] — last modified 2025-08-12
+        - Trader Joe's - Issue for Permit - Lafayette LA.pdf [88.9 MB]
+      - **Woodhouse Spas/** (8 items) [101.3 MB] — last modified 2025-07-07
+        - **2inch Meter Cost/** (1 items) [17.3 KB] — last modified 2025-12-18
+        - **Architectural Manual Spec/** (3 items) [72.6 MB] — last modified 2026-02-06
+        - **Precon Plans/** (7 items) [25.6 MB] — last modified 2026-01-30
+        - **Sketches & Floorplans/** (1 items) [339.2 KB] — last modified 2025-12-16
+        - Project Experience  - Woodhouse.pdf [152.3 KB]
+        - Project Experience  - Woodhouse.xlsx [55.9 KB]
+        - Screenshot 2025-12-19 155912.png [1.3 MB]
+        - Waterline Upgrade Prelim Route.pdf [1.2 MB]
+      - **Youngsville Land Listings/** (3 items) [8.8 MB] — last modified 2026-01-05
+        - Bailey Grove Presentation.pdf [4.6 MB]
+        - Master Marketing Package (Youngsville lots).pdf [1.8 MB]
+        - Youngsville Land Map (6 sites).pptx (1).pdf [2.4 MB]
+      - 2700-2800 Chemin Metairie.pdf [1.2 MB]
+    - **2. ESTIMATING/** (16 items) [3.3 GB] — last modified 2025-05-27
+      - **00-XXX ESTIMATE TEMPLATE/** (4 items) [363.4 KB] — last modified 2025-05-27
+        - **Estimating Excel Sheets/** (1 items) [363.4 KB] — last modified 2026-01-26
+        - **Plans & Specs/** (2 items) — last modified 2025-05-27
+        - **Proposals/** (0 items) — last modified 2025-06-09
+        - **Subcontractors/** (22 items) — last modified 2025-05-27
+      - **23-455 Briarwood/** (9 items) [1.9 GB] — last modified 2025-05-28
+        - **Entergy/** (1 items) [41.1 KB] — last modified 2025-12-19
+        - **McLain Packet/** (5 items) [25.8 MB] — last modified 2025-12-11
+        - **Misc Media/** (10 items) [1.5 GB] — last modified 2025-11-20
+        - **Plans & Specs/** (3 items) [291.0 MB] — last modified 2025-05-27
+        - **Subcontractors/** (22 items) [1.8 MB] — last modified 2025-05-27
+        - **The Reserve at Briarwood/** (18 items) [58.3 MB] — last modified 2025-11-14
+        - Screenshot 2025-08-25 161049.png [3.2 MB]
+        - Screenshot chase markup ADA living.pdf [686.6 KB]
+        - Screenshot Eastside.png [755.3 KB]
+      - **24-088 FPK Johnston/** (5 items) [500.0 MB] — last modified 2025-05-27
+        - **Permits and Approvals/** (3 items) [4.1 MB] — last modified 2025-07-09
+        - **Plans & Specs/** (2 items) [490.4 MB] — last modified 2025-05-27
+        - **Project Schedules/** (1 items) [800.0 KB] — last modified 2025-07-01
+        - **Proposals/** (1 items) [272.6 KB] — last modified 2025-08-13
+        - **Subcontractors/** (23 items) [4.4 MB] — last modified 2025-05-27
+      - **25-112 Rudick - CSWR (Duson)/** (4 items) [20.1 MB] — last modified 2025-06-11
+        - **Existing Site Photos/** (28 items) [3.3 MB] — last modified 2025-06-20
+        - **Plans & Specs/** (2 items) [16.4 MB] — last modified 2025-06-11
+        - **Proposals/** (2 items) [339.4 KB] — last modified 2025-06-09
+        - **Subcontractors/** (22 items) [118.8 KB] — last modified 2025-06-11
+      - **25-113 110 Production Dr/** (4 items) [40.5 MB] — last modified 2025-06-14
+        - **Existing Photos/** (3 items) [18.4 MB] — last modified 2025-06-18
+        - **Plans & Specs/** (2 items) [13.7 MB] — last modified 2025-06-14
+        - **Proposals/** (6 items) [5.4 MB] — last modified 2025-06-09
+        - **Subcontractors/** (22 items) [3.0 MB] — last modified 2025-06-14
+      - **25-114 Roly Poly (Reno.)/** (5 items) [70.3 MB] — last modified 2025-06-20
+        - **Plans & Specs/** (4 items) [13.9 MB] — last modified 2025-06-20
+        - **Project Existing Photos/** (1 items) [56.0 MB] — last modified 2025-07-14
+        - **Proposals/** (1 items) [421.6 KB] — last modified 2025-06-09
+        - **Subcontractors/** (22 items) [38.0 KB] — last modified 2025-06-20
+        - 25-114 Roly Poly (BD).lnk [2.1 KB]
+      - **25-116 800 E Farrel/** (4 items) [4.0 MB] — last modified 2026-02-10
+        - **Estimating Excel Sheets/** (1 items) [359.8 KB] — last modified 2026-02-10
+        - **Plans & Specs/** (2 items) — last modified 2026-02-10
+        - **Proposals/** (0 items) — last modified 2025-06-09
+        - **Subcontractors/** (23 items) [3.7 MB] — last modified 2026-02-10
+      - **25-118 Rossitter Reno/** (3 items) [26.5 MB] — last modified 2025-10-13
+        - **Plans & Specs/** (2 items) — last modified 2025-10-10
+        - **Proposals/** (14 items) [6.1 MB] — last modified 2025-09-25
+        - **Subcontractors/** (23 items) [20.4 MB] — last modified 2025-10-10
+      - **25-120 Caddyshack/** (3 items) [5.8 MB] — last modified 2025-06-17
+        - **Plans & Specs/** (2 items) [73.2 KB] — last modified 2025-06-17
+        - **Proposals/** (0 items) — last modified 2025-06-09
+        - **Subcontractors/** (23 items) [5.7 MB] — last modified 2025-06-17
+      - **25-122 Milton Water System/** (3 items) [17.4 MB] — last modified 2025-12-08
+        - **Plans & Specs/** (2 items) [11.8 MB] — last modified 2025-12-08
+        - **Proposals/** (1 items) [116.9 KB] — last modified 2025-06-09
+        - **Subcontractors/** (22 items) [5.5 MB] — last modified 2025-12-08
+      - **25-123 First South Farm Credit/** (5 items) [103.4 MB] — last modified 2026-02-03
+        - **Bid Management/** (1 items) [112.8 KB] — last modified 2026-02-03
+        - **Estimating Excel Sheets/** (2 items) [717.7 KB] — last modified 2026-02-03
+        - **Plans & Specs/** (2 items) [102.2 MB] — last modified 2026-02-03
+        - **Proposals/** (0 items) — last modified 2025-12-30
+        - **Subcontractors/** (22 items) [398.5 KB] — last modified 2026-02-03
+      - **25-XXX Shamsie Remodel/** (4 items) [853.9 KB] — last modified 2025-07-22
+        - **Plans & Specs/** (2 items) [426.9 KB] — last modified 2025-07-22
+        - **Proposals/** (0 items) — last modified 2025-06-09
+        - **Subcontractors/** (22 items) — last modified 2025-07-22
+        - 2025-07-16 15-09_page_2.pdf [426.9 KB]
+      - **26-124 Woodhouse Spa/** (8 items) [559.5 MB] — last modified 2026-02-06
+        - **02.03.26 Photos/** (55 items) [435.5 MB] — last modified 2026-02-05
+        - **Estimating Excel Sheets/** (6 items) [2.7 MB] — last modified 2026-02-06
+        - **Owner Documents/** (4 items) [542.4 KB] — last modified 2026-03-02
+        - **Plans & Specs/** (2 items) [120.6 MB] — last modified 2026-02-06
+        - **Proposals/** (2 items) [119.4 KB] — last modified 2025-06-09
+        - **Subcontractors/** (22 items) — last modified 2026-02-06
+        - test scope sheet.docx [34.7 KB]
+        - Woodhouse Spas - BusDev.lnk [2.0 KB]
+      - **26-125 Roul's Restaurant/** (5 items) [51.9 MB] — last modified 2026-02-13
+        - **Estimating Excel Sheets/** (1 items) [363.4 KB] — last modified 2026-02-13
+        - **Plans & Specs/** (2 items) [45.8 MB] — last modified 2026-02-13
+        - **Proposals/** (1 items) [126.7 KB] — last modified 2025-12-30
+        - **Subcontractors/** (22 items) — last modified 2026-02-13
+        - ADD #2 - Roul's Restaurant_02.23.2026.pdf [5.6 MB]
+      - **Bid Management Sheet/** (3 items) [308.3 KB] — last modified 2025-12-01
+        - Estimate & Bid Management Template - Master.xlsx [111.3 KB]
+        - Projects in Progress or Bidding.xlsx [169.9 KB]
+        - Scope Sheet.docx [27.1 KB]
+      - **Subs & Vendors/** (4 items) [2.0 MB] — last modified 2025-09-19
+        - **MSAs/** (8 items) [1.8 MB] — last modified 2026-02-19
+        - 20260213 Subscopetemplate.xlsx [83.9 KB]
+        - Sub&Vendor list hyperlinked.xlsx [87.2 KB]
+        - Sub&Vendor List.xlsx [84.6 KB]
+    - **3. SCHEDULING/** (1 items) [144.5 KB] — last modified 2026-03-06
+      - **EXCEL SCHEDULE GANTT/** (1 items) [144.5 KB] — last modified 2026-03-06
+        - gantt-chart_v5-0.xlsx [144.5 KB]
+  - **2. PROJECTS/** (23 items) [16.3 GB] — last modified 2025-05-27
+    - **00-XXX PROJECT TEMPLATE/** (9 items) [685.4 KB] — last modified 2025-05-27
+      - **Estimating/** (2 items) — last modified 2025-10-07
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+      - **Job Costs/** (3 items) — last modified 2025-05-27
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (0 items) — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+      - **Owner Documents/** (3 items) [539.8 KB] — last modified 2025-05-27
+        - **Addendums/** (2 items) [255.5 KB] — last modified 2025-05-27
+        - **Contract Documents/** (4 items) [284.3 KB] — last modified 2025-05-27
+        - **Owner Invoices/** (0 items) — last modified 2025-05-27
+      - **Permits/** (0 items) — last modified 2025-05-27
+      - **Plans & Specs/** (2 items) — last modified 2025-05-27
+        - **Plans/** (2 items) — last modified 2025-05-27
+        - **Specifications/** (0 items) — last modified 2025-05-27
+      - **Project Progress Reports/** (1 items) [58.3 KB] — last modified 2025-09-19
+        - Punch List Template.xlsx [58.3 KB]
+      - **Project Schedules/** (0 items) — last modified 2025-05-27
+      - **RFIs/** (1 items) [59.4 KB] — last modified 2025-05-27
+        - RFI Log.xlsx [59.4 KB]
+      - **Subcontractors/** (24 items) [27.9 KB] — last modified 2025-05-27
+        - **01 - GENERAL REQUIREMENTS/** (0 items) — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (0 items) — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-27
+        - **09 - FINISHES/** (0 items) — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (0 items) — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (0 items) — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-27
+        - Project Buyout Log.xlsx [27.9 KB]
+    - **22-200 Luquette Oil/** (10 items) [38.3 MB] — last modified 2025-05-27
+      - **Estimating/** (2 items) — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+      - **Job Costs/** (3 items) — last modified 2025-05-27
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (0 items) — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+      - **Owner Documents/** (3 items) — last modified 2025-05-27
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Contract Documents/** (0 items) — last modified 2025-05-27
+        - **Owner Invoices/** (0 items) — last modified 2025-05-27
+      - **Permits/** (0 items) — last modified 2025-05-27
+      - **Plans & Specs/** (2 items) [30.1 MB] — last modified 2025-05-27
+        - **Plans/** (6 items) [30.1 MB] — last modified 2025-05-27
+        - **Specifications/** (0 items) — last modified 2025-05-27
+      - **Project Progress Report/** (2 items) [956.0 KB] — last modified 2025-09-26
+        - Project Cost Graph.xlsx [34.0 KB]
+        - Project Progress Report Template.pptx [921.9 KB]
+      - **Project Schedules/** (0 items) — last modified 2025-05-27
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (23 items) — last modified 2025-05-27
+        - **01 - GENERAL REQUIREMENTS/** (0 items) — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (0 items) — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-27
+        - **09 - FINISHES/** (0 items) — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (0 items) — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (0 items) — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-27
+      - **Warranty Notices/** (3 items) [7.3 MB] — last modified 2025-10-17
+        - DOC100824-10082024095600.pdf [7.1 MB]
+        - Notice Letter Repair Work.docx [67.9 KB]
+        - Notice Letter Repair Work.pdf [120.0 KB]
+    - **23-265 Clipper Cove/** (9 items) [5.1 MB] — last modified 2025-05-27
+      - **Estimating/** (2 items) — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+      - **Job Costs/** (3 items) — last modified 2025-05-27
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (0 items) — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+      - **Owner Documents/** (3 items) — last modified 2025-05-27
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Contract Documents/** (0 items) — last modified 2025-05-27
+        - **Owner Invoices/** (0 items) — last modified 2025-05-27
+      - **Permits/** (0 items) — last modified 2025-05-27
+      - **Plans & Specs/** (2 items) [4.2 MB] — last modified 2025-05-27
+        - **Plans/** (2 items) — last modified 2025-05-27
+        - **Specifications/** (1 items) [4.2 MB] — last modified 2025-05-27
+      - **Project Progress Report/** (2 items) [956.0 KB] — last modified 2025-09-26
+        - Project Cost Graph.xlsx [34.0 KB]
+        - Project Progress Report Template.pptx [921.9 KB]
+      - **Project Schedules/** (0 items) — last modified 2025-05-27
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (23 items) — last modified 2025-05-27
+        - **01 - GENERAL REQUIREMENTS/** (0 items) — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (0 items) — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-27
+        - **09 - FINISHES/** (0 items) — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (0 items) — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (0 items) — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-27
+    - **23-470 Bunker Lofts/** (10 items) [86.6 MB] — last modified 2025-05-27
+      - **Estimating/** (2 items) — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+      - **Geotech/** (1 items) [13.4 MB] — last modified 2025-09-02
+        - **11.1 Surveying +Testing + Quality Control/** (7 items) [13.4 MB] — last modified 2025-09-02
+      - **Job Costs/** (3 items) [414.7 KB] — last modified 2025-05-27
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (3 items) [414.7 KB] — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+      - **Owner Documents/** (4 items) [4.8 MB] — last modified 2025-05-27
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Cash Sale Land/** (2 items) [3.4 MB] — last modified 2025-12-17
+        - **Contract Documents/** (1 items) [956.7 KB] — last modified 2025-05-27
+        - **Owner Invoices/** (3 items) [452.3 KB] — last modified 2025-05-27
+      - **Permits/** (0 items) — last modified 2025-05-27
+      - **Plans & Specs/** (2 items) [41.7 MB] — last modified 2025-05-27
+        - **Plans/** (5 items) [41.7 MB] — last modified 2025-05-27
+        - **Specifications/** (0 items) — last modified 2025-05-27
+      - **Project Progress Report/** (3 items) [9.5 MB] — last modified 2025-09-26
+        - 12.5.25 - PPR.pptx [8.6 MB]
+        - Project Cost Graph.xlsx [34.0 KB]
+        - Project Progress Report Template.pptx [925.8 KB]
+      - **Project Schedules/** (1 items) [409.5 KB] — last modified 2025-05-27
+        - Bunker Lofts Schedule 11.18.25.mpp [409.5 KB]
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (23 items) [16.4 MB] — last modified 2025-05-27
+        - **01 - GENERAL REQUIREMENTS/** (1 items) [717.7 KB] — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (0 items) — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-27
+        - **09 - FINISHES/** (0 items) — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (1 items) [70.7 KB] — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (2 items) [14.7 MB] — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (2 items) [918.6 KB] — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-27
+    - **24-088 FPK Johnston/** (12 items) [1.8 GB] — last modified 2025-07-10
+      - **Chase Group/** (47 items) [59.2 MB] — last modified 2025-09-19
+        - **Revised AIA for Shawnee/** (1 items) [25.1 KB] — last modified 2026-01-14
+        - 10-Aug 27 2025 11_13am-NzpY.jpg [2.6 MB]
+        - 11-Aug 27 2025 11_13am-2ytX.jpg [2.1 MB]
+        - 12-Aug 27 2025 11_13am-Jojj.jpg [2.5 MB]
+        - 13-Aug 27 2025 11_14am-ohv8.jpg [1.1 MB]
+        - 14-Aug 27 2025 11_43am-r1Rz.jpg [1.2 MB]
+        - 15-Aug 27 2025 11_53am-N5Wf.jpg [728.3 KB]
+        - 16-Aug 27 2025 12_17pm-UpEg.jpg [1.1 MB]
+        - 17-Aug 27 2025 12_34pm-82MN.jpg [495.8 KB]
+        - 18-Aug 27 2025 12_34pm-2izW.jpg [2.5 MB]
+        - 19-Aug 27 2025 12_34pm-bENt.jpg [2.6 MB]
+        - 1-Aug 07 2025 09_09am-y1Gr.jpg [939.5 KB]
+        - 20-Aug 27 2025 12_34pm-P52V.jpg [2.4 MB]
+        - 21-Aug 27 2025 12_34pm-nJxy.jpg [2.4 MB]
+        - 22-Aug 27 2025 12_39pm-DTp9.jpg [2.5 MB]
+        - 23-Aug 27 2025 12_40pm-cmoX.jpg [2.3 MB]
+        - 24-Aug 27 2025 12_43pm-tAdP.jpg [2.6 MB]
+        - 25-Aug 27 2025 12_54pm-s6WB.jpg [1.4 MB]
+        - 26-Aug 27 2025 12_54pm-gKXi.jpg [1.3 MB]
+        - 27-Aug 27 2025 01_04pm-pSS3.jpg [1.9 MB]
+        - 28-Aug 27 2025 01_06pm-jvVD.jpg [1.5 MB]
+        - 29-Aug 27 2025 01_08pm-Z9xo.jpg [1.3 MB]
+        - 2-Aug 07 2025 09_09am-S19w.jpg [920.0 KB]
+        - 30-Aug 27 2025 01_39pm-zyfo.jpg [757.0 KB]
+        - 31-Aug 27 2025 02_09pm-YStf.jpg [731.7 KB]
+        - 32-Aug 27 2025 02_41pm-AsKL.jpg [1.5 MB]
+        - 33-Aug 27 2025 02_55pm-zjYM.jpg [1.0 MB]
+        - 34-Aug 27 2025 03_14pm-S8SK.jpg [916.9 KB]
+        - 35-Aug 27 2025 03_59pm-2Fr7.jpg [734.5 KB]
+        - 36-Aug 27 2025 04_25pm-gN9u.jpg [1.1 MB]
+        - 37-Aug 27 2025 05_34pm-Qixu.jpg [1.2 MB]
+        - 38-Aug 27 2025 05_34pm-9agM.jpg [383.6 KB]
+        - 39-Aug 28 2025 12_51pm-dvNi.jpg [921.0 KB]
+        - 3-Aug 27 2025 09_29am-m3Cj.jpg [907.8 KB]
+        - 40-Aug 28 2025 12_52pm-TorS.jpg [601.4 KB]
+        - 41-Aug 28 2025 01_16pm-7yqP.jpg [683.8 KB]
+        - 42-Aug 28 2025 01_16pm-HGrq.jpg [548.8 KB]
+        - 43-Sep 18 2025 03_55pm-sxfz.jpg [656.3 KB]
+        - 44-Sep 18 2025 03_55pm-ghCq.jpg [645.3 KB]
+        - 4-Aug 27 2025 09_55am-ZEWw.jpg [1.2 MB]
+        - 5-Aug 27 2025 09_55am-sqDy.jpg [1.2 MB]
+        - 6-Aug 27 2025 10_07am-a1EB.jpg [471.7 KB]
+        - 7-Aug 27 2025 10_26am-MrGX.jpg [1.4 MB]
+        - 8-Aug 27 2025 10_27am-TuP5.jpg [1.7 MB]
+        - 9-Aug 27 2025 11_01am-tQdc.jpg [1.8 MB]
+        - image001.pdf [72.3 KB]
+        - image001.png [124.1 KB]
+      - **Estimating/** (4 items) [2.3 MB] — last modified 2025-10-07
+        - **Estimates/** (1 items) [1.6 MB] — last modified 2025-10-07
+        - **Proposals/** (1 items) [726.1 KB] — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+        - 24-088 FPK Johnston (Estimating).lnk [2.0 KB]
+      - **Job Costs/** (4 items) [1.4 MB] — last modified 2025-07-10
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (1 items) [21.9 KB] — last modified 2025-05-27
+        - **Projections/** (2 items) [190.3 KB] — last modified 2025-05-27
+        - **Proposals/** (3 items) [1.2 MB] — last modified 2025-09-19
+      - **Meetings/** (1 items) [724.8 KB] — last modified 2025-11-06
+        - **OAC/** (2 items) [724.8 KB] — last modified 2025-11-06
+      - **Owner Documents/** (6 items) [11.9 MB] — last modified 2025-07-10
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Change Order Documents/** (3 items) [1.3 MB] — last modified 2025-09-19
+        - **Contract Documents/** (5 items) [654.6 KB] — last modified 2025-05-27
+        - **Owner Invoices/** (2 items) [95.3 KB] — last modified 2025-05-27
+        - **Photo Reports/** (1 items) [9.6 MB] — last modified 2025-08-08
+        - Owner Logo.png [304.7 KB]
+      - **Permits/** (5 items) [9.4 MB] — last modified 2025-05-27
+        - **OSHA/** (9 items) [9.0 MB] — last modified 2026-01-07
+        - Building Permit (Commercial)FPK.pdf [30.3 KB]
+        - Building Permit 2 (Commercial)FPK.pdf [30.3 KB]
+        - Building Permit FPK.pdf [30.3 KB]
+        - Louisiana Testing & Inspection FPK.pdf [256.9 KB]
+      - **Plans & Specs/** (4 items) [1.1 GB] — last modified 2025-12-10
+        - **DWG Files/** (8 items) [9.8 MB] — last modified 2025-12-10
+        - **Geotech Report/** (1 items) [1.1 MB] — last modified 2025-08-26
+        - **Plans/** (4 items) [1.1 GB] — last modified 2025-07-10
+        - **Specifications/** (5 items) [6.8 MB] — last modified 2025-05-27
+      - **Project Progress Report/** (15 items) [174.8 MB] — last modified 2025-09-26
+        - 10.17.25 - PPR.pdf [137.7 KB]
+        - 10.17.25 Picture Report.pdf [17.1 MB]
+        - 10.3.25 - PPR.pdf [889.2 KB]
+        - 10.3.25 - PPR.pptx [4.9 MB]
+        - 10.31.25 - Project Progress Report.pdf [645.5 KB]
+        - 11.14.25 - Project Progress Report.pdf [1.1 MB]
+        - 11.21.25 - Project Progress Report.pdf [1.6 MB]
+        - 11.25.2025 - Procore Photo Report Foundation.pdf [72.5 MB]
+        - 12.16.25 Steel Erection Report.pdf [24.2 MB]
+        - 12.5.25 - PPR.pptx [837.8 KB]
+        - Invoice Graph.xlsx [30.2 KB]
+        - Photo Report 01.13.2026.pdf [3.9 MB]
+        - Photo Report 12.20.25 resize.pdf [400.5 KB]
+        - Photo Report 12.20.25.pdf [45.5 MB]
+        - Project Progress Report Template.pptx [925.8 KB]
+      - **Project Schedules/** (12 items) [15.7 MB] — last modified 2025-05-27
+        - **Old Versions/** (9 items) [8.4 MB] — last modified 2025-07-23
+        - - FPK 01.13.26.pdf [157.3 KB]
+        - - FPK 09.22.25.pdf [189.5 KB]
+        - - FPK 10.03.25.pdf [193.4 KB]
+        - - FPK 11.21.25.pdf [189.6 KB]
+        - 20260310 FPKupdate.mpp [1.2 MB]
+        - 20260311 FPKupdatedh.mpp [1.4 MB]
+        - 20260311 Scheduleupated2.mpp [2.6 MB]
+        - 3 Week Lookahead 11.12.25 - FPK.pdf [144.4 KB]
+        - 3 Week Lookahead 11.12.25 - FPK.xlsx [51.8 KB]
+        - -FJPK 03.12.26.pdf [165.8 KB]
+        - FPK 01.12.25.mpp [1.0 MB]
+      - **RFIs/** (4 items) [14.3 MB] — last modified 2025-05-27
+        - 031226_FPK Portal Frame.pdf [1.5 MB]
+        - 250725_FPK_5' SHIFT PROPOSED & ORIGINAL.pdf [6.3 MB]
+        - 250725_FPK_5' SHIFT.pdf [6.3 MB]
+        - RFI Log.xlsx [60.7 KB]
+      - **Rotolo Update 09.22.25/** (4 items) [189.7 MB] — last modified 2025-09-22
+        - Change Order - Unusable Dirt Areas.pdf [865.5 KB]
+        - FPK 09.22.25.pdf [189.5 KB]
+        - Louisiana Testing & Inspection FPK (After Fill Dirt).pdf [256.9 KB]
+        - Photo Report.pdf [188.4 MB]
+      - **Subcontractors/** (25 items) [182.6 MB] — last modified 2025-07-10
+        - **01 - GENERAL REQUIREMENTS/** (0 items) — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (5 items) [2.4 MB] — last modified 2025-05-27
+        - **04 - MASONRY/** (1 items) [21.8 KB] — last modified 2025-05-27
+        - **05 - METALS/** (2 items) [13.5 MB] — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (3 items) [1.5 MB] — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (3 items) [18.1 MB] — last modified 2025-05-27
+        - **08 - OPENINGS/** (4 items) [3.6 MB] — last modified 2025-05-27
+        - **09 - FINISHES/** (2 items) [3.3 MB] — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (3 items) [8.5 MB] — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (1 items) [1.8 MB] — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (6 items) [63.7 MB] — last modified 2025-05-27
+        - **23 - HVAC/** (1 items) [47.5 MB] — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (2 items) [10.3 MB] — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (1 items) [1.1 MB] — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (2 items) [3.7 MB] — last modified 2025-06-23
+        - **33 - UTILITIES/** (1 items) [449.0 KB] — last modified 2025-05-27
+        - Project Buyout Log.xlsx [24.7 KB]
+        - WRO Maxtec - FPK - Metal Framing.docx [3.2 MB]
+    - **24-115 Smash (Bonin Rd.)/** (12 items) [5.5 GB] — last modified 2025-05-27
+      - **Estimating/** (3 items) [300.8 KB] — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+        - Chase Group Construction LLC Mail - Fwd_ You received a new estimate! (#000679).pdf [300.8 KB]
+      - **Job Costs/** (3 items) [24.7 MB] — last modified 2025-05-27
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (11 items) [23.8 MB] — last modified 2025-05-27
+        - **Projections/** (13 items) [978.6 KB] — last modified 2025-05-27
+      - **Owner Documents/** (10 items) [1.2 GB] — last modified 2025-05-27
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Contract Documents/** (1 items) — last modified 2025-05-27
+        - **Emails/** (2 items) [1.0 GB] — last modified 2025-12-10
+        - **Logos/** (2 items) [83.5 MB] — last modified 2025-06-25
+        - **Owner Invoices/** (19 items) [5.0 MB] — last modified 2025-05-27
+        - **Photo Reports/** (2 items) [17.1 MB] — last modified 2025-11-24
+        - **Video Promo/** (1 items) [80.8 MB] — last modified 2026-03-06
+        - Punch List Smash 02.20.26.pdf [69.6 KB]
+        - Punch List Smash 02.20.26.xlsx [671.9 KB]
+        - SMASH P & L ANNUAL PROJECTION kaliste saloom.xlsx [331.5 KB]
+      - **Permits/** (9 items) [8.9 MB] — last modified 2025-05-27
+        - **AS BUILT AND FEC/** (2 items) [2.9 MB] — last modified 2026-03-06
+        - As built and FEC for SMASH.zip [2.9 MB]
+        - Board of Health Approval 2822 Bonin Rd.pdf [399.5 KB]
+        - Board of health Approval.jpeg [952.2 KB]
+        - Fire Marshal - Smash.pdf [735.6 KB]
+        - Permanent Power Inspection Smash.pdf [24.0 KB]
+        - Permit BLDC-0400-2024 Open Ceiling Inspection Notification.pdf [100.6 KB]
+        - Screenshot 2026-03-05 115505.png [498.5 KB]
+        - SMASH  APPROVED SIGNAGE.pdf [522.6 KB]
+      - **Plans & Specs/** (10 items) [185.7 MB] — last modified 2025-05-27
+        - **Plans/** (11 items) [160.9 MB] — last modified 2025-05-27
+        - **Specifications/** (7 items) [16.4 MB] — last modified 2025-05-27
+        - 10.29.25 - Additions Reflected on Site Plans.pdf [2.4 MB]
+        - E2 - 10.06.25.pdf [126.9 KB]
+        - Fast Partitions - Shop Drawings.pdf [2.4 MB]
+        - Outlook-icon [76.5 KB]
+        - Pickleball surfacing details - Smash.pdf [753.0 KB]
+        - Playground Tunnel Foam.pdf [186.8 KB]
+        - SITE PLAN EDITS - Court Square footage.pdf [2.2 MB]
+        - SSE Advisory Canopy.pdf [351.2 KB]
+      - **Project Progress Reports/** (20 items) [199.3 MB] — last modified 2025-07-18
+        - **Punchlist Photos/** (2 items) [2.5 MB] — last modified 2026-02-23
+        - 10.3.25 - Project Progress Report.pdf [824.5 KB]
+        - 10.31.25 - Project Progress Report.pdf [587.1 KB]
+        - 11.14.25 - Project Progress Report.pdf [1.6 MB]
+        - 12.5.25 - PPR.pptx [12.5 MB]
+        - 7.18.25 - PPR.pptx [177.0 MB]
+        - 7.18.25 - Project Progress Report.pdf [1.4 MB]
+        - IMG_5038.jpeg [209.1 KB]
+        - IMG_5039.jpeg [158.3 KB]
+        - IMG_5040.jpeg [178.3 KB]
+        - IMG_5041.jpeg [180.3 KB]
+        - IMG_5042.jpeg [204.1 KB]
+        - IMG_5043.jpeg [228.9 KB]
+        - IMG_5044.jpeg [207.4 KB]
+        - IMG_5045.jpeg [192.3 KB]
+        - IMG_5046.jpeg [132.9 KB]
+        - Project Cost Graph.xlsx [37.5 KB]
+        - Screenshot 2026-02-23 095723.png [366.8 KB]
+        - Screenshot 2026-02-23 100824.png [375.2 KB]
+        - Screenshot 2026-02-23 104947.png [560.7 KB]
+      - **Project Schedules/** (4 items) [12.3 MB] — last modified 2025-05-27
+        - **Old Versions/** (18 items) [10.9 MB] — last modified 2025-07-08
+        - **Site Walk Notes/** (1 items) [696.0 KB] — last modified 2025-11-21
+        - **Three Week Look Ahead/** (2 items) [201.0 KB] — last modified 2025-11-12
+        - 11.24.25 - SmashBonin - Full Punchlist Schedule - Updates.mpp [538.5 KB]
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (23 items) [116.6 MB] — last modified 2025-05-27
+        - **01 - GENERAL REQUIREMENTS/** (4 items) [2.2 MB] — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (2 items) [1.0 MB] — last modified 2025-05-27
+        - **04 - MASONRY/** (1 items) [20.1 KB] — last modified 2025-05-27
+        - **05 - METALS/** (3 items) [236.8 KB] — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (2 items) [909.5 KB] — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (3 items) [5.3 MB] — last modified 2025-05-27
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-27
+        - **09 - FINISHES/** (7 items) [3.9 MB] — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (2 items) [48.8 MB] — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (2 items) [12.3 MB] — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (2 items) [823.2 KB] — last modified 2025-05-27
+        - **23 - HVAC/** (3 items) [3.9 MB] — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (8 items) [9.6 MB] — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (1 items) [65.3 KB] — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (5 items) [27.6 MB] — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-27
+      - **Temp Folder For MG/** (11 items) [3.8 GB] — last modified 2026-02-25
+        - **plumbing/** (32 items) [162.8 MB] — last modified 2026-02-25
+        - **site plumbing/** (68 items) [376.0 MB] — last modified 2026-02-25
+        - **Unclassified/** (848 items) [3.2 GB] — last modified 2026-02-25
+        - 1009903735_39F3778F-809D-4649-8AF3-0980625E1230.jpeg [5.2 MB]
+        - 1094933948_C982DA36-A382-4C2E-B1D4-3C997455A3E7.jpeg [4.7 MB]
+        - 962364641_602354CA-5131-4F8E-BB86-36792BA7CB54.jpeg [4.1 MB]
+        - 967407399_0D4C4DCA-98E8-4612-A599-2B0BF5839A06.jpeg [6.9 MB]
+        - 969575757_719EB401-469B-48AF-A3E2-8CEE24D01791.jpeg [7.1 MB]
+        - 995702543_A339559D-5750-475C-B1DB-4D466FCAAD55.jpeg [7.6 MB]
+        - Chase - Dulin Sugarmill Pond REVISED SHEETS.pdf [1.0 MB]
+        - Smash As-Builts_Updated Site.pdf [1.9 MB]
+      - 2822 Bonin Rd - Smash - Exterior Selection Visuals.pdf [27.7 MB]
+      - SITE PLAN EDITS Wind Sail Post Locations.pdf [2.7 MB]
+    - **24-125 Provost Daycare/** (17 items) [926.4 MB] — last modified 2025-05-27
+      - **Estimating/** (2 items) — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+      - **Job Costs/** (4 items) [29.1 MB] — last modified 2025-05-27
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (5 items) [1.1 MB] — last modified 2025-05-27
+        - **Projections/** (1 items) [28.2 KB] — last modified 2025-05-27
+        - **Reciepts/** (2 items) [28.0 MB] — last modified 2025-10-09
+      - **New folder/** (0 items) — last modified 2025-11-26
+      - **Owner Documents/** (9 items) [5.7 MB] — last modified 2025-05-27
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **BR Policy/** (2 items) [201.6 KB] — last modified 2025-12-20
+        - **Change Orders/** (4 items) [192.3 KB] — last modified 2025-10-07
+        - **Contract Documents/** (2 items) [1.2 MB] — last modified 2025-05-27
+        - **Final Payment Notes/** (2 items) [469.4 KB] — last modified 2025-12-03
+        - **Leasing/** (3 items) [1.3 MB] — last modified 2025-11-20
+        - **Logo/** (1 items) [103.3 KB] — last modified 2025-10-27
+        - **Owner Invoices/** (5 items) [2.2 MB] — last modified 2025-05-27
+        - **Tenant/** (2 items) [90.6 KB] — last modified 2025-12-16
+      - **Owner Selections/** (1 items) [68.1 KB] — last modified 2025-08-13
+        - Stone Selection.pdf [68.1 KB]
+      - **Permits/** (2 items) [32.0 MB] — last modified 2025-05-27
+        - **City Meeting Docs/** (6 items) [31.7 MB] — last modified 2025-06-24
+        - AR-24-017752-110120240122.pdf [225.9 KB]
+      - **Photo Reports/** (4 items) [31.6 MB] — last modified 2025-09-19
+        - Berm and Landscape.jpeg [5.0 MB]
+        - Photo Report for Supply Closet.pdf [14.6 MB]
+        - water meter 1.1.jpeg [6.0 MB]
+        - water meter 1.jpeg [6.0 MB]
+      - **Plans & Specs/** (2 items) [44.8 MB] — last modified 2025-05-27
+        - **Plans/** (8 items) [40.4 MB] — last modified 2025-05-27
+        - **Specifications/** (1 items) [4.4 MB] — last modified 2025-05-27
+      - **Project Schedules/** (1 items) [592.0 KB] — last modified 2025-05-27
+        - Provost Daycare Schedule.mpp [592.0 KB]
+      - **Provost Daycare Project/** (20 items) [442.8 MB] — last modified 2025-08-21
+        - **000 Archive/** (11 items) [18.1 MB] — last modified 2025-08-21
+        - **01 Contract & Owner Info/** (11 items) [13.8 MB] — last modified 2025-08-21
+        - **02 Budget & Estimating/** (8 items) [5.3 MB] — last modified 2025-08-21
+        - **03 Drawings & Specifications/** (14 items) [314.6 MB] — last modified 2025-08-21
+        - **04 COI + Bonds + Builders Risk/** (2 items) [6.6 MB] — last modified 2025-08-21
+        - **05 Subcontractors/** (5 items) [2.1 MB] — last modified 2025-08-21
+        - **06 Schedules/** (0 items) — last modified 2025-06-07
+        - **07 Permits/** (5 items) [11.4 MB] — last modified 2025-08-21
+        - **08 Warranty Work/** (0 items) — last modified 2025-06-07
+        - **Additional Land Acquisition/** (9 items) [3.0 MB] — last modified 2025-08-21
+        - **Emails to City of Scott/** (1 items) [116.1 KB] — last modified 2025-08-21
+        - **Financial Analysis/** (4 items) [258.1 KB] — last modified 2025-08-21
+        - **L Provost Daycare - Resubmittal 2-13-25/** (1 items) [32.2 MB] — last modified 2025-08-21
+        - **Leasing/** (4 items) [3.1 MB] — last modified 2025-08-21
+        - **New folder/** (0 items) — last modified 2025-06-07
+        - **New folder (2)/** (0 items) — last modified 2025-06-07
+        - **Phase 1/** (4 items) [236.0 KB] — last modified 2025-08-21
+        - **Tenant Info/** (2 items) [471.8 KB] — last modified 2025-08-21
+        - L Provost Daycare - Resubmittal 2-13-25.zip [30.7 MB]
+        - Palmer Parc - Base-LANE WIDENING.pdf [984.4 KB]
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (23 items) [34.0 MB] — last modified 2025-05-27
+        - **01 - GENERAL REQUIREMENTS/** (1 items) [2.7 MB] — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (1 items) [54.7 KB] — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-27
+        - **09 - FINISHES/** (1 items) [216.9 KB] — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (0 items) — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (3 items) [31.0 MB] — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-27
+      - d66d740a-f232-467a-b8db-46699661fce5.pdf [150.3 MB]
+      - Fenstermaker Report Answers Provost.pdf [752.6 KB]
+      - Home Outlet - Shopping Cart.pdf [2.6 MB]
+      - Plumbing Photos.pdf [150.3 MB]
+      - Punch List via Bonnie - 541 L Provost.pdf [1.8 MB]
+    - **24-130  Advanced Learning Academy/** (8 items) [93.1 MB] — last modified 2025-05-27
+      - **Estimating/** (2 items) — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+      - **Job Costs/** (4 items) [32.7 KB] — last modified 2025-05-27
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (0 items) — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+        - Chase+Group+Construction,+LLC_Transaction+Report (6).xlsx [32.7 KB]
+      - **Owner Documents/** (7 items) [49.5 MB] — last modified 2025-05-27
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Contract Documents/** (2 items) [5.3 MB] — last modified 2025-05-27
+        - **Logos/** (2 items) [12.9 KB] — last modified 2025-06-27
+        - **Owner Invoices/** (3 items) [1.0 MB] — last modified 2025-05-27
+        - **Photo Reports/** (1 items) [43.0 MB] — last modified 2026-01-09
+        - Advanced Learning Academy - Change Order 001.docx [37.1 KB]
+        - Advanced Learning Academy - Change Order 002.pdf [93.6 KB]
+      - **Permits/** (2 items) [318.9 KB] — last modified 2025-05-27
+        - Certificate of Occupancy Advanced.pdf [265.3 KB]
+        - PR-25-025287-2EL-25-012643 - Jul 31 2025  843AM-073120250843.pdf [53.6 KB]
+      - **Plans & Specs/** (2 items) [39.6 MB] — last modified 2025-05-27
+        - **Plans/** (6 items) [39.6 MB] — last modified 2025-05-27
+        - **Specifications/** (0 items) — last modified 2025-05-27
+      - **Project Schedules/** (4 items) [2.9 MB] — last modified 2025-05-27
+        - **Old Schedules/** (2 items) [1.3 MB] — last modified 2025-06-27
+        - Advanced Learning Schedule 06.27.25.mpp [605.5 KB]
+        - Advanced Learning Schedule 06.27.25.pdf [85.7 KB]
+        - Advanced Learning Schedule 07.01.25.mpp [1015.5 KB]
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (23 items) [778.3 KB] — last modified 2025-05-27
+        - **01 - GENERAL REQUIREMENTS/** (0 items) — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (1 items) [57.0 KB] — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-27
+        - **09 - FINISHES/** (1 items) [68.5 KB] — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (0 items) — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (3 items) [555.4 KB] — last modified 2025-06-09
+        - **33 - UTILITIES/** (1 items) [97.4 KB] — last modified 2025-05-27
+    - **24-180 Rossitter Building/** (8 items) [21.0 MB] — last modified 2025-07-30
+      - **Estimating/** (2 items) — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+      - **Job Costs/** (4 items) [274.4 KB] — last modified 2025-07-30
+        - **Change Orders/** (1 items) [274.4 KB] — last modified 2025-07-30
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (0 items) — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+      - **Owner Documents/** (3 items) — last modified 2025-07-30
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Contract Documents/** (0 items) — last modified 2025-05-27
+        - **Owner Invoices/** (0 items) — last modified 2025-05-27
+      - **Permits/** (0 items) — last modified 2025-05-27
+      - **Plans & Specs/** (4 items) [20.6 MB] — last modified 2025-07-30
+        - **Plans/** (3 items) [12.0 MB] — last modified 2025-07-30
+        - **Specifications/** (0 items) — last modified 2025-05-27
+        - Plumbing Revise.docx [4.9 MB]
+        - Plumbing Revise.pdf [3.7 MB]
+      - **Project Schedules/** (0 items) — last modified 2025-05-27
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (23 items) [220.8 KB] — last modified 2025-07-30
+        - **01 - GENERAL REQUIREMENTS/** (0 items) — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (1 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (0 items) — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (3 items) [128.2 KB] — last modified 2025-05-27
+        - **09 - FINISHES/** (0 items) — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (1 items) [92.5 KB] — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (1 items) — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (0 items) — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-27
+    - **25-105 Gifted Daycare/** (8 items) [76.6 MB] — last modified 2025-05-27
+      - **Estimating/** (2 items) — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+      - **Job Costs/** (3 items) — last modified 2025-05-27
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (0 items) — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+      - **Owner Documents/** (4 items) [19.6 MB] — last modified 2025-05-27
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Contract Documents/** (2 items) [759.9 KB] — last modified 2025-05-27
+        - **Owner Invoices/** (1 items) [15.3 KB] — last modified 2025-05-27
+        - **Photo Reports/** (2 items) [18.8 MB] — last modified 2025-10-06
+      - **Permits/** (1 items) [119.7 KB] — last modified 2025-05-27
+        - **Fire Marshal Rev 01/** (1 items) [119.7 KB] — last modified 2026-02-25
+      - **Plans & Specs/** (2 items) [26.8 MB] — last modified 2025-05-27
+        - **Plans/** (2 items) [26.8 MB] — last modified 2025-05-27
+        - **Specifications/** (0 items) — last modified 2025-05-27
+      - **Project Schedules/** (1 items) [492.0 KB] — last modified 2025-05-27
+        - Gifted Daycare Schedule.mpp [492.0 KB]
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (23 items) [29.7 MB] — last modified 2025-05-27
+        - **01 - GENERAL REQUIREMENTS/** (1 items) [11.6 MB] — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (2 items) [2.8 MB] — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (1 items) [70.0 KB] — last modified 2025-05-27
+        - **09 - FINISHES/** (1 items) [619.8 KB] — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (1 items) [14.4 MB] — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (1 items) [138.4 KB] — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (0 items) — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-27
+    - **25-108 S1 Technology/** (8 items) [1.1 MB] — last modified 2025-05-27
+      - **Estimating/** (2 items) — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+      - **Job Costs/** (3 items) — last modified 2025-05-27
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (0 items) — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+      - **Owner Documents/** (3 items) — last modified 2025-05-27
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Contract Documents/** (0 items) — last modified 2025-05-27
+        - **Owner Invoices/** (0 items) — last modified 2025-05-27
+      - **Permits/** (0 items) — last modified 2025-05-27
+      - **Plans & Specs/** (2 items) — last modified 2025-05-27
+        - **Plans/** (2 items) — last modified 2025-05-27
+        - **Specifications/** (0 items) — last modified 2025-05-27
+      - **Project Schedules/** (2 items) [768.0 KB] — last modified 2025-05-27
+        - S1 Tech Schedule BB Prog.mpp [438.5 KB]
+        - S1 Tech Schedule.mpp [329.5 KB]
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (23 items) [377.4 KB] — last modified 2025-05-27
+        - **01 - GENERAL REQUIREMENTS/** (0 items) — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (0 items) — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-27
+        - **09 - FINISHES/** (0 items) — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (1 items) [377.4 KB] — last modified 2025-05-27
+        - **22 - PLUMBING/** (0 items) — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (0 items) — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-27
+    - **25-110 Palmer Parc/** (10 items) [1.1 GB] — last modified 2025-05-27
+      - **Estimating/** (6 items) [380.0 KB] — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Subcontractors/** (25 items) [157.5 KB] — last modified 2026-02-16
+        - **Takeoffs/** (3 items) [68.6 KB] — last modified 2025-10-07
+        - Glen Lege site bid.pdf [63.0 KB]
+        - Glen Lege site bid.xlsx [18.6 KB]
+        - Palmer Parc - Budget Tracker.xlsx [72.4 KB]
+      - **Job Costs/** (3 items) — last modified 2025-05-27
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (0 items) — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+      - **New folder/** (0 items) — last modified 2026-01-24
+      - **Owner Documents/** (10 items) [592.4 MB] — last modified 2025-05-27
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Contract Documents/** (0 items) — last modified 2025-05-27
+        - **DOTD Roundabout/** (1 items) [24.3 KB] — last modified 2026-01-29
+        - **EIN Doc/** (1 items) [785.8 KB] — last modified 2026-01-29
+        - **Owner Invoices/** (1 items) [16.1 KB] — last modified 2025-05-27
+        - **Plat Cert/** (2 items) [86.9 KB] — last modified 2025-09-30
+        - **Traffic Impact Study/** (1 items) [24.4 MB] — last modified 2026-01-23
+        - 020526. Chase Group Construction (Palmer Parc) Update.mp4 [208.7 MB]
+        - 022726. Palmer Parc Dev Update.mp4 [357.1 MB]
+        - Screenshot 2026-02-27 153933.png [1.3 MB]
+      - **Permits/** (4 items) [886.0 KB] — last modified 2025-05-27
+        - **Review Letters/** (1 items) [219.7 KB] — last modified 2025-12-10
+        - SWPPP CLIENT PROVIDE INFO FORM - Filled.pdf [169.4 KB]
+        - SWPPP CLIENT PROVIDE INFO FORM.pdf [476.8 KB]
+        - SWPPP CLIENT PROVIDE INFO FORM.xlsx [20.1 KB]
+      - **Plans & Specs/** (6 items) [528.9 MB] — last modified 2025-05-27
+        - **Plans/** (13 items) [491.9 MB] — last modified 2025-05-27
+        - **Preconstruction/** (13 items) [36.1 MB] — last modified 2026-01-23
+        - **SFM/** (1 items) [150.5 KB] — last modified 2026-02-03
+        - **Specifications/** (1 items) [705.0 KB] — last modified 2025-05-27
+        - Palmer_Parc_Daycare_3D_Plumbing_Riser.png [52.4 KB]
+        - Palmer_Parc_Daycare_Plumbing_Riser_Diagram.png [45.9 KB]
+      - **Project Schedules/** (1 items) [62.7 KB] — last modified 2025-05-27
+        - Milestones Schedule Palmer Parc.xlsx [62.7 KB]
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (24 items) [5.0 MB] — last modified 2025-05-27
+        - **01 - GENERAL REQUIREMENTS/** (2 items) [4.6 MB] — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (1 items) [164.7 KB] — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (0 items) — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-27
+        - **09 - FINISHES/** (0 items) — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (0 items) — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (1 items) [120.1 KB] — last modified 2025-06-23
+        - **33 - UTILITIES/** (1 items) [96.4 KB] — last modified 2025-05-27
+        - Quotes from Subs.xlsx [17.8 KB]
+      - Palmer Parc (BD).lnk [2.0 KB]
+    - **25-113 110 Production Dr/** (9 items) [130.6 MB] — last modified 2025-07-03
+      - **Estimating/** (2 items) — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+      - **Job Costs/** (3 items) [226.2 KB] — last modified 2025-07-03
+        - **Cost Coded Budget/** (3 items) [117.6 KB] — last modified 2025-07-10
+        - **Job Cost Reports/** (4 items) [108.6 KB] — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+      - **Owner Documents/** (5 items) [6.0 MB] — last modified 2025-07-03
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Contingency Aproval Emails/** (4 items) [339.5 KB] — last modified 2025-10-27
+        - **Contract Documents/** (7 items) [1.8 MB] — last modified 2025-05-27
+        - **Owner Invoices/** (5 items) [229.7 KB] — last modified 2025-05-27
+        - **Photo Reports/** (1 items) [3.7 MB] — last modified 2025-09-03
+      - **Permits/** (4 items) [1.2 MB] — last modified 2025-05-27
+        - 110 Production Demo Permit.pdf [30.2 KB]
+        - 2025-3557-site plan and reno details.pdf [760.0 KB]
+        - Building Review Letter.pdf [220.3 KB]
+        - Developing Review Letter.pdf [219.0 KB]
+      - **Plans & Specs/** (2 items) [36.2 MB] — last modified 2025-07-03
+        - **Plans/** (7 items) [36.2 MB] — last modified 2025-07-03
+        - **Specifications/** (0 items) — last modified 2025-05-27
+      - **Project Progress Reports/** (13 items) [23.8 MB] — last modified 2025-09-19
+        - 10.17.25 - Project Progress Report.pdf [372.3 KB]
+        - 10.3.25 - PPR.pptx [3.7 MB]
+        - 10.3.25 - Project Progress Report.pdf [652.7 KB]
+        - 10.31.25 - Project Progress Report.pdf [415.0 KB]
+        - 11.14.25 - Project Progress Report.pdf [566.0 KB]
+        - 11.26.25 - Project Progress Report.pdf [614.1 KB]
+        - 12.5.25 - PPR.pptx [9.5 MB]
+        - 12.5.25 - Project Progress Report.pdf [1.0 MB]
+        - 9.19.25 - PPR.pdf [605.9 KB]
+        - 9.19.25 - PPR.pptx [5.5 MB]
+        - Invoice Graph.xlsx [51.3 KB]
+        - Project Cost Graph.xlsx [34.0 KB]
+        - Project Progress Report Template.pptx [925.8 KB]
+      - **Project Schedules/** (14 items) [4.0 MB] — last modified 2025-05-27
+        - **3 Week Lookahead/** (1 items) [54.7 KB] — last modified 2025-11-19
+        - 07.14.25 Schedule.xlsx [47.7 KB]
+        - 09.26.25 Schedule.pdf [259.4 KB]
+        - 09.26.25 Schedule.xlsx [46.3 KB]
+        - 10.02.25 Schedule.pdf [297.2 KB]
+        - 10.02.25 Schedule.xlsx [52.4 KB]
+        - 10.17.25 Schedule.pdf [298.0 KB]
+        - 10.31.25 Schedule.pdf [333.2 KB]
+        - 11.14.25 Schedule.pdf [363.3 KB]
+        - 11.24.25 Schedule.pdf [327.9 KB]
+        - 11.3.25 Schedule.pdf [295.9 KB]
+        - 110 Production.mpp [1.1 MB]
+        - 12.5.25 Schedule.pdf [328.0 KB]
+        - 9.19.25 Schedule.pdf [295.0 KB]
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (24 items) [59.1 MB] — last modified 2025-07-03
+        - **01 - GENERAL REQUIREMENTS/** (0 items) — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (1 items) [221.4 KB] — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (3 items) [8.5 MB] — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (1 items) [4.3 MB] — last modified 2025-05-27
+        - **09 - FINISHES/** (3 items) [26.9 MB] — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (0 items) — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (1 items) [7.9 MB] — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (1 items) [4.0 MB] — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (2 items) [7.3 MB] — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-27
+        - Project Buyout Log.xlsx [24.2 KB]
+    - **25-115 2905 Kaliste Saloom/** (11 items) [1005.4 MB] — last modified 2025-07-08
+      - **2905 Kaliste Saloom Rd/** (29 items) [799.7 MB] — last modified 2025-08-21
+        - **Building Inspiration Photos/** (8 items) [7.0 MB] — last modified 2025-08-21
+        - **Cash Sale/** (2 items) [2.5 MB] — last modified 2025-08-21
+        - **Comps/** (1 items) [129.5 KB] — last modified 2025-08-21
+        - **Demo Instruction/** (1 items) [225.4 KB] — last modified 2025-08-21
+        - **Drawings/** (1 items) [4.6 MB] — last modified 2025-08-21
+        - **Due Diligence/** (1 items) [317.3 KB] — last modified 2025-08-21
+        - **Encroachment Agrrement/** (1 items) [564.2 KB] — last modified 2025-09-25
+        - **Evals/** (5 items) [451.6 KB] — last modified 2025-08-21
+        - **Executed Agreement/** (1 items) [680.3 KB] — last modified 2025-08-21
+        - **Extension/** (9 items) [1.0 MB] — last modified 2025-08-21
+        - **Fiverr/** (13 items) [28.5 MB] — last modified 2025-08-21
+        - **Insurance/** (1 items) [192.9 KB] — last modified 2025-08-21
+        - **Investment/** (2 items) [123.5 KB] — last modified 2025-08-21
+        - **Leasing/** (1 items) [1.1 MB] — last modified 2025-08-21
+        - **Loan Commitment Letter/** (3 items) [79.8 KB] — last modified 2025-08-21
+        - **Offers/** (6 items) [3.4 MB] — last modified 2025-08-21
+        - **P & L Smash/** (1 items) [327.0 KB] — last modified 2025-08-21
+        - **Plat/** (3 items) [3.9 MB] — last modified 2025-08-21
+        - **Polycam/** (4 items) [665.7 MB] — last modified 2025-08-21
+        - **PowerPoint/** (12 items) [61.4 MB] — last modified 2025-08-21
+        - **Pre-Development Notes/** (1 items) [280.4 KB] — last modified 2025-08-21
+        - **Renders & Models/** (10 items) [6.4 MB] — last modified 2025-08-21
+        - **Sat photos pics/** (9 items) [5.7 MB] — last modified 2025-08-21
+        - **Seller Counters/** (1 items) [824.5 KB] — last modified 2025-08-21
+        - **Seller Docs/** (1 items) [434.8 KB] — last modified 2025-08-21
+        - **site plan/** (1 items) [226.8 KB] — last modified 2025-08-21
+        - **Temp logo/** (7 items) [680.5 KB] — last modified 2025-08-21
+        - **Title Policy/** (1 items) [911.5 KB] — last modified 2025-08-21
+        - **Zoning/** (1 items) [2.1 MB] — last modified 2025-08-21
+      - **Estimating/** (3 items) [90.3 KB] — last modified 2025-10-20
+        - **Pre Con/** (1 items) [34.5 KB] — last modified 2025-11-03
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (1 items) [55.7 KB] — last modified 2025-10-07
+      - **Job Costs/** (3 items) — last modified 2025-07-08
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (0 items) — last modified 2025-05-28
+        - **Projections/** (0 items) — last modified 2025-05-28
+      - **New folder/** (0 items) — last modified 2025-12-11
+      - **Owner Documents/** (6 items) [163.3 MB] — last modified 2025-07-08
+        - **Addendums/** (0 items) — last modified 2025-05-28
+        - **Appraisal/** (1 items) [15.6 MB] — last modified 2025-10-27
+        - **Contract Documents/** (1 items) [563.0 KB] — last modified 2025-05-28
+        - **Owner Invoices/** (1 items) [3.4 MB] — last modified 2025-05-28
+        - **Pickleball Consult/** (1 items) [473.4 KB] — last modified 2025-10-17
+        - **Promotional Media/** (7 items) [143.2 MB] — last modified 2026-01-27
+      - **Permits/** (4 items) [1.5 MB] — last modified 2025-05-28
+        - 2025-3383-demo instruction.pdf [225.4 KB]
+        - 2905 Kaliste Saloom Permit.pdf [30.1 KB]
+        - Certificate of Occupancy (Occupational License).pdf [705.0 KB]
+        - Signed and Notarized by owners.pdf [564.2 KB]
+      - **Plans & Specs/** (4 items) [31.7 MB] — last modified 2025-07-08
+        - **Models and Renders/** (3 items) [10.6 MB] — last modified 2025-08-20
+        - **Photos and Inspo/** (3 items) [4.2 MB] — last modified 2025-08-20
+        - **Plans/** (6 items) [14.3 MB] — last modified 2025-07-08
+        - **Specifications/** (1 items) [2.6 MB] — last modified 2025-05-28
+      - **Project Progress Report/** (2 items) [946.6 KB] — last modified 2025-09-26
+        - 10.3.25 - PPR.pptx [912.6 KB]
+        - Project Cost Graph.xlsx [34.0 KB]
+      - **Project Schedules/** (0 items) — last modified 2025-05-28
+      - **RFIs/** (0 items) — last modified 2025-05-28
+      - **Subcontractors/** (23 items) [8.3 MB] — last modified 2025-07-08
+        - **01 - GENERAL REQUIREMENTS/** (2 items) [4.5 MB] — last modified 2025-05-28
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-28
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-28
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-28
+        - **05 - METALS/** (0 items) — last modified 2025-05-28
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-28
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-28
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-28
+        - **09 - FINISHES/** (0 items) — last modified 2025-05-28
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-28
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-28
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-28
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-28
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-28
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-28
+        - **22 - PLUMBING/** (0 items) — last modified 2025-05-28
+        - **23 - HVAC/** (0 items) — last modified 2025-05-28
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-28
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-28
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-28
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-05-28
+        - **32 - EXTERIOR IMPROVEMENTS/** (1 items) [3.8 MB] — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-28
+    - **25-116 800 E Farrel/** (13 items) [1.4 GB] — last modified 2025-08-21
+      - **800 E Farrel Rd/** (16 items) [171.0 MB] — last modified 2025-08-21
+        - **3D Models  Fiverr/** (5 items) [128.8 MB] — last modified 2025-08-21
+        - **Appraisal/** (1 items) [7.2 MB] — last modified 2025-08-21
+        - **Area Map/** (2 items) [4.8 MB] — last modified 2025-08-21
+        - **Complete_with_Docusign_800_E_Farrel_Road_Pur/** (2 items) [655.0 KB] — last modified 2025-08-21
+        - **Drawings/** (1 items) [4.1 MB] — last modified 2025-08-21
+        - **Executed Purchase Agreement/** (1 items) [352.4 KB] — last modified 2025-08-21
+        - **Extension/** (8 items) [1.2 MB] — last modified 2025-08-21
+        - **Exterior & Design Files/** (6 items) [5.8 MB] — last modified 2025-08-21
+        - **Exterior Measurements/** (2 items) [2.2 MB] — last modified 2025-08-21
+        - **Financial Evaluations/** (5 items) [157.6 KB] — last modified 2025-08-21
+        - **Floor plans/** (2 items) [1.6 MB] — last modified 2025-08-21
+        - **LOI & Leasing/** (18 items) [12.5 MB] — last modified 2025-08-21
+        - 20250407175031274.pdf [482.8 KB]
+        - 800 E Farrel Road Purchase Agreement.pdf [165.8 KB]
+        - Buyer Signed 800 E Farrel Rd Offer.pdf [482.3 KB]
+        - Complete_with_Docusign_800_E_Farrel_Road_Pur.zip [514.2 KB]
+      - **Estimating/** (8 items) [70.5 MB] — last modified 2025-09-29
+        - **Takeoffs/** (1 items) [69.4 MB] — last modified 2026-02-10
+        - Bider Tracking.xlsx [136.0 KB]
+        - Estimate 10.16.25 E Farrel.pdf [463.8 KB]
+        - Estimate from Procore 02.03.26.xlsx [94.7 KB]
+        - Legendary SOV.xlsx [35.7 KB]
+        - Proposal 800 E Farrel Combined 092925.pdf [315.2 KB]
+        - SOV Budget Tracker 800 E. Farrel.xlsx [39.6 KB]
+        - Subcontractors.lnk [2.2 KB]
+      - **Inspection/** (2 items) [10.3 MB] — last modified 2025-09-12
+        - 800_E_Farrel_Rd___Commercial_Inspection.pdf [10.2 MB]
+        - Observation Report - 800 E Farrel.pdf [117.7 KB]
+      - **Job Costs/** (4 items) [1.4 MB] — last modified 2025-08-01
+        - **CGC Estimates/** (4 items) [809.8 KB] — last modified 2025-12-31
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (5 items) [544.7 KB] — last modified 2025-05-27
+        - **Projections/** (2 items) [85.1 KB] — last modified 2025-05-27
+      - **Leasing/** (10 items) [1.0 MB] — last modified 2025-10-31
+        - **Addendums/** (1 items) [210.9 KB] — last modified 2025-11-19
+        - ASSIGNMENT OF LANDLORD.docx [25.7 KB]
+        - Executed Assignment 800 E Farrel.pdf [120.3 KB]
+        - Lafayette_Lease_Comp_Sheet.pdf [68.7 KB]
+        - Lafayette_Lease_Comp_Sheet_CLEAN.pdf [69.9 KB]
+        - Lafayette_Lease_Comp_Sheet_LANDSCAPE.pdf [89.1 KB]
+        - Lafayette_Lease_Comp_Sheet_LANDSCAPE_FINAL.pdf [328.0 KB]
+        - Lafayette_Lease_Comp_Sheet_TWOPAGE.pdf [88.9 KB]
+        - Lafayette_Lease_Comps.csv [958 B]
+        - LEASE ADDENDUM NO 1.docx [24.9 KB]
+      - **Owner Documents/** (4 items) [6.7 MB] — last modified 2025-08-01
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Contract Documents/** (7 items) [6.1 MB] — last modified 2025-08-01
+        - **Misc/** (4 items) [418.8 KB] — last modified 2025-12-05
+        - **Owner Invoices/** (4 items) [286.5 KB] — last modified 2025-05-27
+      - **Permits/** (7 items) [2.5 MB] — last modified 2025-05-27
+        - **Review Letters/** (5 items) [964.4 KB] — last modified 2025-11-26
+        - Approval Letter 02.10.26.pdf [383.1 KB]
+        - Building Permit 02-10-26.pdf [386.7 KB]
+        - Demo Permit Farrel.pdf [30.1 KB]
+        - Owner Acknowledgement - 800 Farrel Rd - Signed.pdf [208.7 KB]
+        - Owner Acknowledgement - 800 Farrel Rd.pdf [350.6 KB]
+        - Public Works Review Comments Letter 11.26.25.pdf [223.1 KB]
+      - **Photo Exchange/** (15 items) [518.8 MB] — last modified 2025-10-10
+        - **1/** (1 items) [70.7 MB] — last modified 2025-10-10
+        - **10/** (1 items) [29.3 MB] — last modified 2025-10-10
+        - **11/** (1 items) [32.0 MB] — last modified 2025-10-10
+        - **12/** (1 items) [26.9 MB] — last modified 2025-10-10
+        - **13/** (1 items) [33.1 MB] — last modified 2025-10-10
+        - **14/** (1 items) [45.7 MB] — last modified 2025-10-10
+        - **15/** (1 items) [24.5 MB] — last modified 2025-10-10
+        - **2/** (1 items) [13.0 MB] — last modified 2025-10-10
+        - **3/** (1 items) [39.3 MB] — last modified 2025-10-10
+        - **4/** (1 items) [39.3 MB] — last modified 2025-10-10
+        - **5/** (1 items) [15.9 MB] — last modified 2025-10-10
+        - **6/** (1 items) [44.0 MB] — last modified 2025-10-10
+        - **7/** (1 items) [39.9 MB] — last modified 2025-10-10
+        - **8/** (1 items) [28.7 MB] — last modified 2025-10-10
+        - **9/** (1 items) [36.4 MB] — last modified 2025-10-10
+      - **Plans & Specs/** (4 items) [457.5 MB] — last modified 2025-08-01
+        - **Plans/** (13 items) [449.8 MB] — last modified 2025-08-01
+        - **Plat/** (2 items) [1.2 MB] — last modified 2026-02-09
+        - **Specifications/** (1 items) [5.9 MB] — last modified 2025-05-27
+        - Playground Mounds.jpeg [565.9 KB]
+      - **Project Progress Report/** (5 items) [108.2 MB] — last modified 2025-09-26
+        - **Photos for Pay App 03.13.26/** (30 items) [95.7 MB] — last modified 2026-03-13
+        - 10.3.25 - PPR.pdf [917.0 KB]
+        - 10.3.25 - PPR.pptx [11.6 MB]
+        - construction_photo_report.pdf [45.1 KB]
+        - Project Cost Graph.xlsx [34.0 KB]
+      - **Project Schedules/** (6 items) [1.1 MB] — last modified 2025-05-27
+        - **3 Week Lookahead/** (1 items) [51.9 KB] — last modified 2025-11-19
+        - 02.23.26 800 E. Farrel Schedule 2 Pages.pdf [130.1 KB]
+        - 02.23.26 800 E. Farrel Schedule.pdf [121.5 KB]
+        - 800 schedule - Draft.mpp [482.5 KB]
+        - Project Schedule CML 03.06.26.xlsx [145.0 KB]
+        - Project Schedule Rev 1.xlsx [144.7 KB]
+      - **RFIs/** (2 items) [1.4 MB] — last modified 2025-05-27
+        - RFI #1.xlsx [1.4 MB]
+        - RFI Log - 001.xlsx [61.0 KB]
+      - **Subcontractors/** (25 items) [56.9 MB] — last modified 2025-08-01
+        - **01 - GENERAL REQUIREMENTS/** (6 items) [10.8 MB] — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (1 items) [61.7 KB] — last modified 2025-05-27
+        - **03 - CONCRETE/** (3 items) [7.3 MB] — last modified 2025-05-27
+        - **04 - MASONRY/** (1 items) [55.5 KB] — last modified 2025-05-27
+        - **05 - METALS/** (0 items) — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (3 items) [4.1 MB] — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (1 items) [3.2 MB] — last modified 2025-05-27
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-27
+        - **09 - FINISHES/** (1 items) [3.2 MB] — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (1 items) [3.2 MB] — last modified 2025-05-27
+        - **22 - PLUMBING/** (1 items) [3.2 MB] — last modified 2025-05-27
+        - **23 - HVAC/** (1 items) [3.5 MB] — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (2 items) [9.1 MB] — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (2 items) [3.6 MB] — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (3 items) [5.2 MB] — last modified 2025-06-23
+        - **33 - UTILITIES/** (1 items) [61.8 KB] — last modified 2025-05-27
+        - Legendary Scope Prices Given.pdf [126.2 KB]
+        - Project Buyout Log.xlsx [24.4 KB]
+    - **25-117 Lormand Rd Development/** (9 items) [1.8 MB] — last modified 2025-08-27
+      - **Appraisals/** (1 items) [1.6 MB] — last modified 2025-08-27
+        - 4143 Lormand Road, Maurice, La 70555.pdf [1.6 MB]
+      - **Estimating/** (2 items) — last modified 2025-10-20
+        - **Proposals/** (0 items) — last modified 2025-10-07
+        - **Takeoffs/** (0 items) — last modified 2025-10-07
+      - **Job Costs/** (3 items) — last modified 2025-08-27
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (0 items) — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+      - **Owner Documents/** (3 items) [132.2 KB] — last modified 2025-08-27
+        - **Addendums/** (0 items) — last modified 2025-05-27
+        - **Contract Documents/** (2 items) [132.2 KB] — last modified 2025-08-27
+        - **Owner Invoices/** (0 items) — last modified 2025-05-27
+      - **Permits/** (0 items) — last modified 2025-05-27
+      - **Plans & Specs/** (2 items) — last modified 2025-08-27
+        - **Plans/** (2 items) — last modified 2025-08-27
+        - **Specifications/** (0 items) — last modified 2025-05-27
+      - **Project Schedules/** (0 items) — last modified 2025-05-27
+      - **RFIs/** (0 items) — last modified 2025-05-27
+      - **Subcontractors/** (25 items) [98.3 KB] — last modified 2025-08-27
+        - **01 - GENERAL REQUIREMENTS/** (1 items) [70.2 KB] — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (0 items) — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (0 items) — last modified 2025-05-27
+        - **09 - FINISHES/** (0 items) — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (0 items) — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (0 items) — last modified 2025-06-23
+        - **33 - UTILITIES/** (0 items) — last modified 2025-05-27
+        - **MSA Template/** (0 items) — last modified 2025-08-27
+        - Project Buyout Log.xlsx [28.1 KB]
+    - **25-120 Caddy Shack/** (12 items) [1.0 GB] — last modified 2025-10-20
+      - **Consultants/** (4 items) [3.1 MB] — last modified 2025-11-20
+        - 01.27.26 Salas O'Brien Fee Increase.msg [2.4 MB]
+        - Caddy Shack - Marcon Road Mech-Elec Engineering Proposal.pdf [167.9 KB]
+        - Signed Caddy Shack - Marcon Road Mech-Elec Engineering Proposal - 12.30.25.pdf [276.1 KB]
+        - signed Caddy Shack - Marcon Road Mech-Elec Engineering Proposal.pdf [269.5 KB]
+      - **Estimating/** (9 items) [338.4 MB] — last modified 2025-10-20
+        - **CGCSpecSelection/** (6 items) [2.3 MB] — last modified 2026-02-16
+        - **Estimate Recap/** (8 items) [456.2 KB] — last modified 2026-02-24
+        - **Estimate Spreadsheet/** (3 items) [1.1 MB] — last modified 2026-02-12
+        - **Proposals/** (11 items) [5.4 MB] — last modified 2025-10-07
+        - **Takeoffs/** (8 items) [329.2 MB] — last modified 2025-10-07
+        - 25-120 Caddy Shack - Shortcut.lnk [1.4 KB]
+        - General Condition Line Items.pdf [33.4 KB]
+        - SOV Budget Tracker.xlsx [30.4 KB]
+        - Subcontractors.lnk [2.2 KB]
+      - **Geotech/** (1 items) [13.7 MB] — last modified 2025-10-20
+        - **11.1 Surveying +Testing + Quality Control/** (7 items) [13.7 MB] — last modified 2025-10-20
+      - **Job Costs/** (3 items) [602.9 KB] — last modified 2025-08-20
+        - **Cost Coded Budget/** (0 items) — last modified 2025-07-10
+        - **Job Cost Reports/** (5 items) [602.9 KB] — last modified 2025-05-27
+        - **Projections/** (0 items) — last modified 2025-05-27
+      - **Owner Documents/** (5 items) [3.9 MB] — last modified 2025-08-20
+        - **Addendums/** (1 items) [39.7 KB] — last modified 2025-05-27
+        - **Contract Documents/** (7 items) [2.6 MB] — last modified 2025-08-20
+        - **Duhon's Payment/** (1 items) [218.9 KB] — last modified 2026-03-05
+        - **Misc/** (4 items) [1019.6 KB] — last modified 2026-01-05
+        - **Owner Invoices/** (1 items) [45.1 KB] — last modified 2025-05-27
+      - **Permits/** (1 items) [585.3 KB] — last modified 2025-05-27
+        - LDA permit for the revised water loop at Marcon Dr..pdf [585.3 KB]
+      - **Plans & Specs/** (2 items) [642.9 MB] — last modified 2025-08-20
+        - **Plans/** (15 items) [642.9 MB] — last modified 2025-08-20
+        - **Specifications/** (1 items) [32.9 KB] — last modified 2025-05-27
+      - **Project Progress Report/** (3 items) [1.7 MB] — last modified 2025-09-26
+        - 10.31.25 - PPR.pptx [772.7 KB]
+        - Project Cost Graph.xlsx [34.0 KB]
+        - Project Progress Report Template.pptx [920.5 KB]
+      - **Project Schedules/** (1 items) [51.8 KB] — last modified 2025-05-27
+        - **3 Week Lookahead/** (1 items) [51.8 KB] — last modified 2025-11-19
+      - **RFIs/** (3 items) [4.1 MB] — last modified 2025-05-27
+        - RFI Log - 001 Response.xlsx [1.4 MB]
+        - RFI Log - 001.xlsx [1.4 MB]
+        - RFI Log.xlsx [1.4 MB]
+      - **Subcontractors/** (26 items) [24.2 MB] — last modified 2025-08-20
+        - **01 - GENERAL REQUIREMENTS/** (2 items) [3.5 MB] — last modified 2025-05-27
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-05-27
+        - **03 - CONCRETE/** (0 items) — last modified 2025-05-27
+        - **04 - MASONRY/** (0 items) — last modified 2025-05-27
+        - **05 - METALS/** (0 items) — last modified 2025-05-27
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-05-27
+        - **07 - THERMAL & MOISTURE PROTECT/** (0 items) — last modified 2025-05-27
+        - **08 - OPENINGS/** (1 items) [521.7 KB] — last modified 2025-05-27
+        - **09 - FINISHES/** (1 items) [22.8 KB] — last modified 2025-05-27
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-05-27
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-05-27
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-05-27
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-05-27
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-05-27
+        - **22 - PLUMBING/** (0 items) — last modified 2025-05-27
+        - **23 - HVAC/** (0 items) — last modified 2025-05-27
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-05-27
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-05-27
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-05-27
+        - **31 - EARTHWORK/** (2 items) [15.4 MB] — last modified 2025-05-27
+        - **32 - EXTERIOR IMPROVEMENTS/** (2 items) [548.6 KB] — last modified 2025-06-23
+        - **33 - UTILITIES/** (1 items) [3.9 MB] — last modified 2025-05-27
+        - **46 - WATER - WASTEWATER EQUIP/** (1 items) [126.5 KB] — last modified 2026-02-06
+        - **MSA Template/** (1 items) [60.5 KB] — last modified 2025-08-20
+        - Project Buyout Log.xlsx [28.1 KB]
+      - **Temp/** (8 items) [16.1 MB] — last modified 2026-03-09
+        - Incomplete ditch and missing culvert location.heic [6.1 MB]
+        - JRicks_C5.1_Markups.pdf [534.1 KB]
+        - JRicks_CulvertPlacement.pdf [1.2 MB]
+        - JRicks_New_Drawing.pdf [715.0 KB]
+        - Marcon Road - C5.1-C5.3 (1).pdf [1.9 MB]
+        - Original Civil Plan Southeast Corner.pdf [1.2 MB]
+        - Pile of tree and branches on site.heic [3.8 MB]
+        - Updated Civil Plan Southeast Corner.pdf [710.8 KB]
+    - **25-121 Ryan Martin/** (10 items) [13.6 MB] — last modified 2025-11-13
+      - **25-119 Principal's List/** (9 items) [9.6 MB] — last modified 2025-10-20
+        - **Estimating/** (2 items) — last modified 2025-10-20
+        - **Job Costs/** (3 items) — last modified 2025-10-20
+        - **Owner Documents/** (5 items) [259.2 KB] — last modified 2025-10-20
+        - **Permits/** (0 items) — last modified 2025-10-13
+        - **Plans & Specs/** (2 items) [1.8 MB] — last modified 2025-10-20
+        - **Project Progress Reports/** (0 items) — last modified 2025-10-13
+        - **Project Schedules/** (0 items) — last modified 2025-10-13
+        - **RFIs/** (0 items) — last modified 2025-10-13
+        - **Subcontractors/** (25 items) [7.5 MB] — last modified 2025-10-20
+      - **Estimating/** (2 items) — last modified 2025-11-13
+        - **Proposals/** (0 items) — last modified 2025-10-13
+        - **Takeoffs/** (0 items) — last modified 2025-10-13
+      - **Job Costs/** (3 items) [91.1 KB] — last modified 2025-11-13
+        - **Cost Coded Budget/** (0 items) — last modified 2025-10-13
+        - **Job Cost Reports/** (3 items) [91.1 KB] — last modified 2025-10-13
+        - **Projections/** (0 items) — last modified 2025-10-13
+      - **Owner Documents/** (3 items) [134.9 KB] — last modified 2025-11-13
+        - **Addendums/** (0 items) — last modified 2025-10-13
+        - **Contract Documents/** (2 items) [134.9 KB] — last modified 2025-11-13
+        - **Owner Invoices/** (0 items) — last modified 2025-10-13
+      - **Permits/** (0 items) — last modified 2025-10-13
+      - **Plans & Specs/** (2 items) — last modified 2025-11-13
+        - **Plans/** (2 items) — last modified 2025-11-13
+        - **Specifications/** (0 items) — last modified 2025-10-13
+      - **Project Progress Reports/** (0 items) — last modified 2025-10-13
+      - **Project Schedules/** (0 items) — last modified 2025-10-13
+      - **RFIs/** (0 items) — last modified 2025-10-13
+      - **Subcontractors/** (25 items) [3.8 MB] — last modified 2025-11-13
+        - **01 - GENERAL REQUIREMENTS/** (0 items) — last modified 2025-10-13
+        - **02 - EXISTING CONDITIONS/** (0 items) — last modified 2025-10-13
+        - **03 - CONCRETE/** (0 items) — last modified 2025-10-13
+        - **04 - MASONRY/** (0 items) — last modified 2025-10-13
+        - **05 - METALS/** (0 items) — last modified 2025-10-13
+        - **06 - WOOD, PLASTICS, COMP/** (0 items) — last modified 2025-10-13
+        - **07 - THERMAL & MOISTURE PROTECT/** (1 items) [3.7 MB] — last modified 2025-10-13
+        - **08 - OPENINGS/** (0 items) — last modified 2025-10-13
+        - **09 - FINISHES/** (0 items) — last modified 2025-10-13
+        - **10 - SPECIALTIES/** (0 items) — last modified 2025-10-13
+        - **11 - EQUIPMENT/** (0 items) — last modified 2025-10-13
+        - **12 - FURNISHINGS/** (0 items) — last modified 2025-10-13
+        - **13 - SPECIAL CONSTRUCTION/** (0 items) — last modified 2025-10-13
+        - **14 - CONVEYING EQUIPMENT/** (0 items) — last modified 2025-10-13
+        - **21 - FIRE SUPPRESSION/** (0 items) — last modified 2025-10-13
+        - **22 - PLUMBING/** (0 items) — last modified 2025-10-13
+        - **23 - HVAC/** (0 items) — last modified 2025-10-13
+        - **25 - INTEGRATED AUTOMATION/** (0 items) — last modified 2025-10-13
+        - **25, 26, 27, 28 - ELECTRICAL SYSTEMS/** (0 items) — last modified 2025-10-13
+        - **27 - COMMUNICATIONS/** (0 items) — last modified 2025-10-13
+        - **31 - EARTHWORK/** (0 items) — last modified 2025-10-13
+        - **32 - EXTERIOR IMPROVEMENTS/** (0 items) — last modified 2025-10-13
+        - **33 - UTILITIES/** (0 items) — last modified 2025-10-13
+        - **MSA Template/** (1 items) [60.5 KB] — last modified 2025-11-13
+        - Project Buyout Log.xlsx [30.7 KB]
+    - **25-900 MCC Estimating/** (6 items) [3.1 GB] — last modified 2025-06-19
+      - **Completed Projects/** (22 items) [1.6 GB] — last modified 2025-07-23
+        - **C25-002/** (4 items) — last modified 2025-06-19
+        - **C25-003/** (4 items) — last modified 2025-06-19
+        - **M25-001 N Vermilion Stadium/** (4 items) [59.0 MB] — last modified 2025-06-10
+        - **M25-004 LPSS Maint/** (4 items) [98.8 MB] — last modified 2025-06-10
+        - **M25-005 Texas Roadhouse Vestibule/** (4 items) — last modified 2025-06-10
+        - **M25-006 Lafayette Readiness Center/** (4 items) [194.1 MB] — last modified 2025-06-10
+        - **M25-007 State Farm Office (Doucet)/** (4 items) [176.8 MB] — last modified 2025-06-23
+        - **M25-008 Heymann Park/** (4 items) [38.4 MB] — last modified 2025-06-10
+        - **M25-009 Comeaux House Plans/** (4 items) [4.1 MB] — last modified 2025-06-10
+        - **M25-010 SMPG - Central Office/** (4 items) [27.2 MB] — last modified 2025-06-19
+        - **M25-011 Terminal Access Loop/** (4 items) [254.2 MB] — last modified 2025-06-23
+        - **M25-012 911 Communications Center/** (4 items) [111.8 MB] — last modified 2025-06-23
+        - **M25-013 Welsh Upper Elementary/** (4 items) [75.4 MB] — last modified 2025-06-23
+        - **M25-014 Fast Pace Urgent Care/** (4 items) [70.8 MB] — last modified 2025-06-23
+        - **M25-015 Sugarcane Research Lab/** (4 items) [110.4 MB] — last modified 2025-06-23
+        - **M25-016 Duson Renovation/** (4 items) [208.8 KB] — last modified 2025-06-26
+        - **M25-017 Rayne Veterans Memorial Park/** (4 items) [40.8 MB] — last modified 2025-07-08
+        - **M25-018 Crowley Walmart/** (4 items) [845.7 KB] — last modified 2025-07-10
+        - **M25-019 Evangeline Bank/** (4 items) [26.6 MB] — last modified 2025-07-14
+        - **M25-020 SS New Field House/** (4 items) [94.6 MB] — last modified 2025-07-15
+        - **M25-021 Jeanerette Readiness Center/** (4 items) [174.8 MB] — last modified 2025-07-21
+        - **M25-022 New Iberia Readiness Center/** (4 items) [58.2 MB] — last modified 2025-07-23
+      - **M25-023 Swig - Youngsville/** (4 items) [12.0 MB] — last modified 2025-07-24
+        - **1. Plans/** (3 items) [11.9 MB] — last modified 2025-07-24
+        - **2. Specifications/** (0 items) — last modified 2025-05-29
+        - **3. Proposals/** (1 items) [141.3 KB] — last modified 2025-05-29
+        - **4. Correspondence/** (0 items) — last modified 2025-05-29
+      - **M25-024 Post Road WWTP/** (4 items) [90.9 MB] — last modified 2025-08-06
+        - **1. Plans/** (2 items) [90.9 MB] — last modified 2025-08-06
+        - **2. Specifications/** (0 items) — last modified 2025-05-29
+        - **3. Proposals/** (0 items) — last modified 2025-05-29
+        - **4. Correspondence/** (0 items) — last modified 2025-05-29
+      - **M25-025 Avoyelles Health Care/** (4 items) [1.4 GB] — last modified 2025-08-06
+        - **1. Plans/** (2 items) [1.4 GB] — last modified 2025-08-06
+        - **2. Specifications/** (1 items) [7.1 MB] — last modified 2025-05-29
+        - **3. Proposals/** (0 items) — last modified 2025-05-29
+        - **4. Correspondence/** (0 items) — last modified 2025-05-29
+      - **Template/** (4 items) — last modified 2025-05-29
+        - **1. Plans/** (1 items) — last modified 2025-05-29
+        - **2. Specifications/** (0 items) — last modified 2025-05-29
+        - **3. Proposals/** (0 items) — last modified 2025-05-29
+        - **4. Correspondence/** (0 items) — last modified 2025-05-29
+      - Projects List.xlsx [24.0 KB]
+    - **Completed Projects/** (0 items) — last modified 2025-07-10
+    - **Misc Projects/** (1 items) [2.4 MB] — last modified 2025-09-02
+      - **Mimosa - Rental/** (2 items) [2.4 MB] — last modified 2025-08-18
+        - Full Report - 168 Mimosa Pl, Lafayette, LA 70503, USA.pdf [2.4 MB]
+        - Renovation Task List.xlsx [20.0 KB]
+    - **Project Progress Report/** (3 items) [1007.3 KB] — last modified 2025-09-24
+      - Chase Group Construction, LLC_A_P Aging Summary Report Details 3.13.26 2026-03-13.xlsx [51.4 KB]
+      - Project Cost Graph.xlsx [34.0 KB]
+      - Project Progress Report Template.pptx [921.9 KB]
+    - **Temporary Folder/** (6 items) [116.9 MB] — last modified 2025-07-08
+      - **538 L Provost - 20Ton rock/** (1 items) [1.7 MB] — last modified 2025-09-23
+        - Screenshot 2025-09-23 144205.png [1.7 MB]
+      - **Chalico FPK Files/** (4 items) [112.4 MB] — last modified 2025-08-26
+        - 25.03.06 FPK - Site Improvements.pdf [35.4 MB]
+        - 250306_FPK_FULL_IFP.pdf [76.4 MB]
+        - Chase Group--Fat Pat's Johnston - Quote_Proposal.pdf [151.7 KB]
+        - Fat Pats - Lambright Concrete.pdf [431.7 KB]
+      - 20250708103740982.pdf [89.5 KB]
+      - FOUNDA_2.PDF [512.0 KB]
+      - IMG_7018.heic [2.2 MB]
+      - Sign Drawings for Bonin.pdf [44.6 KB]
+  - **3. MARKETING/** (3 items) [346.1 MB] — last modified 2025-05-27
+    - **Chase Group/** (4 items) [335.3 MB] — last modified 2025-05-27
+      - **Logos/** (4 items) [4.1 MB] — last modified 2025-05-27
+        - **BLUE ORANGE/** (8 items) [2.1 MB] — last modified 2025-06-30
+        - **PNG/** (1 items) [10.0 KB] — last modified 2025-06-25
+        - **WHITE LETTERING/** (2 items) [1.9 MB] — last modified 2025-08-28
+        - chase group commercial construction logo.webp [6.6 KB]
+      - **Project Media/** (3 items) [321.5 MB] — last modified 2025-10-17
+        - **Bunker Lofts/** (1 items) [66.0 MB] — last modified 2025-11-26
+        - **FPK/** (4 items) [172.0 MB] — last modified 2025-10-17
+        - **Smash/** (1 items) [83.5 MB] — last modified 2025-11-03
+      - **Project Signage/** (3 items) [5.9 MB] — last modified 2025-07-18
+        - **Project Signage Template/** (2 items) [248.7 KB] — last modified 2025-08-07
+        - **Screen/** (1 items) [5.6 MB] — last modified 2026-01-14
+        - Approved Design CGC 4x8 Sign.png [79.0 KB]
+      - Tent.PNG [3.7 MB]
+    - **Chase Group Realty/** (4 items) [10.8 MB] — last modified 2025-05-27
+      - **Logos/** (6 items) [6.1 MB] — last modified 2025-05-27
+        - Blue letter New logo.png [1.4 MB]
+        - ChatGPT Logo 3.png [1.4 MB]
+        - ChatGPT Realty 2.png [278.1 KB]
+        - ChatGPT Realty logo.png [336.5 KB]
+        - ChatGPT white letters style 3 rev.png [1.4 MB]
+        - ChatGPT white letters style 3.png [1.4 MB]
+      - Pin only.png [2.0 MB]
+      - Screenshot 2025-10-16 203218.png [873.6 KB]
+      - ss2.png [1.9 MB]
+    - 2822 Bonin Rd. Schedule.xlsx [27.7 KB]
+  - **4. MISCELLANEOUS/** (16 items) [1.4 GB] — last modified 2025-05-27
+    - **3 Week Lookahead Template/** (1 items) [51.0 KB] — last modified 2025-11-12
+      - Chase_Group_3_Week_Lookahead.xlsx [51.0 KB]
+    - **Chalico Jobs/** (1 items) [259.8 KB] — last modified 2025-06-25
+      - P&C Construction--Starbucks, Lafayette Quote - Sheet1[95].pdf [259.8 KB]
+    - **Company Documents/** (11 items) [37.6 MB] — last modified 2025-08-08
+      - **Chase Robotics LLC/** (1 items) [110.7 KB] — last modified 2026-02-02
+        - Chase Robotics EIN Letter.pdf [110.7 KB]
+      - **Contracts/** (3 items) [3.2 MB] — last modified 2025-12-12
+        - **_Master Design Build Addendum/** (5 items) [421.1 KB] — last modified 2025-12-12
+        - **_Master Design-Build Contract/** (8 items) [887.1 KB] — last modified 2025-12-12
+        - **_Master Owner Contracts/** (3 items) [1.9 MB] — last modified 2025-12-12
+      - **GL Insurance/** (1 items) [3.3 MB] — last modified 2025-08-08
+        - Chase Group Construction LLC -- 25-26 GL Pol.pdf [3.3 MB]
+      - **Hold Point QC/** (1 items) [226.8 KB] — last modified 2025-09-24
+        - Hold Point Master Copy.pdf [226.8 KB]
+      - **MSA & WRO/** (9 items) [8.1 MB] — last modified 2025-08-28
+        - **Archive/** (5 items) [3.1 MB] — last modified 2026-02-25
+        - **Excuted MSAs/** (1 items) [284.7 KB] — last modified 2026-03-10
+        - **In-Progress MSAs/** (8 items) [1.8 MB] — last modified 2026-03-16
+        - **Master WRO Template - Subcontractor/** (0 items) — last modified 2026-01-13
+        - MSA - LAS 03.17.26 R3.docx [59.5 KB]
+        - MSA - LAS FIRE - Revised.pdf [311.4 KB]
+        - MSA Template 02.13.26 R3.docx [64.1 KB]
+        - SUBCONTRACTOR AGREEMENT Original.docx [28.9 KB]
+        - WRO Template 02.24.26 (Working).docx [2.5 MB]
+      - **Owner Contracts/** (1 items) [55.5 KB] — last modified 2025-11-04
+        - Master Small Project Contract 07.17.25.docx [55.5 KB]
+      - **PM Daily Checklist/** (1 items) [26.6 KB] — last modified 2026-01-14
+        - CHECKLIST PM Daily Routine 01.14.26.docx [26.6 KB]
+      - **RFIs/** (1 items) [53.7 KB] — last modified 2026-03-17
+        - RFI Template.xlsx [53.7 KB]
+      - **SOPs/** (2 items) [11.1 MB] — last modified 2025-08-28
+        - SOP of New Construction Sequence 08.28.25.xlsx [5.8 MB]
+        - SOP of New Construction Sequence 09.24.25 cml.xlsx [5.3 MB]
+      - Chase Group Construction Insurance Policy 2025-2026.pdf [10.6 MB]
+      - PPE Sign-Off Checklist.docx [760.2 KB]
+    - **Company License/** (3 items) [21.1 MB] — last modified 2025-12-05
+      - Chase Group Construction License 68642 Certificate.pdf [428.4 KB]
+      - LAL1 - Student Manual BW.pdf [20.1 MB]
+      - MG-License Application.pdf [588.2 KB]
+    - **DSH Planswift/** (3 items) [952.4 MB] — last modified 2026-02-11
+      - **Jobs/** (4 items) [952.4 MB] — last modified 2026-02-11
+        - **24-088/** (7 items) [211.0 MB] — last modified 2026-02-11
+        - **26/** (7 items) [193.3 MB] — last modified 2026-02-27
+        - **2602/** (7 items) [548.1 MB] — last modified 2026-02-23
+        - Data.xml [868 B]
+      - **Templates/** (1 items) [878 B] — last modified 2026-02-11
+        - Data.xml [878 B]
+      - Data.xml [422 B]
+    - **HSE/** (2 items) [8.1 MB] — last modified 2025-08-21
+      - PPE Rollout.pdf [541.0 KB]
+      - Re_   2905 Kaliste update.zip [7.6 MB]
+    - **Letterhead Template/** (1 items) [70.4 KB] — last modified 2025-07-09
+      - New CG Construction Blank Letterhead.docx [70.4 KB]
+    - **MISC/** (12 items) [395.6 MB] — last modified 2025-08-08
+      - **2024 LDC (Development Code)/** (4 items) [158.6 MB] — last modified 2025-06-06
+        - CM-1 Zoning Uses.docx [30.2 KB]
+        - CM-1 Zoning Uses.pdf [317.9 KB]
+        - Cover Page ldc-amended-november-2024.pdf [72.0 MB]
+        - ldc-amended-november-2024.pdf [86.2 MB]
+      - **Landmark/** (2 items) [88.1 KB] — last modified 2025-08-08
+        - Landmark Engineering Overages Spreadsheet.xlsx [48.1 KB]
+        - Landmark Engineering.xlsx [40.0 KB]
+      - **Misc Materials Cost Data/** (1 items) [68.5 KB] — last modified 2026-03-05
+        - Portland Cement Bulk.doc [68.5 KB]
+      - 1000010289.jpg [568.2 KB]
+      - Christmas 2025 List.xlsx [15.9 KB]
+      - Conditional Lien Waiver & Progress Payment Template.docx [133.8 KB]
+      - Contact 5.csv [214.5 KB]
+      - Drawing Log - FPK.xlsx [19.8 KB]
+      - Inventory List.xlsx [235.7 MB]
+      - Lime Sources.msg [165.5 KB]
+      - Resource Tracker.xlsx [45.4 KB]
+      - Unconditional Lien Waiver Template.docx [20.8 KB]
+    - **SmartSheets/** (14 items) [647.9 KB] — last modified 2025-08-20
+      - 2822 Bonin Rd. Schedule.pdf [126.4 KB]
+      - 2822 Bonin Rd. Schedule.xlsx [27.7 KB]
+      - Office Expenses Equipment Property.xlsx [18.9 KB]
+      - Office Expenses.pdf [93.1 KB]
+      - Simple Information Dashboard (1).xlsx [14.6 KB]
+      - Simple Information Dashboard (2).xlsx [14.6 KB]
+      - Simple Information Dashboard.pdf [83.3 KB]
+      - Simple Information Dashboard.xlsx [14.6 KB]
+      - Task List by Priority.xlsx [15.2 KB]
+      - Team To Do List (1).xlsx [29.7 KB]
+      - Team To Do List.pdf [94.8 KB]
+      - Team To Do List.xlsx [22.6 KB]
+      - Work with Suzanne.pdf [79.1 KB]
+      - Work with Suzanne.xlsx [13.4 KB]
+    - **THURSDAY OPS MEETINGS/** (9 items) [350.7 KB] — last modified 2025-06-10
+      - RAIL.xlsx [26.4 KB]
+      - Thursday Ops Meeting 02.05.26.xlsx [40.3 KB]
+      - Thursday Ops Meeting 02.19.26.pdf [23.2 KB]
+      - Thursday Ops Meeting 02.19.26.xlsx [33.7 KB]
+      - Thursday Ops Meeting 02.26.26.pdf [70.2 KB]
+      - Thursday Ops Meeting 03.12.26.pdf [24.4 KB]
+      - Thursday Ops Meeting.pdf [87.5 KB]
+      - Thursday Ops Mtg 02.05.26.csv [3.8 KB]
+      - Thursday Ops Mtg 02.05.26.pdf [41.4 KB]
+    - **WEEKLY PM MEETINGS/** (9 items) [385.2 KB] — last modified 2025-10-23
+      - 02.23.26.pdf [71.3 KB]
+      - Weekly PM Meeting 02.23.26.xlsx [33.6 KB]
+      - Weekly PM Meeting 10.13.25.xlsx [39.7 KB]
+      - Weekly PM Meeting 10.27.25.xlsx [39.5 KB]
+      - Weekly PM Meeting 11.03.25.xlsx [40.2 KB]
+      - Weekly PM Meeting 11.10.25.xlsx [40.2 KB]
+      - Weekly PM Meeting 11.17.25.xlsx [40.2 KB]
+      - Weekly PM Meeting 11.24.25.xlsx [40.2 KB]
+      - Weekly PM Meeting 12.01.25.xlsx [40.3 KB]
+    - Advanced Learning Academy Charges.xlsx [24.4 KB]
+    - Project Experience 10.22.25 (Working).xlsx [49.1 KB]
+    - Screenshot 2026-01-16 092322.png [7.7 KB]
+    - Temp Power Accounts.xlsx [88.9 KB]
+    - Temporary PO & SC Sheet.xlsx [80.0 KB]
+  - **CGC Knowledge Base/** (14 items) [33.7 MB] — last modified 2025-12-06
+    - **Temp/** (0 items) — last modified 2025-12-13
+    - Corrective Actions Management.docx [30.0 KB]
+    - Daily Task Management.docx [27.9 KB]
+    - Full SOP Index .docx [293.0 KB]
+    - How to think at Chase Group Construction.docx [111.8 KB]
+    - Job Photo Protocol Procore.pptx [41.7 KB]
+    - Lessons Learned .xlsx [41.4 KB]
+    - PM Daily Schedule & Strategy SOP.docx [2.2 MB]
+    - Project Admin Accounts Payable Lifecycle.pdf [72.3 KB]
+    - Project Admin Accounts Payable Lifecycle.pptx [142.2 KB]
+    - Protocol Packet CGC.pdf [25.5 MB]
+    - Protocols & strategy for clients during projects.docx [31.0 KB]
+    - SOP Index Start.docx [33.2 KB]
+    - SOP of New Construction Sequence 09.24.25 cml.xlsx [5.3 MB]
+- Time-Off-Request-Form.pdf [154.8 KB]
+
+---
+
+## CG Executive - Documents
+
+- **Executive Meeting/** (13 items) [672.9 KB] — last modified 2025-10-13
+  - Executive Meeting Agenda 01.07.26.docx [49.4 KB]
+  - Executive Meeting Agenda 02.04.26.docx [49.7 KB]
+  - Executive Meeting Agenda 09.03.25.docx [48.8 KB]
+  - Executive Meeting Agenda 09.10.25.docx [48.8 KB]
+  - Executive Meeting Agenda 09.17.25.docx [54.9 KB]
+  - Executive Meeting Agenda 09.24.25.docx [54.6 KB]
+  - Executive Meeting Agenda 10.01.25.docx [55.2 KB]
+  - Executive Meeting Agenda 10.08.25.docx [55.2 KB]
+  - Executive Meeting Agenda 10.15.25.docx [50.1 KB]
+  - Executive Meeting Agenda 10.22.25.docx [51.7 KB]
+  - Executive Meeting Agenda 10.29.25.docx [51.5 KB]
+  - Executive Meeting Agenda 11.19.25.docx [51.4 KB]
+  - Executive Meeting Agenda 12.03.25.docx [51.6 KB]
+- **HR/** (1 items) [715.6 KB] — last modified 2025-12-23
+  - **Offers/** (2 items) [715.6 KB] — last modified 2025-12-23
+    - Jamison T PM Offer 12.23.25.pdf [625.3 KB]
+    - Nick G. Offer Letter.docx [90.3 KB]
+- **IT/** (3 items) [14.8 MB] — last modified 2026-02-10
+  - **Bluebeam/** (2 items) [26.6 KB] — last modified 2026-02-10
+    - b2b_Invoicepage.pdf [7.0 KB]
+    - IT Licenses.xlsx [19.6 KB]
+  - **Procore Transfer/** (5 items) [503.1 KB] — last modified 2026-01-16
+    - **Transfer list/** (1 items) [19.6 KB] — last modified 2026-01-16
+      - Excel list.xlsx [19.6 KB]
+    - Screenshot 2026-01-16 095635 √.pdf [141.1 KB]
+    - Screenshot 2026-01-16 095635.png [147.6 KB]
+    - Screenshot 2026-01-16 095743 √.pdf [89.7 KB]
+    - Screenshot 2026-01-16 095743.png [105.2 KB]
+  - **Trimble/** (9 items) [14.3 MB] — last modified 2026-02-10
+    - **Implementation Docs/** (6 items) [2.2 MB] — last modified 2026-01-09
+      - Chase Group Construction, LLC_Spectrum BPI TC1 Trimble Bundled SOW (01-09-2026).pdf [369.1 KB]
+      - Create a Viewpoint Academy Account Using Trimble ID (3) (1).pdf [117.7 KB]
+      - Spectrum - Business Process Review Chase Group 1.doc [376.5 KB]
+      - Spectrum - Business Process Review Chase Group.doc [381.0 KB]
+      - Spectrum - Business Process Review.doc [377.5 KB]
+      - Spectrum - SDX Setup Guide.pdf [584.1 KB]
+    - **ProjectSight/** (1 items) [21.8 KB] — last modified 2026-03-18
+      - Upcoming Mtgs..docx [21.8 KB]
+    - **Spectrum/** (1 items) [3.2 MB] — last modified 2026-03-18
+      - Chase Group Construction TC1 (Spectrum_ProjectSight_Traqspera) Kickoff.pptx.pdf [3.2 MB]
+    - Case Creation_ Vista_Spectrum __ ProjectSight.pdf [320.1 KB]
+    - Chase Group TC1 Spectrum - Customer Copy.xlsx [151.6 KB]
+    - Meeting 01.23.26.png [37.5 KB]
+    - Signed SOW.pdf [7.6 MB]
+    - Spectrum - Business Process Review Chase Group.doc [381.5 KB]
+    - Trimble Quote Q-707972 - Agreement for Your Signature_encrypted_.pdf [464.1 KB]
+- **Knowledge Base/** (1 items) [33.8 MB] — last modified 2025-12-06
+  - **CGC Knowledge Base/** (17 items) [33.8 MB] — last modified 2025-12-23
+    - **Estimating/** (1 items) [22.3 KB] — last modified 2026-03-02
+      - LLM prompt Estimating.docx [22.3 KB]
+    - **Temp/** (0 items) — last modified 2025-12-13
+    - CG Copy Only Client duty Building & Design-Build Process .docx [43.3 KB]
+    - Client duty Building & Design-Build Process .docx [42.8 KB]
+    - Corrective Actions Management.docx [30.3 KB]
+    - Daily Task Management.docx [28.1 KB]
+    - Full SOP Index .docx [293.0 KB]
+    - How to think at Chase Group Construction.docx [126.9 KB]
+    - How to think at Chase Group Construction.pdf [127.4 KB]
+    - Job Photo Protocol Procore.pptx [41.7 KB]
+    - Lessons Learned .xlsx [41.4 KB]
+    - PM Daily Schedule & Strategy SOP.docx [2.2 MB]
+    - Protocol Packet CGC.pdf [25.5 MB]
+    - Protocols & strategy for clients during projects.docx [28.9 KB]
+    - SOP Index Start.docx [37.4 KB]
+    - SOP of New Construction Sequence 09.24.25 cml.xlsx [5.3 MB]
+    - Superintendent Duty Update 12.23.25.docx [28.4 KB]
+- **Master Sub & Vendor Agreements/** (6 items) [263.3 KB] — last modified 2026-01-13
+  - Aligned_Master_Professional_Services_MSA.docx [33.4 KB]
+  - C141-2014-Working draft- Offline editing Consultant.docx [61.1 KB]
+  - Full_Length_Master_Professional_Services_MSA.docx [47.1 KB]
+  - Master Professional Services Subconsultant Agreement.docx [24.6 KB]
+  - MSA Template 07.09.25 Copy for Consultants.docx [63.7 KB]
+  - Professional_Services_Task_Order_Template.docx [33.4 KB]
+- **Op Agreements/** (1 items) [129.2 KB] — last modified 2025-10-30
+  - East Farrel Development Operating Agreement 01 draft.docx [129.2 KB]
+- **Opportunities/** (2 items) [295.0 KB] — last modified 2025-10-14
+  - **Briarwood/** (4 items) [263.3 KB] — last modified 2025-10-24
+    - **Misc/** (1 items) [121.8 KB] — last modified 2025-11-26
+      - MCLAIN COMPANIES BTR CONSULTING PROGRAM.pdf [121.8 KB]
+    - Briarwood BTR Eval 10.09.25.xlsx [86.3 KB]
+    - Chase Construction Co - Unit Breakdown.docx [27.1 KB]
+    - Palmer Parc Investor Pitch.docx [28.2 KB]
+  - **Garcia/** (1 items) [31.7 KB] — last modified 2025-10-24
+    - Garcia Pro Forma.xlsx [31.7 KB]
+- **Overview All Dev Deals/** (1 items) [82.8 KB] — last modified 2025-12-07
+  - **All Deals/** (2 items) [82.8 KB] — last modified 2025-12-07
+    - All Deals Eval 5.18.2025.xlsx [65.7 KB]
+    - Deal Sheet Outside Investment 5.17.2025.xlsx [17.1 KB]
+- **Real Estate Development/** (4 items) [1.4 GB] — last modified 2025-12-07
+  - **Marketing/** (1 items) [1.9 MB] — last modified 2026-01-13
+    - **Palmer Parc & Briarwood/** (1 items) [1.9 MB] — last modified 2026-01-13
+      - google sat view screenshot.png [1.9 MB]
+  - **Master Folder/** (8 items) [4.4 MB] — last modified 2025-12-07
+    - **00_ADMINISTRATION/** (4 items) — last modified 2025-12-07
+      - **Branding_Marketing_Assets/** (0 items) — last modified 2025-12-07
+      - **Company_Policies_Procedures/** (0 items) — last modified 2025-12-07
+      - **Legal_Master_Agreements/** (5 items) — last modified 2025-12-07
+        - **Development_Agreements/** (0 items) — last modified 2025-12-07
+        - **Lease_Templates/** (0 items) — last modified 2025-12-07
+        - **NDA/** (0 items) — last modified 2025-12-07
+        - **Purchase_Agreements/** (0 items) — last modified 2025-12-07
+        - **Vendor_Contracts/** (0 items) — last modified 2025-12-07
+      - **Templates_Forms/** (0 items) — last modified 2025-12-07
+    - **01_ACQUISITIONS/** (7 items) — last modified 2025-12-07
+      - **Closing_Documents/** (0 items) — last modified 2025-12-07
+      - **Deal_Pipeline/** (3 items) — last modified 2025-12-07
+        - **Active_Deals/** (0 items) — last modified 2025-12-07
+        - **Dead_Deals/** (0 items) — last modified 2025-12-07
+        - **On_Hold/** (0 items) — last modified 2025-12-07
+      - **Due_Diligence/** (5 items) — last modified 2025-12-07
+        - **Soil_Geotech/** (0 items) — last modified 2025-12-07
+        - **Title_Commitments/** (0 items) — last modified 2025-12-07
+        - **Traffic_Studies/** (0 items) — last modified 2025-12-07
+        - **Utilities_Availability/** (0 items) — last modified 2025-12-07
+        - **Zoning_Verification/** (0 items) — last modified 2025-12-07
+      - **Financial_Models/** (0 items) — last modified 2025-12-07
+      - **Letters_of_Intent/** (0 items) — last modified 2025-12-07
+      - **Market_Studies/** (0 items) — last modified 2025-12-07
+      - **Site_Evaluations/** (4 items) — last modified 2025-12-07
+        - **Environmental_Reports/** (0 items) — last modified 2025-12-07
+        - **Flood_Wetlands_Data/** (0 items) — last modified 2025-12-07
+        - **Site_Photos/** (0 items) — last modified 2025-12-07
+        - **Surveys/** (0 items) — last modified 2025-12-07
+    - **02_PLANNING_DESIGN/** (6 items) — last modified 2025-12-07
+      - **Architectural/** (0 items) — last modified 2025-12-07
+      - **Civil_Engineering/** (4 items) — last modified 2025-12-07
+        - **Grading_Drainage/** (0 items) — last modified 2025-12-07
+        - **Site_Plans/** (0 items) — last modified 2025-12-07
+        - **Traffic_Access/** (0 items) — last modified 2025-12-07
+        - **Utilities/** (0 items) — last modified 2025-12-07
+      - **Landscape/** (0 items) — last modified 2025-12-07
+      - **Master_Planning/** (0 items) — last modified 2025-12-07
+      - **Regulatory_Submittals/** (4 items) — last modified 2025-12-07
+        - **Agency_Correspondence/** (0 items) — last modified 2025-12-07
+        - **Permit_Applications/** (0 items) — last modified 2025-12-07
+        - **Planning_Commission/** (0 items) — last modified 2025-12-07
+        - **Zoning_Applications/** (0 items) — last modified 2025-12-07
+      - **Renderings_Visuals/** (0 items) — last modified 2025-12-07
+    - **03_FINANCE_FEASIBILITY/** (6 items) [4.2 MB] — last modified 2025-12-07
+      - **Appraisals/** (0 items) — last modified 2025-12-07
+      - **Bank_Communications/** (0 items) — last modified 2025-12-07
+      - **Capital_Stack_Documents/** (0 items) — last modified 2025-12-07
+      - **Cost_Estimates/** (0 items) — last modified 2025-12-07
+      - **Investor_Presentations/** (18 items) [3.7 MB] — last modified 2025-12-07
+        - **Promissory Note & Loan Agreement/** (1 items) [30.9 KB] — last modified 2026-02-12
+        - Bridge Loan Opportunity 02.09.26.docx [28.8 KB]
+        - Bridge Loan Opportunity CGH.docx [28.7 KB]
+        - Bridge Loan Opportunity CRE.pdf [183.4 KB]
+        - Commercial Development Investment 0221.pdf [1.4 MB]
+        - Commercial Development Investment Op.docx [25.7 KB]
+        - Commercial Development Investment Op.pdf [187.7 KB]
+        - Investment memo.docx [82.2 KB]
+        - PALMER PARC Bridge Loan Op 02.17.26.docx [87.6 KB]
+        - Real Estate Investment Portfolio Opportunities.docx [24.7 KB]
+        - Site Plan 800 E Farrel Daycare Civil Set (10-30-2025).pdf [466.3 KB]
+        - Sponsor Bridge Loan Opportunity.docx [56.1 KB]
+        - Sponsor Bridge Loan Opportunity.pdf [145.4 KB]
+        - Tax Assessor 168 Mimosa Place.pdf [437.1 KB]
+        - Tax Assessor 538 L Provost Rd.pdf [417.5 KB]
+        - Washington State Bank Memo.docx [34.4 KB]
+        - Washington State Bank Memo.pdf [95.4 KB]
+        - Washington_State_Bank_Executive_Credit_Summary.docx [34.3 KB]
+      - **Proformas/** (9 items) [510.9 KB] — last modified 2025-12-07
+        - 2905 Kaliste Business Plan Rev.docx [36.9 KB]
+        - 2905 Kaliste Business Plan.docx [36.0 KB]
+        - As-Is Property Equity.xlsx [17.3 KB]
+        - Kaliste_Fitness_District_Executive_Business_Plan_UPDATED.docx [35.4 KB]
+        - Land Dev Model - Palmer Parc.xlsx [296.5 KB]
+        - Property Values as is BB.xlsx [23.9 KB]
+        - Property Values as is CML2.xlsx [24.0 KB]
+        - Property Values as is.xlsx [22.4 KB]
+        - Stabilized Property Equity Positions.xlsx [18.4 KB]
+    - **04_PROJECTS/** (5 items) [201.6 KB] — last modified 2025-12-07
+      - **BTR/** (0 items) — last modified 2025-12-07
+      - **COMMERCIAL/** (1 items) [201.6 KB] — last modified 2025-12-07
+        - **Palmer Parc/** (2 items) [201.6 KB] — last modified 2026-01-28
+      - **INDUSTRIAL/** (0 items) — last modified 2025-12-07
+      - **MIXED_USE/** (0 items) — last modified 2025-12-07
+      - **RESIDENTIAL/** (0 items) — last modified 2025-12-07
+    - **05_CONSTRUCTION/** (9 items) — last modified 2025-12-07
+      - **Bid_Packages/** (0 items) — last modified 2025-12-07
+      - **Change_Orders/** (0 items) — last modified 2025-12-07
+      - **Closeout_Documents/** (0 items) — last modified 2025-12-07
+      - **Construction_Drawings/** (0 items) — last modified 2025-12-07
+      - **Contractor_RFPs/** (0 items) — last modified 2025-12-07
+      - **Inspections/** (0 items) — last modified 2025-12-07
+      - **Permits/** (0 items) — last modified 2025-12-07
+      - **RFIs/** (0 items) — last modified 2025-12-07
+      - **Schedules/** (0 items) — last modified 2025-12-07
+    - **06_LEASING_SALES/** (5 items) — last modified 2025-12-07
+      - **Broker_Packages/** (0 items) — last modified 2025-12-07
+      - **Lease_Agreements/** (0 items) — last modified 2025-12-07
+      - **Marketing_Materials/** (0 items) — last modified 2025-12-07
+      - **Purchase_Agreements/** (0 items) — last modified 2025-12-07
+      - **Tenant_Communications/** (0 items) — last modified 2025-12-07
+    - **07_PROPERTY_MANAGEMENT/** (5 items) — last modified 2025-12-07
+      - **CAM_Operating_Expenses/** (0 items) — last modified 2025-12-07
+      - **Compliance_Documents/** (0 items) — last modified 2025-12-07
+      - **Insurance/** (0 items) — last modified 2025-12-07
+      - **Maintenance_Logs/** (0 items) — last modified 2025-12-07
+      - **Tenant_Files/** (0 items) — last modified 2025-12-07
+  - **Pitch Decks/** (23 items) [92.7 MB] — last modified 2025-12-11
+    - 2905 Kaliste Saloom Rd Promo Packet Public.pptx [12.1 MB]
+    - 2905 Kaliste Saloom Rd Promo Packet.pdf [1.9 MB]
+    - 2905 Kaliste Saloom Rd Promo Packet.pptx [12.2 MB]
+    - 800 E Farrel Promo Packet.pdf [2.5 MB]
+    - 800 E Farrel Promo Packet.pptx [13.5 MB]
+    - Capital Partner Option.docx [25.5 KB]
+    - Palmer Parc Promo Packet Page 001.png [3.0 MB]
+    - Palmer Parc Promo Packet Page 002.png [3.4 MB]
+    - Palmer Parc Promo Packet Page 003.png [550.6 KB]
+    - Palmer Parc Promo Packet Page 004.png [1.1 MB]
+    - Palmer Parc Promo Packet Page 005.png [3.1 MB]
+    - Palmer Parc Promo Packet Page 006.png [645.7 KB]
+    - Palmer Parc Promo Packet Page 007.png [1.2 MB]
+    - Palmer Parc Promo Packet Page 008.png [1.3 MB]
+    - Palmer Parc Promo Packet Page 009.png [861.5 KB]
+    - Palmer Parc Promo Packet Page 010.png [1.2 MB]
+    - Palmer Parc Promo Packet Page 011.png [532.5 KB]
+    - Palmer Parc Promo Packet Page 012.png [925.1 KB]
+    - Palmer Parc Promo Packet Page 013.png [461.7 KB]
+    - Palmer Parc Promo Packet Page 014.png [272.8 KB]
+    - Palmer Parc Promo Packet.pdf [4.0 MB]
+    - Palmer Parc Promo Packet.pptx [28.1 MB]
+    - Palmer Parc Teaser.docx [25.9 KB]
+  - **Prior Chase Files/** (1 items) [1.3 GB] — last modified 2025-12-07
+    - **Land Development/** (30 items) [1.3 GB] — last modified 2025-12-07
+      - **_Development and Investment/** (6 items) [288.0 MB] — last modified 2025-12-07
+        - **Blackcard/** (1 items) [7.9 MB] — last modified 2025-12-07
+        - **Flood Maps/** (2 items) [265.7 MB] — last modified 2025-12-07
+        - **High end office Flex Texas/** (1 items) — last modified 2025-12-07
+        - **New folder/** (0 items) — last modified 2025-12-07
+        - **Shotgun Model/** (1 items) [14.2 MB] — last modified 2025-12-07
+        - **Warehouse Office/** (1 items) [238.3 KB] — last modified 2025-12-07
+      - **Blackhouse Development/** (7 items) [89.0 MB] — last modified 2025-12-07
+        - **Layout and Design ideas/** (7 items) [45.4 MB] — last modified 2025-12-07
+        - **Pics/** (56 items) [40.4 MB] — last modified 2025-12-07
+        - 233-2339006_white-left-arrow-png-white-arrow-png-left.png [109.0 KB]
+        - 73-731704_marker-red-pin-icon-png-transparent-png.png [139.5 KB]
+        - location-icon-png-23.png [97.2 KB]
+        - red-location-icon-map-png-clip-art-11563267716immuffqihc.png [180.5 KB]
+        - Sat view 2.PNG [2.8 MB]
+      - **City of Scott Ordiances/** (2 items) [66.8 KB] — last modified 2025-12-07
+        - ARTICLE_IV.___BUILDING_SETBACKS.docx [37.2 KB]
+        - Sec._8_83.___Restrictions..docx [29.5 KB]
+      - **City Planning Commission/** (1 items) [91.3 KB] — last modified 2025-12-07
+        - 2025-city-planning-commission-schedule.pdf [91.3 KB]
+      - **Cold Dark Shell Reqs/** (1 items) [29.4 KB] — last modified 2025-12-07
+        - K7 - Cold Dark Shell Exhibit-200a.docx [29.4 KB]
+      - **Cottage BTR Drawings Examples/** (3 items) [15.9 MB] — last modified 2025-12-07
+        - Cottage BTR Leasing Office Common Area.pdf [13.6 MB]
+        - Cottage Design Drawing BTR.pdf [1.1 MB]
+        - Cottage Takeoff Set BTR Basis Model.pdf [1.2 MB]
+      - **Deals/** (3 items) [146.6 KB] — last modified 2025-12-07
+        - **2905 E Kaliste Saloom Rd/** (1 items) [54.5 KB] — last modified 2025-12-07
+        - **800 E Farrel/** (0 items) — last modified 2025-12-07
+        - **All Deals/** (2 items) [92.1 KB] — last modified 2025-12-07
+      - **Financial Analysis Models/** (2 items) [1.6 MB] — last modified 2025-12-07
+        - Land Development Model - Hoyt Marcon.xlsx [295.3 KB]
+        - Land-Development-Model_v0.752.xlsb [1.4 MB]
+      - **i10 Louisiana Ave property/** (2 items) [28.5 MB] — last modified 2025-12-07
+        - **i10 Louisiana Ave property/** (13 items) [15.7 MB] — last modified 2025-12-07
+        - i10 Louisiana Ave property.zip [12.8 MB]
+      - **Lafayette/** (1 items) [485.9 KB] — last modified 2025-12-07
+        - **Commercial Retail +/** (4 items) [485.9 KB] — last modified 2025-12-07
+      - **Land Development checklists/** (1 items) [2.1 MB] — last modified 2025-12-07
+        - checklist.pdf [2.1 MB]
+      - **Land Development Project Research/** (5 items) [15.6 MB] — last modified 2025-12-07
+        - **Concepts/** (1 items) [4.7 MB] — last modified 2025-12-07
+        - Johnston St Development Ema land.png [2.9 MB]
+        - Lormand GIS map w parcel number.png [2.4 MB]
+        - Lormand Rd approx plat area.pdf [2.6 MB]
+        - Lormand Rd.png [2.9 MB]
+      - **Map Icons & Logos/** (2 items) [12.6 KB] — last modified 2025-12-07
+        - **Other company logos/** (1 items) [12.6 KB] — last modified 2025-12-07
+        - **Road Icons & Symbols/** (0 items) — last modified 2025-12-07
+      - **New folder/** (0 items) — last modified 2025-12-07
+      - **Parish Planning commission/** (1 items) [12.8 KB] — last modified 2025-12-07
+        - 2025-parish-planning-commission-schedule.pdf [12.8 KB]
+      - **Site Selection/** (5 items) [644.1 MB] — last modified 2025-12-07
+        - **Camellia Blvd/** (7 items) [613.3 MB] — last modified 2025-12-07
+        - **Duhon & Johnston St/** (4 items) [494.9 KB] — last modified 2025-12-07
+        - **Fat Pats/** (3 items) [17.3 MB] — last modified 2025-12-07
+        - **Pinhook raw land/** (5 items) [440.2 KB] — last modified 2025-12-07
+        - **Settlers Trace/** (2 items) [12.6 MB] — last modified 2025-12-07
+      - **Sugarmill Pond Restrictions/** (9 items) [115.4 MB] — last modified 2025-12-07
+        - **Permitting & Development Fees 2024/** (2 items) [1.9 MB] — last modified 2025-12-07
+        - 3rd Supp Decl and Amend (2007-08-06) (recorded).pdf [221.0 KB]
+        - COVENANTS - SMP - Original.pdf [6.8 MB]
+        - Full set SMP_Commercial Design Code.pdf [50.4 MB]
+        - Full set SMP_Commercial Design Code.pdf size.pdf [5.7 MB]
+        - Pages from COMMERCIAL CODE_Page_1.pdf [693.4 KB]
+        - SMP_Commercial Design Code.pdf [47.9 MB]
+        - SMP_Commercial Design Code_Pg 2.pdf [852.1 KB]
+        - SMP_Commercial Landscape Code.pdf [1.0 MB]
+      - **TestFit/** (2 items) [79.2 MB] — last modified 2025-12-07
+        - **Development Sites/** (26 items) [79.0 MB] — last modified 2025-12-07
+        - **License/** (1 items) [167.5 KB] — last modified 2025-12-07
+      - **Typical Road Design/** (2 items) [396.8 KB] — last modified 2025-12-07
+        - 002a typical section.pdf [189.5 KB]
+        - 002b typical section.pdf [207.3 KB]
+      - **Zoning Commission Meetings/** (1 items) [97.4 KB] — last modified 2025-12-07
+        - 2025-zoning-commission-meetings.pdf [97.4 KB]
+      - Bailey Grove Development.pdf [2.1 MB]
+      - Floodmap verot and 92.JPG [216.1 KB]
+      - Land development Flow Chart responsibilities.pptx [52.0 KB]
+      - Land Development Model - Hoyt Marcon.xlsx [292.7 KB]
+      - Letter requesting Information on Land Verot .pdf [473.0 KB]
+      - re Letter requesting Information on Land Verot .pdf [473.0 KB]
+      - Verot Hwy 92 corner raw land Eval.JPG [276.3 KB]
+      - Verot Hwy 92 corner raw land Evaluation Chase Group.pdf [281.5 KB]
+      - Verot Hwy 92 corner raw land.JPG [272.5 KB]
+      - Verot Hwy 92 corner raw land.pdf [255.6 KB]
+- **SOPs/** (1 items) — last modified 2026-02-19
+  - **Work in Progress Files/** (0 items) — last modified 2026-02-19
+- 2905 Kaliste Bridge 1.docx [24.1 KB]
+- 2905 Kaliste Bridge 2.docx [26.8 KB]
+- Project Experience 10.22.25 (Working).xlsx [40.5 KB]
+- Rev WIP CG Construction 1.28.25.docx [2.4 MB]
+- Sewage Treatment Letter.pdf [380.2 KB]
+
+---
+
+## CGC Operations Team - Documents
+
+- **110 Production/** (0 items) — last modified 2026-01-14
+- **800 E. Farrel/** (43 items) [1.3 GB] — last modified 2026-02-11
+  - **Archive/** (93 items) [358.1 MB] — last modified 2026-03-04
+    - 1864bbb4-3db6-445b-9f2c-5ed29969dc35.jpg [256.0 KB]
+    - 20260210_110246.jpg [5.0 MB]
+    - 20260210_110249.jpg [2.0 MB]
+    - 20260210_110250.jpg [2.1 MB]
+    - 20260210_110253.jpg [2.2 MB]
+    - 20260210_110256.jpg [2.4 MB]
+    - 20260210_110258.jpg [2.2 MB]
+    - 20260210_110300.jpg [2.0 MB]
+    - 20260210_113747.jpg [2.5 MB]
+    - 20260210_113750.jpg [2.3 MB]
+    - 20260210_113754.jpg [2.0 MB]
+    - 20260210_113755.jpg [1.9 MB]
+    - 20260210_113757.jpg [1.8 MB]
+    - 20260210_113800.jpg [2.0 MB]
+    - 20260210_113802.jpg [1.9 MB]
+    - 20260212_164047.jpg [4.5 MB]
+    - 20260212_164049.jpg [4.9 MB]
+    - 20260212_164052.jpg [5.0 MB]
+    - 20260212_164056.jpg [5.6 MB]
+    - 20260212_164058.jpg [4.8 MB]
+    - 20260212_164101.jpg [4.6 MB]
+    - 20260212_164104.jpg [2.0 MB]
+    - 20260212_164106.jpg [1.9 MB]
+    - 20260212_164108.jpg [1.7 MB]
+    - 20260212_164110.jpg [1.9 MB]
+    - 20260212_164115.jpg [1.7 MB]
+    - 20260224_074613.jpg [1.5 MB]
+    - 20260224_074615.jpg [1.4 MB]
+    - 20260224_074617.jpg [1.6 MB]
+    - 20260224_074625.jpg [1.5 MB]
+    - 20260224_074627.jpg [1.4 MB]
+    - 20260224_074628.jpg [1.5 MB]
+    - 20260224_074640.jpg [1.6 MB]
+    - 20260224_083211.jpg [4.9 MB]
+    - 20260224_083213.jpg [4.8 MB]
+    - 20260224_084118.jpg [2.6 MB]
+    - 20260224_091014.jpg [6.3 MB]
+    - 20260224_091027.jpg [6.1 MB]
+    - 20260224_091031.jpg [5.7 MB]
+    - 20260224_091147.jpg [3.1 MB]
+    - 20260224_091149.jpg [5.3 MB]
+    - 20260224_091557.jpg [5.9 MB]
+    - 20260224_093449.jpg [5.4 MB]
+    - 20260224_094751.jpg [3.3 MB]
+    - 20260224_094753.jpg [3.3 MB]
+    - 20260224_094808.jpg [3.3 MB]
+    - 20260224_103201.jpg [5.6 MB]
+    - 20260224_103203.jpg [5.4 MB]
+    - 20260224_103207.jpg [2.1 MB]
+    - 20260224_103210.jpg [2.3 MB]
+    - 20260224_103213.jpg [2.1 MB]
+    - 20260224_123354.jpg [5.0 MB]
+    - 20260224_123359.jpg [6.0 MB]
+    - 20260224_123442.jpg [5.3 MB]
+    - 20260224_123444.jpg [5.1 MB]
+    - 20260224_154325.jpg [6.3 MB]
+    - 20260224_154328.jpg [5.6 MB]
+    - 20260224_154330.jpg [5.5 MB]
+    - 20260224_154332.jpg [6.7 MB]
+    - 20260224_154335.jpg [4.5 MB]
+    - 20260224_154348.jpg [4.8 MB]
+    - 20260224_154351.jpg [5.7 MB]
+    - 20260224_162615.jpg [5.0 MB]
+    - 20260224_162618.jpg [5.6 MB]
+    - 20260224_162620.jpg [4.6 MB]
+    - 20260224_162623.jpg [5.3 MB]
+    - 20260224_162626.jpg [7.4 MB]
+    - 20260224_162628.jpg [5.8 MB]
+    - 20260225_111044.jpg [5.9 MB]
+    - 20260225_111046.jpg [5.4 MB]
+    - 20260225_111050.jpg [5.7 MB]
+    - 20260225_111053.jpg [5.1 MB]
+    - 20260225_111056.jpg [5.2 MB]
+    - 20260225_114227.jpg [5.3 MB]
+    - 20260225_114229.jpg [5.7 MB]
+    - 20260225_114231.jpg [6.0 MB]
+    - 20260225_114232.jpg [6.0 MB]
+    - 20260225_114234.jpg [5.7 MB]
+    - 20260225_114253.jpg [6.8 MB]
+    - 20260225_114313.jpg [7.2 MB]
+    - 20260226_091622.jpg [3.5 MB]
+    - 20260226_091624.jpg [3.5 MB]
+    - 20260226_091631.jpg [3.5 MB]
+    - 20260226_091640.jpg [3.5 MB]
+    - 20260226_091643.jpg [3.6 MB]
+    - 20260226_091651.jpg [3.3 MB]
+    - 20260227_074141.jpg [5.6 MB]
+    - 20260227_074149.jpg [2.0 MB]
+    - 20260227_074152.jpg [2.0 MB]
+    - 20260227_074156.jpg [1.8 MB]
+    - 20260227_074200.jpg [1.9 MB]
+    - 54ed0ef6-612f-48b0-a78f-15d84900d414.jpg [275.3 KB]
+    - 6ebb4910-2161-4e06-9d35-779ea83ed2a7.jpg [453.1 KB]
+  - **New Photos/** (357 items) [939.8 MB] — last modified 2026-03-04
+    - 20260123_195001451_iOS.heic [4.5 MB]
+    - 20260216_194346719_iOS.heic [2.4 MB]
+    - 20260216_194349423_iOS.heic [2.2 MB]
+    - 20260216_194354947_iOS.heic [2.3 MB]
+    - 20260216_194356940_iOS.heic [1.6 MB]
+    - 20260216_194359316_iOS.heic [2.1 MB]
+    - 20260219_023645509_iOS.heic [2.5 MB]
+    - 20260219_185635644_iOS.heic [1.5 MB]
+    - 20260219_185637818_iOS.heic [1.4 MB]
+    - 20260219_185639242_iOS.heic [1.4 MB]
+    - 20260219_185644986_iOS.heic [1.2 MB]
+    - 20260219_185654879_iOS.heic [1.2 MB]
+    - 20260219_185657066_iOS.heic [1.4 MB]
+    - 20260219_185704006_iOS.heic [2.2 MB]
+    - 20260219_185705381_iOS.heic [2.2 MB]
+    - 20260219_185708123_iOS.heic [1.9 MB]
+    - 20260219_185709362_iOS.heic [1.3 MB]
+    - 20260219_185716293_iOS.heic [1.2 MB]
+    - 20260219_185717626_iOS.heic [1.3 MB]
+    - 20260219_185723709_iOS.heic [1.4 MB]
+    - 20260219_185728642_iOS.heic [1.6 MB]
+    - 20260219_185731524_iOS.heic [994.6 KB]
+    - 20260219_185739008_iOS.heic [1.5 MB]
+    - 20260219_185742363_iOS.heic [1.5 MB]
+    - 20260219_185827481_iOS.heic [1.9 MB]
+    - 20260219_185831234_iOS.heic [2.2 MB]
+    - 20260225_163704951_iOS.heic [2.1 MB]
+    - 20260225_163706761_iOS.heic [2.1 MB]
+    - 20260227_122039112_iOS.heic [1.0 MB]
+    - 20260227_122040381_iOS.heic [1.1 MB]
+    - 20260227_122042477_iOS.heic [1.0 MB]
+    - 20260227_122057859_iOS.heic [1.1 MB]
+    - 20260227_122101280_iOS.heic [1.1 MB]
+    - 20260227_195112801_iOS.heic [2.6 MB]
+    - 20260227_195114274_iOS.heic [2.6 MB]
+    - 20260227_195116660_iOS.heic [2.8 MB]
+    - 20260227_195118085_iOS.heic [2.6 MB]
+    - 20260227_195123249_iOS.heic [2.8 MB]
+    - 20260227_195131084_iOS.heic [3.1 MB]
+    - 20260227_195136387_iOS.heic [3.0 MB]
+    - 20260227_195140235_iOS.heic [4.7 MB]
+    - 20260227_195141576_iOS.heic [4.3 MB]
+    - 20260227_195503408_iOS.heic [2.8 MB]
+    - 20260227_195513433_iOS.heic [3.4 MB]
+    - 20260227_195517916_iOS.heic [3.0 MB]
+    - 20260227_195518902_iOS.heic [2.9 MB]
+    - 20260227_195526657_iOS.heic [2.8 MB]
+    - 20260227_195527608_iOS.heic [2.7 MB]
+    - 20260227_195528820_iOS.heic [3.0 MB]
+    - 20260227_195530173_iOS.heic [2.8 MB]
+    - 20260227_195541434_iOS.heic [3.3 MB]
+    - 20260227_195542901_iOS.heic [3.4 MB]
+    - 20260227_195545292_iOS.heic [4.1 MB]
+    - 20260227_195551128_iOS.heic [3.6 MB]
+    - 20260227_195553252_iOS.heic [3.1 MB]
+    - 20260227_195555172_iOS.heic [3.6 MB]
+    - 20260227_195557734_iOS.heic [2.8 MB]
+    - 20260227_195558745_iOS.heic [3.0 MB]
+    - 20260227_195601273_iOS.heic [2.5 MB]
+    - 20260227_195602948_iOS.heic [2.5 MB]
+    - 20260227_195612507_iOS 1.heic [3.5 MB]
+    - 20260227_195612507_iOS.heic [3.5 MB]
+    - 20260227_195615179_iOS 1.heic [3.3 MB]
+    - 20260227_195615179_iOS.heic [3.3 MB]
+    - 20260227_195616802_iOS.heic [3.0 MB]
+    - 20260228_195249424_iOS.heic [4.3 MB]
+    - 20260228_195251332_iOS.heic [4.5 MB]
+    - 20260228_195256735_iOS.heic [4.1 MB]
+    - 20260228_195259265_iOS.heic [4.6 MB]
+    - 20260301_002859761_iOS.heic [1.9 MB]
+    - 20260301_002906610_iOS.heic [1.7 MB]
+    - 20260301_002912407_iOS 1.heic [1.3 MB]
+    - 20260301_002912407_iOS.heic [1.3 MB]
+    - 20260301_002918028_iOS.heic [2.2 MB]
+    - 20260301_002919571_iOS.heic [1.9 MB]
+    - 20260301_002921039_iOS.heic [1.9 MB]
+    - 20260301_002923689_iOS.heic [2.1 MB]
+    - 20260301_002935361_iOS.heic [745.9 KB]
+    - 20260301_002936676_iOS.heic [769.6 KB]
+    - 20260301_002946017_iOS.heic [1.9 MB]
+    - 20260301_002949769_iOS.heic [1.9 MB]
+    - 20260301_002956811_iOS.heic [1.1 MB]
+    - 20260301_141401502_iOS.heic [4.4 MB]
+    - 20260301_141402984_iOS.heic [2.4 MB]
+    - 20260301_141404629_iOS.heic [2.5 MB]
+    - 20260301_201852447_iOS.heic [2.6 MB]
+    - 20260301_201855314_iOS.heic [4.7 MB]
+    - 20260301_201857096_iOS.heic [4.8 MB]
+    - 20260301_201900687_iOS.heic [5.2 MB]
+    - 20260301_201910437_iOS.heic [5.5 MB]
+    - 20260302_132322324_iOS.heic [3.6 MB]
+    - 20260302_132429396_iOS.heic [2.9 MB]
+    - 20260302_132435289_iOS.heic [3.0 MB]
+    - 20260302_163601124_iOS.heic [5.1 MB]
+    - 20260302_163602622_iOS.heic [4.7 MB]
+    - 20260302_170932681_iOS.heic [5.7 MB]
+    - 20260302_170933535_iOS.heic [5.2 MB]
+    - 20260302_170934906_iOS.heic [4.3 MB]
+    - 20260302_170943519_iOS.heic [4.2 MB]
+    - 20260302_170944958_iOS.heic [4.7 MB]
+    - 20260302_170947676_iOS.heic [4.5 MB]
+    - 20260302_170949483_iOS.heic [2.6 MB]
+    - 20260302_171104707_iOS.heic [1.5 MB]
+    - 20260302_171109761_iOS.heic [1.4 MB]
+    - 20260302_171112756_iOS.heic [1.4 MB]
+    - 20260302_171124191_iOS.heic [1.2 MB]
+    - 20260302_171142856_iOS.heic [1.4 MB]
+    - 20260302_171144418_iOS.heic [1.4 MB]
+    - 20260302_171150124_iOS.heic [1.2 MB]
+    - 20260302_171200806_iOS.heic [1.9 MB]
+    - 20260302_171211433_iOS.heic [1.2 MB]
+    - 20260302_171238194_iOS.heic [1.9 MB]
+    - 20260302_171239738_iOS.heic [1.8 MB]
+    - 20260302_171245432_iOS.heic [1.1 MB]
+    - 20260302_171248026_iOS.heic [2.0 MB]
+    - 20260302_171251100_iOS.heic [1.7 MB]
+    - 20260302_171304560_iOS.heic [2.0 MB]
+    - 20260302_171313120_iOS.heic [1.8 MB]
+    - 20260302_171349228_iOS.heic [1.1 MB]
+    - 20260302_171350800_iOS.heic [1.5 MB]
+    - 20260302_171354382_iOS.heic [1.3 MB]
+    - 20260302_171357186_iOS.heic [1.0 MB]
+    - 20260302_171400989_iOS.heic [969.2 KB]
+    - 20260302_171402385_iOS.heic [1.3 MB]
+    - 20260302_171404020_iOS.heic [1.3 MB]
+    - 20260302_171411660_iOS.heic [1.1 MB]
+    - 20260302_174545000_iOS.png [585.0 KB]
+    - 20260302_190159007_iOS.heic [5.7 MB]
+    - 20260302_190206739_iOS.heic [6.0 MB]
+    - 20260302_190209521_iOS.heic [5.3 MB]
+    - 20260302_213657652_iOS.heic [2.9 MB]
+    - 20260302_213702408_iOS.heic [2.9 MB]
+    - 20260302_222520987_iOS.heic [4.4 MB]
+    - 20260302_222523735_iOS.heic [4.2 MB]
+    - 20260302_223922333_iOS.heic [4.4 MB]
+    - 20260302_223924011_iOS.heic [4.6 MB]
+    - 20260302_223925435_iOS.heic [4.6 MB]
+    - 20260302_223933509_iOS.heic [4.3 MB]
+    - 20260302_223936175_iOS.heic [2.3 MB]
+    - 20260303_123420058_iOS.heic [1.7 MB]
+    - 20260303_123421324_iOS.heic [1.6 MB]
+    - 20260303_123428042_iOS.heic [1.6 MB]
+    - 20260303_123430559_iOS.heic [4.3 MB]
+    - 20260303_123448770_iOS.heic [4.0 MB]
+    - 20260303_123450830_iOS.heic [1.7 MB]
+    - 20260303_123613393_iOS.heic [4.1 MB]
+    - 20260303_123614725_iOS.heic [3.7 MB]
+    - 20260303_123616831_iOS.heic [4.0 MB]
+    - 20260303_123618544_iOS.heic [3.7 MB]
+    - 20260303_123619994_iOS.heic [3.7 MB]
+    - 20260303_123624212_iOS.heic [3.6 MB]
+    - 20260303_123849053_iOS.heic [5.3 MB]
+    - 20260303_123853934_iOS.heic [2.1 MB]
+    - 20260303_140928950_iOS.heic [4.2 MB]
+    - 20260303_140931565_iOS.heic [2.1 MB]
+    - 20260303_140934210_iOS.heic [2.1 MB]
+    - 20260303_140935202_iOS.heic [2.1 MB]
+    - 20260303_140936742_iOS.heic [2.1 MB]
+    - 20260303_140938388_iOS.heic [2.1 MB]
+    - 20260303_140939111_iOS.heic [2.1 MB]
+    - 20260303_140940313_iOS.heic [2.2 MB]
+    - 20260303_140941044_iOS.heic [2.1 MB]
+    - 20260303_140941846_iOS.heic [2.2 MB]
+    - 20260303_142416700_iOS.heic [5.0 MB]
+    - 20260303_142431337_iOS.heic [3.2 MB]
+    - 20260303_144621983_iOS.heic [2.8 MB]
+    - 20260303_144625549_iOS.heic [2.9 MB]
+    - 20260303_144627300_iOS.heic [3.1 MB]
+    - 20260303_144628521_iOS.heic [2.6 MB]
+    - 20260303_184315591_iOS.heic [5.0 MB]
+    - 20260303_184317053_iOS.heic [2.8 MB]
+    - 20260303_184318146_iOS.heic [3.6 MB]
+    - 20260303_184319570_iOS.heic [3.5 MB]
+    - 20260303_184320551_iOS.heic [2.8 MB]
+    - 20260303_224518915_iOS.heic [3.3 MB]
+    - 20260303_224519686_iOS.heic [4.3 MB]
+    - 20260303_224520597_iOS.heic [5.6 MB]
+    - 20260303_224522147_iOS.heic [4.9 MB]
+    - 20260303_224524380_iOS.heic [2.7 MB]
+    - 20260303_224525306_iOS.heic [2.5 MB]
+    - 20260303_224526474_iOS.heic [2.1 MB]
+    - 20260303_224536768_iOS.heic [2.9 MB]
+    - 20260303_224538071_iOS.heic [2.3 MB]
+    - 20260303_224539499_iOS.heic [2.3 MB]
+    - 20260303_224545969_iOS.heic [2.3 MB]
+    - 20260303_224549367_iOS.heic [3.2 MB]
+    - 20260303_224553156_iOS.heic [6.1 MB]
+    - 20260303_224556634_iOS.heic [5.5 MB]
+    - 20260304_130026283_iOS.heic [2.5 MB]
+    - 20260304_130027238_iOS.heic [1.9 MB]
+    - 20260304_130029109_iOS.heic [2.0 MB]
+    - 20260304_132208822_iOS.heic [4.1 MB]
+    - 20260304_132209598_iOS.heic [4.1 MB]
+    - 20260304_132211024_iOS.heic [3.9 MB]
+    - 20260304_132221460_iOS.heic [2.6 MB]
+    - 20260304_132222378_iOS.heic [2.5 MB]
+    - 20260304_132224522_iOS.heic [3.0 MB]
+    - 20260304_132225978_iOS.heic [3.5 MB]
+    - 20260304_132227191_iOS.heic [4.9 MB]
+    - 20260304_132230211_iOS.heic [4.8 MB]
+  - 20260304_100344.jpg [1.8 MB]
+  - 20260304_100347.jpg [1.7 MB]
+  - 20260304_100351.jpg [2.0 MB]
+  - 20260304_100355.jpg [1.7 MB]
+  - 20260304_100357.jpg [1.7 MB]
+  - 20260304_100403.jpg [1.6 MB]
+  - 20260304_100411.jpg [1.9 MB]
+  - 20260304_100415.jpg [2.2 MB]
+  - 20260304_100417.jpg [2.1 MB]
+  - 20260304_100420.jpg [1.9 MB]
+  - 20260312_100716.jpg [3.6 MB]
+  - 20260312_100723.jpg [3.6 MB]
+  - 20260312_100732.jpg [3.7 MB]
+  - 20260312_100742.jpg [1.5 MB]
+  - 20260312_100744.jpg [1.3 MB]
+  - 20260312_100754.jpg [1.9 MB]
+  - 20260312_100758.jpg [1.9 MB]
+  - 20260312_100800.jpg [1.9 MB]
+  - 20260312_100810.jpg [1.7 MB]
+  - 20260312_100814.jpg [1.7 MB]
+  - 20260312_100823.jpg [2.0 MB]
+  - 20260312_100825.jpg [2.1 MB]
+  - 20260312_100829.jpg [2.0 MB]
+  - 20260312_100838.jpg [2.0 MB]
+  - 20260312_100841.jpg [2.0 MB]
+  - 20260312_100849.jpg [1.9 MB]
+  - 20260312_100857.jpg [2.0 MB]
+  - 20260312_100901.jpg [2.1 MB]
+  - 20260312_100948.jpg [1.9 MB]
+  - 20260312_100952.jpg [2.0 MB]
+  - 20260312_100954.jpg [2.1 MB]
+  - 20260312_100955.jpg [2.0 MB]
+  - 20260312_101017.jpg [1.8 MB]
+  - 20260312_101341.jpg [1.8 MB]
+  - 20260312_101348.jpg [1.7 MB]
+  - 20260312_101355.jpg [1.8 MB]
+  - 20260312_101400.jpg [1.7 MB]
+  - 20260312_101411.jpg [2.0 MB]
+  - 20260312_101415.jpg [1.7 MB]
+  - 20260312_101420.jpg [1.7 MB]
+  - 20260312_101424.jpg [1.7 MB]
+- **Caddy Shack/** (163 items) [568.2 MB] — last modified 2026-03-06
+  - 20260304_172954676_iOS.heic [6.2 MB]
+  - 20260304_173008228_iOS.heic [6.1 MB]
+  - 20260304_173011683_iOS 1.heic [6.4 MB]
+  - 20260304_173011683_iOS.heic [6.4 MB]
+  - 20260304_173037900_iOS.heic [5.6 MB]
+  - 20260304_173600511_iOS 1.heic [4.9 MB]
+  - 20260304_173600511_iOS.heic [4.9 MB]
+  - 20260304_173603548_iOS.heic [6.1 MB]
+  - 20260304_173607257_iOS.heic [5.6 MB]
+  - 20260304_173629444_iOS.heic [5.8 MB]
+  - 20260304_173630847_iOS.heic [5.9 MB]
+  - 20260304_173642708_iOS.heic [6.2 MB]
+  - 20260304_173655211_iOS.heic [5.0 MB]
+  - 20260304_173827751_iOS.heic [6.4 MB]
+  - 20260304_173830301_iOS.heic [7.1 MB]
+  - 20260304_173840771_iOS.heic [4.8 MB]
+  - 20260304_173842329_iOS.heic [6.1 MB]
+  - 20260304_173843701_iOS.heic [5.0 MB]
+  - 20260304_174124212_iOS.heic [6.0 MB]
+  - 20260304_174312741_iOS.heic [4.4 MB]
+  - 20260304_174314313_iOS.heic [3.6 MB]
+  - 20260304_174325094_iOS.heic [4.9 MB]
+  - 20260304_175321832_iOS.heic [3.8 MB]
+  - 20260304_175523742_iOS.heic [2.4 MB]
+  - 20260304_175537827_iOS.heic [6.2 MB]
+  - 20260304_175627221_iOS.heic [4.1 MB]
+  - 20260304_175628921_iOS.heic [5.5 MB]
+  - 20260304_175643264_iOS.heic [3.8 MB]
+  - 20260304_175656758_iOS.heic [5.3 MB]
+  - 20260304_175711702_iOS.heic [3.5 MB]
+  - 20260304_175826315_iOS.heic [5.3 MB]
+  - 20260304_175841000_iOS.heic [5.5 MB]
+  - 20260304_175848812_iOS.heic [4.0 MB]
+  - 20260304_175902907_iOS.heic [5.0 MB]
+  - 20260304_175904417_iOS.heic [5.0 MB]
+  - 20260304_175908870_iOS.heic [4.9 MB]
+  - 20260304_175925328_iOS.heic [3.4 MB]
+  - 20260304_180134584_iOS.heic [3.4 MB]
+  - 20260304_180152202_iOS.heic [4.3 MB]
+  - 20260304_180207843_iOS.heic [4.1 MB]
+  - 20260304_180218089_iOS.heic [4.0 MB]
+  - 20260311_121254098_iOS.heic [3.1 MB]
+  - 20260311_121257871_iOS.heic [2.6 MB]
+  - 20260311_121302432_iOS.heic [1.3 MB]
+  - 20260311_121318410_iOS.heic [2.4 MB]
+  - 20260311_121339443_iOS.heic [1.5 MB]
+  - 20260311_121342612_iOS.heic [1.4 MB]
+  - 20260311_121349425_iOS.heic [1.4 MB]
+  - 20260311_121413915_iOS.heic [1.1 MB]
+  - 20260311_121417114_iOS.heic [1.2 MB]
+  - 20260311_121425120_iOS.heic [2.4 MB]
+  - 20260311_121433981_iOS.heic [2.4 MB]
+  - 20260311_121440928_iOS.heic [2.4 MB]
+  - 20260311_121446245_iOS.heic [2.9 MB]
+  - 20260311_121523839_iOS.heic [2.3 MB]
+  - 20260311_121530707_iOS.heic [3.1 MB]
+  - 20260311_121556986_iOS.heic [994.8 KB]
+  - 20260311_121559050_iOS.heic [1.0 MB]
+  - 20260311_121611763_iOS.heic [1.3 MB]
+  - 20260311_121617645_iOS.heic [1.6 MB]
+  - 20260311_121648405_iOS.heic [1.3 MB]
+  - 20260311_121656167_iOS.heic [1.1 MB]
+  - 20260311_121657579_iOS.heic [1.2 MB]
+  - 20260311_121659078_iOS.heic [964.4 KB]
+  - 20260311_121700226_iOS.heic [1.0 MB]
+  - 20260311_121709024_iOS.heic [1.2 MB]
+  - 20260311_121711526_iOS.heic [1.2 MB]
+  - 20260311_121713508_iOS.heic [1.2 MB]
+  - 20260311_121715761_iOS.heic [1.1 MB]
+  - 20260311_121717674_iOS.heic [1.1 MB]
+  - 20260311_121757649_iOS.heic [1.2 MB]
+  - 20260311_121808909_iOS.heic [1.3 MB]
+  - 20260311_121817862_iOS.heic [1.2 MB]
+  - 20260311_123629229_iOS.heic [2.8 MB]
+  - 20260311_123631372_iOS.heic [2.6 MB]
+  - 20260311_123637684_iOS.heic [2.0 MB]
+  - 20260311_123638699_iOS.heic [1.8 MB]
+  - 20260311_123639832_iOS.heic [2.1 MB]
+  - 20260311_123650427_iOS.heic [2.4 MB]
+  - 20260311_123658314_iOS.heic [2.4 MB]
+  - 20260311_123712650_iOS.heic [2.5 MB]
+  - 20260311_123721015_iOS.heic [3.8 MB]
+  - 20260311_123722618_iOS.heic [3.7 MB]
+  - 20260311_123723640_iOS.heic [3.5 MB]
+  - 20260311_123725421_iOS.heic [4.6 MB]
+  - 20260311_123734159_iOS.heic [4.1 MB]
+  - 20260311_123737023_iOS.heic [4.0 MB]
+  - 20260311_123742948_iOS.heic [3.5 MB]
+  - 20260311_123744156_iOS.heic [2.7 MB]
+  - 20260311_123746665_iOS.heic [3.7 MB]
+  - 20260311_123751776_iOS.heic [4.1 MB]
+  - 20260311_123814970_iOS.heic [2.3 MB]
+  - 20260311_123819699_iOS.heic [2.1 MB]
+  - 20260311_123827236_iOS.heic [2.7 MB]
+  - 20260311_123829973_iOS.heic [2.0 MB]
+  - 20260311_123848968_iOS.heic [5.5 MB]
+  - 20260311_123851961_iOS.heic [2.8 MB]
+  - 20260311_123853076_iOS.heic [2.3 MB]
+  - 20260311_123854263_iOS.heic [2.2 MB]
+  - 20260311_123904841_iOS.heic [2.8 MB]
+  - 20260311_123906155_iOS.heic [2.2 MB]
+  - 20260311_123907244_iOS.heic [3.0 MB]
+  - 20260311_123941379_iOS.heic [3.8 MB]
+  - 20260311_123944281_iOS.heic [3.2 MB]
+  - 20260311_123952549_iOS.heic [3.5 MB]
+  - 20260311_123953876_iOS.heic [4.7 MB]
+  - 20260311_123956779_iOS.heic [3.7 MB]
+  - 20260311_124010680_iOS.heic [4.1 MB]
+  - 20260311_124011814_iOS.heic [4.6 MB]
+  - 20260311_124014191_iOS.heic [2.7 MB]
+  - 20260311_124015062_iOS.heic [3.9 MB]
+  - 20260311_124016159_iOS.heic [4.3 MB]
+  - 20260311_124019918_iOS.heic [4.3 MB]
+  - 20260311_124024569_iOS.heic [3.2 MB]
+  - 20260311_124027370_iOS.heic [2.1 MB]
+  - 20260311_124029275_iOS.heic [3.9 MB]
+  - 20260311_124131714_iOS.heic [2.7 MB]
+  - 20260311_124132606_iOS.heic [2.9 MB]
+  - 20260311_124134768_iOS.heic [2.8 MB]
+  - 20260311_124426636_iOS.heic [4.1 MB]
+  - 20260311_124427603_iOS.heic [3.8 MB]
+  - 20260311_124429485_iOS.heic [3.6 MB]
+  - 20260311_124432619_iOS.heic [3.5 MB]
+  - 20260311_124433541_iOS.heic [3.2 MB]
+  - 20260311_124434509_iOS.heic [4.3 MB]
+  - 20260311_124435695_iOS.heic [4.8 MB]
+  - 20260311_124442271_iOS.heic [4.4 MB]
+  - 20260311_124452150_iOS.heic [3.9 MB]
+  - 20260311_124459598_iOS.heic [3.5 MB]
+  - 20260311_124500577_iOS.heic [3.5 MB]
+  - 20260311_124506587_iOS.heic [3.4 MB]
+  - 20260311_124514933_iOS.heic [3.1 MB]
+  - 20260311_124516390_iOS.heic [2.9 MB]
+  - 20260311_124518807_iOS.heic [3.5 MB]
+  - 20260311_124521621_iOS.heic [4.1 MB]
+  - 20260311_124523932_iOS.heic [3.4 MB]
+  - 20260311_124527274_iOS.heic [4.4 MB]
+  - 20260311_124541537_iOS.heic [4.3 MB]
+  - 20260311_124544811_iOS.heic [3.0 MB]
+  - 20260311_124546448_iOS.heic [4.3 MB]
+  - 20260311_124548019_iOS.heic [4.9 MB]
+  - 20260311_124549812_iOS.heic [4.8 MB]
+  - 20260311_124553441_iOS.heic [5.0 MB]
+  - 20260311_124555949_iOS.heic [2.4 MB]
+  - 20260311_124601043_iOS.heic [4.2 MB]
+  - 20260311_124602542_iOS.heic [4.5 MB]
+  - 20260311_124604274_iOS.heic [4.1 MB]
+  - 20260311_124608302_iOS.heic [3.9 MB]
+  - 20260311_124615783_iOS.heic [2.8 MB]
+  - 20260311_124617048_iOS.heic [2.7 MB]
+  - 20260311_124630956_iOS.heic [2.0 MB]
+  - 20260311_124632776_iOS.heic [2.0 MB]
+  - 20260311_124634204_iOS.heic [2.0 MB]
+  - 20260311_124637486_iOS.heic [3.5 MB]
+  - 20260311_124638829_iOS.heic [3.5 MB]
+  - 20260311_124640449_iOS.heic [4.1 MB]
+  - 20260311_124720115_iOS.heic [3.9 MB]
+  - 20260311_124722033_iOS.heic [4.1 MB]
+  - 20260311_124730549_iOS.heic [3.8 MB]
+  - 20260311_124740478_iOS.heic [5.1 MB]
+  - 20260311_124754559_iOS.heic [5.6 MB]
+  - 20260311_124756908_iOS.heic [4.6 MB]
+  - 20260311_124804932_iOS.heic [1.5 MB]
+- **Daily Huddle/** (1 items) — last modified 2025-05-15
+  - **Test Folder/** (0 items) — last modified 2025-05-28
+- **FPK Project/** (637 items) [2.0 GB] — last modified 2026-01-14
+  - 20260121_200953209_iOS.heic [2.5 MB]
+  - 20260121_201002730_iOS.heic [2.6 MB]
+  - 20260121_201031145_iOS.heic [3.9 MB]
+  - 20260121_201034098_iOS.heic [4.0 MB]
+  - 20260122_140143130_iOS.heic [3.5 MB]
+  - 20260122_140149440_iOS.heic [3.3 MB]
+  - 20260122_140159998_iOS.heic [3.3 MB]
+  - 20260122_140202366_iOS.heic [3.4 MB]
+  - 20260122_140203943_iOS.heic [3.5 MB]
+  - 20260122_140528666_iOS.heic [3.2 MB]
+  - 20260122_202554874_iOS.heic [3.7 MB]
+  - 20260122_202603402_iOS.heic [3.9 MB]
+  - 20260122_202621028_iOS.heic [4.6 MB]
+  - 20260122_202657935_iOS.heic [703.3 KB]
+  - 20260122_202705461_iOS.heic [755.9 KB]
+  - 20260122_205929530_iOS.heic [4.2 MB]
+  - 20260122_205937616_iOS.heic [4.3 MB]
+  - 20260122_213635549_iOS.heic [4.2 MB]
+  - 20260122_213644740_iOS.heic [4.1 MB]
+  - 20260123_143752320_iOS.heic [3.1 MB]
+  - 20260123_143800176_iOS.heic [3.3 MB]
+  - 20260123_143828874_iOS.heic [2.9 MB]
+  - 20260123_143848970_iOS.heic [3.2 MB]
+  - 20260123_143903504_iOS.heic [4.3 MB]
+  - 20260123_143905625_iOS.heic [3.7 MB]
+  - 20260123_143916229_iOS.heic [3.2 MB]
+  - 20260123_143920678_iOS.heic [3.5 MB]
+  - 20260123_143928082_iOS.heic [3.4 MB]
+  - 20260123_143946880_iOS.heic [3.2 MB]
+  - 20260123_144000812_iOS.heic [3.4 MB]
+  - 20260123_144012173_iOS.heic [3.4 MB]
+  - 20260123_144030315_iOS.heic [3.5 MB]
+  - 20260123_144052852_iOS.heic [3.2 MB]
+  - 20260123_144056368_iOS.heic [2.6 MB]
+  - 20260123_144100010_iOS.heic [3.3 MB]
+  - 20260123_144110914_iOS.heic [3.0 MB]
+  - 20260123_144112843_iOS.heic [2.7 MB]
+  - 20260123_144122401_iOS.heic [3.1 MB]
+  - 20260123_144150958_iOS.heic [2.9 MB]
+  - 20260123_144152924_iOS.heic [2.9 MB]
+  - 20260123_144154924_iOS.heic [2.4 MB]
+  - 20260123_144156666_iOS.heic [2.4 MB]
+  - 20260123_144204384_iOS.heic [2.6 MB]
+  - 20260123_201847843_iOS.heic [3.6 MB]
+  - 20260123_201852390_iOS.heic [3.7 MB]
+  - 20260123_201909068_iOS.heic [3.3 MB]
+  - 20260123_201910998_iOS.heic [3.4 MB]
+  - 20260123_204331089_iOS.heic [4.0 MB]
+  - 20260126_143353797_iOS.heic [3.7 MB]
+  - 20260126_143354948_iOS.heic [3.5 MB]
+  - 20260126_143356326_iOS.heic [3.3 MB]
+  - 20260126_143359855_iOS.heic [2.9 MB]
+  - 20260126_143408562_iOS.heic [3.5 MB]
+  - 20260126_143415997_iOS.heic [3.9 MB]
+  - 20260126_143444183_iOS.heic [3.3 MB]
+  - 20260126_143613192_iOS.heic [3.4 MB]
+  - 20260126_143625323_iOS.heic [3.3 MB]
+  - 20260126_143632220_iOS.heic [3.2 MB]
+  - 20260126_143648236_iOS.heic [3.0 MB]
+  - 20260126_143649954_iOS.heic [3.0 MB]
+  - 20260126_143652096_iOS.heic [3.1 MB]
+  - 20260126_143712334_iOS.heic [3.4 MB]
+  - 20260126_143714303_iOS.heic [3.4 MB]
+  - 20260126_143715560_iOS.heic [3.4 MB]
+  - 20260126_143726497_iOS.heic [3.0 MB]
+  - 20260126_143731077_iOS.heic [3.0 MB]
+  - 20260126_143733152_iOS.heic [4.0 MB]
+  - 20260128_163348958_iOS.heic [2.8 MB]
+  - 20260128_163352430_iOS.heic [4.3 MB]
+  - 20260128_163403383_iOS.heic [4.0 MB]
+  - 20260128_163407105_iOS.heic [4.0 MB]
+  - 20260128_163411908_iOS.heic [4.2 MB]
+  - 20260128_163417784_iOS.heic [3.2 MB]
+  - 20260128_163420539_iOS.heic [3.5 MB]
+  - 20260128_163424526_iOS.heic [3.8 MB]
+  - 20260128_163426711_iOS.heic [3.4 MB]
+  - 20260128_163428473_iOS.heic [4.6 MB]
+  - 20260128_163440336_iOS.heic [4.7 MB]
+  - 20260128_163448352_iOS.heic [4.7 MB]
+  - 20260130_181943043_iOS.jpg [649.6 KB]
+  - 20260130_205128877_iOS.heic [5.1 MB]
+  - 20260130_205132108_iOS.heic [956.4 KB]
+  - 20260130_205156025_iOS.heic [4.7 MB]
+  - 20260130_205159306_iOS.heic [1.1 MB]
+  - 20260130_213621124_iOS.heic [2.8 MB]
+  - 20260130_213638876_iOS.heic [4.3 MB]
+  - 20260130_213642713_iOS.heic [3.8 MB]
+  - 20260130_213707405_iOS.heic [405.0 KB]
+  - 20260130_213750031_iOS.heic [3.1 MB]
+  - 20260130_213801152_iOS.heic [3.2 MB]
+  - 20260130_213806449_iOS.heic [3.2 MB]
+  - 20260130_213816583_iOS.heic [3.1 MB]
+  - 20260130_213843346_iOS.heic [2.8 MB]
+  - 20260130_213848729_iOS.heic [3.1 MB]
+  - 20260130_213853946_iOS.heic [3.2 MB]
+  - 20260130_213855718_iOS.heic [3.3 MB]
+  - 20260130_213904417_iOS.heic [3.2 MB]
+  - 20260130_213926988_iOS.heic [3.3 MB]
+  - 20260130_213928984_iOS.heic [3.5 MB]
+  - 20260130_213931101_iOS.heic [3.5 MB]
+  - 20260130_213933327_iOS.heic [3.3 MB]
+  - 20260130_213943111_iOS.heic [3.5 MB]
+  - 20260130_213944817_iOS.heic [3.5 MB]
+  - 20260130_213946981_iOS.heic [3.1 MB]
+  - 20260130_213949114_iOS.heic [3.1 MB]
+  - 20260130_213951731_iOS.heic [3.6 MB]
+  - 20260202_194900901_iOS.jpg [141.1 KB]
+  - 20260202_200549818_iOS.heic [2.4 MB]
+  - 20260202_213434736_iOS.heic [4.9 MB]
+  - 20260202_213437997_iOS.heic [4.3 MB]
+  - 20260202_213444540_iOS.heic [6.3 MB]
+  - 20260202_213457813_iOS.heic [6.1 MB]
+  - 20260202_213500722_iOS.heic [6.5 MB]
+  - 20260202_213502321_iOS.heic [6.5 MB]
+  - 20260202_213510219_iOS.heic [6.0 MB]
+  - 20260202_213538281_iOS.heic [3.0 MB]
+  - 20260202_213548964_iOS.heic [3.1 MB]
+  - 20260202_213551096_iOS.heic [2.1 MB]
+  - 20260202_213626285_iOS.heic [2.4 MB]
+  - 20260202_213628185_iOS.heic [2.4 MB]
+  - 20260202_213629808_iOS.heic [3.1 MB]
+  - 20260202_213635090_iOS.heic [3.5 MB]
+  - 20260202_213640269_iOS.heic [3.2 MB]
+  - 20260202_213642409_iOS.heic [3.6 MB]
+  - 20260202_213644422_iOS.heic [3.5 MB]
+  - 20260202_213650575_iOS.heic [3.4 MB]
+  - 20260202_213736889_iOS.heic [2.0 MB]
+  - 20260202_213737975_iOS.heic [2.0 MB]
+  - 20260202_213754449_iOS.heic [2.4 MB]
+  - 20260202_213802488_iOS.heic [3.8 MB]
+  - 20260202_213805586_iOS.heic [2.6 MB]
+  - 20260202_213826396_iOS.heic [4.6 MB]
+  - 20260202_213828693_iOS.heic [2.8 MB]
+  - 20260203_135448797_iOS.heic [3.9 MB]
+  - 20260203_135453407_iOS.heic [3.4 MB]
+  - 20260203_135453724_iOS.heic [3.3 MB]
+  - 20260203_154248104_iOS.heic [3.2 MB]
+  - 20260203_154319887_iOS.heic [2.4 MB]
+  - 20260203_163808580_iOS.heic [3.7 MB]
+  - 20260203_212717306_iOS.heic [4.1 MB]
+  - 20260203_212718794_iOS.heic [4.0 MB]
+  - 20260203_212720328_iOS.heic [3.6 MB]
+  - 20260203_212721790_iOS.heic [3.6 MB]
+  - 20260203_212729161_iOS.heic [3.2 MB]
+  - 20260203_212730915_iOS.heic [3.2 MB]
+  - 20260203_212732578_iOS.heic [3.4 MB]
+  - 20260203_212758190_iOS.heic [5.6 MB]
+  - 20260203_212804233_iOS.heic [3.9 MB]
+  - 20260203_212902484_iOS.heic [3.4 MB]
+  - 20260203_212911148_iOS.heic [3.4 MB]
+  - 20260203_212944253_iOS.heic [3.9 MB]
+  - 20260203_213007842_iOS.heic [3.4 MB]
+  - 20260203_213042215_iOS.heic [3.6 MB]
+  - 20260203_213043751_iOS.heic [3.7 MB]
+  - 20260203_213100971_iOS.heic [3.1 MB]
+  - 20260203_213102669_iOS.heic [3.3 MB]
+  - 20260203_213104773_iOS.heic [3.5 MB]
+  - 20260203_213118089_iOS.heic [3.4 MB]
+  - 20260203_213119529_iOS.heic [3.3 MB]
+  - 20260203_213821333_iOS.heic [2.1 MB]
+  - 20260203_213822571_iOS.heic [2.3 MB]
+  - 20260203_213834196_iOS.heic [3.8 MB]
+  - 20260203_213836075_iOS.heic [2.1 MB]
+  - 20260203_213847371_iOS.heic [4.0 MB]
+  - 20260203_213850221_iOS.heic [4.5 MB]
+  - 20260203_213852484_iOS.heic [5.0 MB]
+  - 20260203_214711375_iOS.heic [2.7 MB]
+  - 20260203_215322277_iOS.heic [2.4 MB]
+  - 20260203_215323819_iOS.heic [2.7 MB]
+  - 20260203_215325521_iOS.heic [2.7 MB]
+  - 20260203_215327089_iOS.heic [2.9 MB]
+  - 20260203_215329041_iOS.heic [2.9 MB]
+  - 20260203_215331006_iOS.heic [3.2 MB]
+  - 20260203_215333030_iOS.heic [3.4 MB]
+  - 20260203_215334896_iOS.heic [3.6 MB]
+  - 20260203_215337281_iOS.heic [4.3 MB]
+  - 20260203_215502122_iOS.heic [2.6 MB]
+  - 20260203_215503596_iOS.heic [2.5 MB]
+  - 20260203_215505457_iOS.heic [2.6 MB]
+  - 20260203_215507440_iOS.heic [2.5 MB]
+  - 20260203_215509167_iOS.heic [2.4 MB]
+  - 20260203_215510913_iOS.heic [2.5 MB]
+  - 20260203_215512593_iOS.heic [2.5 MB]
+  - 20260203_215514410_iOS.heic [2.4 MB]
+  - 20260205_132521355_iOS.heic [2.1 MB]
+  - 20260205_132522968_iOS.heic [1.9 MB]
+  - 20260205_132619433_iOS.heic [2.8 MB]
+  - 20260205_132622891_iOS.heic [3.0 MB]
+  - 20260205_132626192_iOS.heic [4.0 MB]
+  - 20260205_132631039_iOS.heic [3.9 MB]
+  - 20260205_132658608_iOS.heic [3.0 MB]
+  - 20260205_132707145_iOS.heic [933.6 KB]
+  - 20260205_133038215_iOS.heic [4.7 MB]
+  - 20260205_133040203_iOS.heic [4.2 MB]
+  - 20260205_133042914_iOS.heic [3.6 MB]
+  - 20260205_133045921_iOS.heic [3.7 MB]
+  - 20260205_133049073_iOS.heic [4.0 MB]
+  - 20260205_133108558_iOS.heic [4.2 MB]
+  - 20260205_133111130_iOS 1.heic [4.1 MB]
+  - 20260205_133111130_iOS 2.heic [4.1 MB]
+- **Gifted Daycare/** (38 items) [90.0 MB] — last modified 2026-01-26
+  - 20260123_222008585_iOS.heic [2.3 MB]
+  - 20260123_222009898_iOS.heic [2.3 MB]
+  - 20260123_222011186_iOS.heic [2.3 MB]
+  - 20260123_222012384_iOS.heic [2.2 MB]
+  - 20260123_222052629_iOS.heic [2.4 MB]
+  - 20260123_222057086_iOS.heic [2.4 MB]
+  - 20260123_222100662_iOS.heic [2.4 MB]
+  - 20260123_222102917_iOS.heic [2.6 MB]
+  - 20260123_222104575_iOS.heic [2.7 MB]
+  - 20260123_222113632_iOS.heic [2.6 MB]
+  - 20260123_222117550_iOS.heic [2.7 MB]
+  - 20260123_222119605_iOS.heic [2.5 MB]
+  - 20260123_222121506_iOS.heic [2.6 MB]
+  - 20260123_222123243_iOS.heic [2.6 MB]
+  - 20260123_222125324_iOS.heic [2.5 MB]
+  - 20260123_222127740_iOS.heic [3.0 MB]
+  - 20260123_222145695_iOS.heic [2.8 MB]
+  - 20260123_222147429_iOS.heic [3.0 MB]
+  - 20260123_222149298_iOS.heic [2.8 MB]
+  - 20260123_222151116_iOS.heic [2.7 MB]
+  - 20260123_222155691_iOS.heic [1.7 MB]
+  - 20260123_222204434_iOS.heic [1.7 MB]
+  - 20260123_222206377_iOS.heic [1.6 MB]
+  - 20260123_222208409_iOS.heic [1.8 MB]
+  - 20260124_003535482_iOS.jpg [571.5 KB]
+  - 20260124_003537006_iOS.jpg [544.0 KB]
+  - 20260125_201839857_iOS.heic [3.1 MB]
+  - 20260125_201846654_iOS.heic [2.9 MB]
+  - 20260125_201854333_iOS.heic [3.1 MB]
+  - 20260125_201900081_iOS.heic [1.1 MB]
+  - 20260125_201902168_iOS.heic [2.7 MB]
+  - 20260125_201903821_iOS.heic [2.7 MB]
+  - 20260125_201909705_iOS.heic [2.5 MB]
+  - 20260125_203404550_iOS.heic [2.8 MB]
+  - 20260125_203412934_iOS.heic [3.1 MB]
+  - 20260125_203419303_iOS.heic [2.9 MB]
+  - 20260125_214227820_iOS.heic [2.4 MB]
+  - 20260125_214231075_iOS.heic [1.1 MB]
+- **Meetings/** (1 items) [31.7 KB] — last modified 2026-02-10
+  - Chase Group Daily Ops Huddle 2026-02-10.loop [31.7 KB]
+- **Smash Project/** (255 items) [508.7 MB] — last modified 2026-01-14
+  - 07059a83-6775-48ea-9729-490633ee5f74.jpg [383.7 KB]
+  - 132a0f8c-2241-4d23-adb0-2d0d86a0b2af.jpg [410.3 KB]
+  - 18a3e4ca-c8aa-4e2b-9382-f1a201c8cf6f.jpg [233.5 KB]
+  - 1efa1915-2083-4780-87ba-67dbb6723bc4.jpg [359.5 KB]
+  - 20260107_151101.jpg [3.7 MB]
+  - 20260121_102023.jpg [4.7 MB]
+  - 20260121_102029.jpg [4.5 MB]
+  - 20260121_102035.jpg [4.4 MB]
+  - 20260129_081354.jpg [1.5 MB]
+  - 20260129_081409.jpg [1.5 MB]
+  - 20260129_081419.jpg [1.7 MB]
+  - 20260129_081447.jpg [1.6 MB]
+  - 20260129_081452.jpg [1.5 MB]
+  - 20260129_081507.jpg [1.7 MB]
+  - 20260129_081513.jpg [1.8 MB]
+  - 20260129_081518.jpg [1.8 MB]
+  - 20260129_081524.jpg [1.8 MB]
+  - 20260129_081540.jpg [1.5 MB]
+  - 20260129_081544.jpg [1.8 MB]
+  - 20260129_081559.jpg [1.3 MB]
+  - 20260129_081602.jpg [1.3 MB]
+  - 20260129_081608.jpg [1.7 MB]
+  - 20260129_081616.jpg [1.6 MB]
+  - 20260129_081620.jpg [1.5 MB]
+  - 20260129_081628.jpg [1.6 MB]
+  - 20260129_081634.jpg [1.4 MB]
+  - 20260129_081639.jpg [1.3 MB]
+  - 20260129_081642.jpg [1.4 MB]
+  - 20260129_081652.jpg [1.5 MB]
+  - 20260129_081656.jpg [1.7 MB]
+  - 20260129_081708.jpg [1.4 MB]
+  - 20260129_081716.jpg [1.9 MB]
+  - 20260129_081718.jpg [1.9 MB]
+  - 20260129_081724.jpg [1.9 MB]
+  - 20260129_081728.jpg [2.0 MB]
+  - 20260129_081732.jpg [2.0 MB]
+  - 20260129_081733.jpg [2.0 MB]
+  - 20260129_081737.jpg [1.8 MB]
+  - 20260129_081753.jpg [1.5 MB]
+  - 20260129_081758.jpg [1.5 MB]
+  - 20260129_081801.jpg [1.6 MB]
+  - 20260129_081814.jpg [1.3 MB]
+  - 20260129_081840.jpg [1.5 MB]
+  - 20260129_081843.jpg [1.5 MB]
+  - 20260129_081847.jpg [1.5 MB]
+  - 20260129_081908.jpg [1.5 MB]
+  - 20260129_081911.jpg [1.4 MB]
+  - 20260129_081914.jpg [1.5 MB]
+  - 20260129_081919.jpg [1.6 MB]
+  - 20260129_081923.jpg [1.7 MB]
+  - 20260129_081928.jpg [1.6 MB]
+  - 20260129_081934.jpg [1.4 MB]
+  - 20260129_081945.jpg [1.6 MB]
+  - 20260129_081953.jpg [1.4 MB]
+  - 20260129_081957.jpg [1.4 MB]
+  - 20260129_082021.jpg [1.2 MB]
+  - 20260129_082033.jpg [1.6 MB]
+  - 20260129_082037.jpg [1.4 MB]
+  - 20260129_082043.jpg [1.5 MB]
+  - 20260129_082054.jpg [1.6 MB]
+  - 20260129_082108.jpg [1.7 MB]
+  - 20260129_082233.jpg [1.5 MB]
+  - 20260129_082237.jpg [1.5 MB]
+  - 20260129_082243.jpg [1.5 MB]
+  - 20260129_082247.jpg [1.5 MB]
+  - 20260129_082253.jpg [1.4 MB]
+  - 20260129_082257.jpg [1.4 MB]
+  - 20260129_082259.jpg [1.4 MB]
+  - 20260129_082308.jpg [1.4 MB]
+  - 20260129_082310.jpg [1.5 MB]
+  - 20260129_082315.jpg [1.5 MB]
+  - 20260129_082329.jpg [1.3 MB]
+  - 20260129_085313.jpg [2.2 MB]
+  - 20260129_085322.jpg [2.3 MB]
+  - 20260129_085328.jpg [2.8 MB]
+  - 20260129_085330.jpg [3.3 MB]
+  - 20260129_085334.jpg [2.7 MB]
+  - 20260129_085350.jpg [3.0 MB]
+  - 20260129_085353.jpg [5.9 MB]
+  - 20260129_085358.jpg [2.0 MB]
+  - 20260129_085412.jpg [1.7 MB]
+  - 20260129_085416.jpg [1.8 MB]
+  - 20260129_085426.jpg [1.5 MB]
+  - 20260129_085428.jpg [1.4 MB]
+  - 20260129_085439.jpg [1.9 MB]
+  - 20260129_085446.jpg [1.8 MB]
+  - 20260129_085447.jpg [2.1 MB]
+  - 20260129_085451.jpg [2.0 MB]
+  - 20260129_085500.jpg [1.8 MB]
+  - 20260129_085501.jpg [2.1 MB]
+  - 20260129_085505.jpg [1.8 MB]
+  - 20260129_085510.jpg [1.4 MB]
+  - 20260129_085517.jpg [1.6 MB]
+  - 20260129_085521.jpg [1.5 MB]
+  - 20260129_085538.jpg [1.3 MB]
+  - 20260129_085547.jpg [1.4 MB]
+  - 20260129_085600.jpg [1.7 MB]
+  - 20260129_085602.jpg [1.6 MB]
+  - 20260203_101043.jpg [3.1 MB]
+  - 20260203_101052.jpg [3.3 MB]
+  - 20260203_101612.jpg [3.0 MB]
+  - 20260205_095438.jpg [2.4 MB]
+  - 20260205_095448.jpg [3.4 MB]
+  - 20260205_095451.jpg [3.6 MB]
+  - 20260205_095454.jpg [4.0 MB]
+  - 20260205_095512.jpg [2.0 MB]
+  - 20260205_095515.jpg [2.0 MB]
+  - 20260205_095517.jpg [2.1 MB]
+  - 20260205_095536.jpg [1.9 MB]
+  - 20260205_095539.jpg [1.7 MB]
+  - 20260205_095543.jpg [1.4 MB]
+  - 20260205_095550.jpg [1.4 MB]
+  - 20260205_095553.jpg [1.5 MB]
+  - 20260205_095556.jpg [1.3 MB]
+  - 20260205_095606.jpg [1.2 MB]
+  - 20260205_095612.jpg [1.5 MB]
+  - 20260205_095622.jpg [1.4 MB]
+  - 20260205_095628.jpg [1.5 MB]
+  - 20260205_095631.jpg [1.5 MB]
+  - 20260205_095645.jpg [1.5 MB]
+  - 20260205_095647.jpg [1.5 MB]
+  - 20260205_095658.jpg [1.4 MB]
+  - 20260205_095702.jpg [1.5 MB]
+  - 20260205_095713.jpg [1.4 MB]
+  - 20260205_095716.jpg [1.4 MB]
+  - 20260205_095719.jpg [1.5 MB]
+  - 20260205_095722.jpg [1.6 MB]
+  - 20260205_095725.jpg [1.6 MB]
+  - 20260205_095729.jpg [1.8 MB]
+  - 20260205_095731.jpg [1.7 MB]
+  - 20260205_095735.jpg [1.5 MB]
+  - 20260205_095738.jpg [1.7 MB]
+  - 20260205_095745.jpg [1.6 MB]
+  - 20260205_095755.jpg [1.5 MB]
+  - 20260205_095757.jpg [1.5 MB]
+  - 20260205_095804.jpg [1.7 MB]
+  - 20260205_095806.jpg [1.6 MB]
+  - 20260205_095808.jpg [1.6 MB]
+  - 20260205_095811.jpg [1.7 MB]
+  - 20260205_095818.jpg [1.9 MB]
+  - 20260205_095926.jpg [4.6 MB]
+  - 20260205_095939.jpg [5.6 MB]
+  - 20260205_095944.jpg [6.5 MB]
+  - 20260205_095948.jpg [4.8 MB]
+  - 20260205_095958.jpg [3.2 MB]
+  - 20260205_100001.jpg [3.9 MB]
+  - 20260205_100002.jpg [4.3 MB]
+  - 20260205_100041.jpg [2.7 MB]
+  - 20260205_100043.jpg [3.0 MB]
+  - 20260205_100045.jpg [3.6 MB]
+  - 20260205_100048.jpg [3.6 MB]
+  - 20260205_100050.jpg [2.8 MB]
+  - 20260205_100052.jpg [4.3 MB]
+  - 20260205_100101.jpg [4.1 MB]
+  - 20260205_100111.jpg [5.4 MB]
+  - 20260205_100114.jpg [3.5 MB]
+  - 20260210_141144.jpg [1.6 MB]
+  - 20260210_141148.jpg [1.8 MB]
+  - 20260210_141150.jpg [1.6 MB]
+  - 20260210_141153.jpg [1.6 MB]
+  - 20260210_141155.jpg [1.7 MB]
+  - 20260210_141206.jpg [1.6 MB]
+  - 20260210_141208.jpg [1.8 MB]
+  - 20260210_141216.jpg [1.9 MB]
+  - 20260210_141218.jpg [1.9 MB]
+  - 20260210_141222.jpg [1.9 MB]
+  - 20260210_141233.jpg [1.4 MB]
+  - 20260210_141236.jpg [1.6 MB]
+  - 20260210_141238.jpg [1.7 MB]
+  - 20260210_141239.jpg [1.5 MB]
+  - 20260210_141249.jpg [1.6 MB]
+  - 20260210_141255.jpg [2.1 MB]
+  - 20260210_141258.jpg [2.0 MB]
+  - 20260210_141308.jpg [1.8 MB]
+  - 20260210_141333.jpg [1.7 MB]
+  - 20260210_141335.jpg [1.8 MB]
+  - 20260210_141336.jpg [1.9 MB]
+  - 20260210_141338.jpg [1.9 MB]
+  - 20260210_141400.jpg [1.6 MB]
+  - 20260210_141402.jpg [1.7 MB]
+  - 20260210_141413.jpg [1.9 MB]
+  - 20260210_141415.jpg [2.2 MB]
+  - 20260210_141418.jpg [1.7 MB]
+  - 20260210_141420.jpg [1.6 MB]
+  - 20260210_141437.jpg [1.4 MB]
+  - 20260210_141448.jpg [1.3 MB]
+  - 20260210_141459.jpg [1.7 MB]
+  - 20260303_075040.jpg [4.4 MB]
+  - 20260303_075042.jpg [4.2 MB]
+  - 20260303_075044.jpg [3.7 MB]
+  - 20260303_075053.jpg [3.2 MB]
+  - 20260303_075100.jpg [3.7 MB]
+  - 20260303_075106.jpg [3.6 MB]
+  - 20260303_151603.jpg [6.6 MB]
+  - 20260303_151608.jpg [5.7 MB]
+  - 20260303_151618.jpg [5.1 MB]
+  - 20260303_151622.jpg [3.3 MB]
+  - 20260303_152013.jpg [5.3 MB]
+  - 20260304_071719.jpg [3.5 MB]
+  - 20260304_071724.jpg [3.1 MB]
+- **Woodhouse/** (64 items) [253.7 MB] — last modified 2026-03-16
+  - 20260316_130243.jpg [2.6 MB]
+  - 20260316_130246.jpg [2.5 MB]
+  - 20260316_130256.jpg [1.9 MB]
+  - 20260316_130314.jpg [2.9 MB]
+  - 20260316_130316.jpg [3.7 MB]
+  - 20260316_130319.jpg [2.9 MB]
+  - 20260316_130322.jpg [3.3 MB]
+  - 20260316_130324.jpg [2.4 MB]
+  - 20260316_130327.jpg [3.0 MB]
+  - 20260316_130329.jpg [2.8 MB]
+  - 20260316_130334.jpg [2.9 MB]
+  - 20260316_130338.jpg [2.5 MB]
+  - 20260316_130342.jpg [3.0 MB]
+  - 20260316_130416.jpg [5.2 MB]
+  - 20260316_130419.jpg [4.3 MB]
+  - 20260316_130422.jpg [5.3 MB]
+  - 20260316_130427.jpg [4.3 MB]
+  - 20260316_130429.jpg [5.7 MB]
+  - 20260316_130441.jpg [4.4 MB]
+  - 20260316_130445.jpg [3.5 MB]
+  - 20260316_130453.jpg [4.8 MB]
+  - 20260316_130501.jpg [4.1 MB]
+  - 20260316_130503.jpg [4.2 MB]
+  - 20260316_130508.jpg [5.3 MB]
+  - 20260316_130511.jpg [3.9 MB]
+  - 20260316_130514.jpg [4.9 MB]
+  - 20260316_130519.jpg [6.0 MB]
+  - 20260316_130525.jpg [4.2 MB]
+  - 20260316_130527.jpg [5.5 MB]
+  - 20260316_130529.jpg [4.4 MB]
+  - 20260316_130532.jpg [6.6 MB]
+  - 20260316_130537.jpg [6.4 MB]
+  - 20260316_130539.jpg [5.7 MB]
+  - 20260316_130543.jpg [3.3 MB]
+  - 20260316_130549.jpg [3.0 MB]
+  - 20260316_130553.jpg [2.9 MB]
+  - 20260316_130557.jpg [2.9 MB]
+  - 20260316_130602.jpg [4.9 MB]
+  - 20260316_130604.jpg [4.3 MB]
+  - 20260316_130609.jpg [4.3 MB]
+  - 20260316_130613.jpg [3.6 MB]
+  - 20260316_130617.jpg [4.9 MB]
+  - 20260316_130619.jpg [4.6 MB]
+  - 20260316_130622.jpg [3.7 MB]
+  - 20260316_130624.jpg [3.6 MB]
+  - 20260316_130630.jpg [4.8 MB]
+  - 20260316_130642.jpg [3.1 MB]
+  - 20260316_130652.jpg [4.1 MB]
+  - 20260316_130654.jpg [4.2 MB]
+  - 20260316_130656.jpg [3.9 MB]
+  - 20260316_130706.jpg [2.5 MB]
+  - 20260316_130708.jpg [3.0 MB]
+  - 20260316_130715.jpg [5.1 MB]
+  - 20260316_130728.jpg [4.6 MB]
+  - 20260316_130731.jpg [4.2 MB]
+  - 20260316_130750.jpg [5.4 MB]
+  - 20260316_130753.jpg [4.9 MB]
+  - 20260316_130803.jpg [4.9 MB]
+  - 20260316_130804.jpg [4.8 MB]
+  - 20260316_130901.jpg [3.4 MB]
+  - 20260316_130903.jpg [3.2 MB]
+  - 20260316_130905.jpg [2.4 MB]
+  - 20260316_130912.jpg [2.0 MB]
+  - 20260316_130914.jpg [2.6 MB]
+

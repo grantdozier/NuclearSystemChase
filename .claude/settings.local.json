@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(cd:*)",
+      "Bash(npx vite:*)",
+      "Bash(dotnet run --project backend -- --mcp)",
+      "Bash(dotnet run:*)",
+      "Bash(npm run:*)",
+      "Bash(pkill -f \"vite\")",
+      "Bash(dotnet build:*)",
+      "Bash(curl -s http://localhost:5000/api/directory/status)",
+      "Bash(node -e \"process.stdin.resume\\(\\);let d='''''''';process.stdin.on\\(''''data'''',c=>d+=c\\);process.stdin.on\\(''''end'''',\\(\\)=>console.log\\(JSON.stringify\\(JSON.parse\\(d\\),null,2\\)\\)\\)\")",
+      "Bash(curl -s \"http://localhost:5000/api/projects?status=Active\")",
+      "Bash(node -e \"process.stdin.resume\\(\\);let d='''''''';process.stdin.on\\(''''data'''',c=>d+=c\\);process.stdin.on\\(''''end'''',\\(\\)=>{const p=JSON.parse\\(d\\);p.forEach\\(x=>console.log\\(x.number,''''|'''',x.displayName,''''|'''',x.status,''''|'''',x.phase,''''|'''',''''files:''''+x.fileCount,''''|'''',''''subs:'''',Object.keys\\(x.subfolders\\).join\\('''', ''''\\)\\)\\)}\\)\")",
+      "Bash(curl -s \"http://localhost:5000/api/projects?status=PunchList\")",
+      "Bash(node -e \"process.stdin.resume\\(\\);let d='''''''';process.stdin.on\\(''''data'''',c=>d+=c\\);process.stdin.on\\(''''end'''',\\(\\)=>{const p=JSON.parse\\(d\\);p.forEach\\(x=>console.log\\(x.number,''''|'''',x.displayName,''''|'''',x.status\\)\\)}\\)\")",
+      "Bash(curl -s \"http://localhost:5000/api/projects/activity?limit=10\")",
+      "Bash(node -e \"process.stdin.resume\\(\\);let d='''''''';process.stdin.on\\(''''data'''',c=>d+=c\\);process.stdin.on\\(''''end'''',\\(\\)=>{const a=JSON.parse\\(d\\);a.forEach\\(x=>console.log\\(x.lastModified.substring\\(0,10\\),''''|'''',x.projectNumber||''''LEAD'''',''''|'''',x.projectName,''''|'''',x.fileName\\)\\)}\\)\")",
+      "Bash(curl -s http://localhost:5000/api/projects/summary)",
+      "Bash(dotnet add:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git rm:*)",
+      "Bash(git push:*)",
+      "Bash(git reset:*)"
+    ]
+  }
+}
