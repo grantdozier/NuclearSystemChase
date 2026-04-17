@@ -40,6 +40,18 @@ Claude Desktop can talk to this app and see your project data. To set it up:
 
 Now when you talk to Claude, it can look up your projects, check which ones are stale, search by name, etc. — on top of the email and calendar access you already have.
 
+### Email Agent
+The Email Agent pulls M365 mail daily, classifies it by project, and regenerates `PROJECTS/<slug>/CLAUDE.md` so every Claude session has fresh project context baked in.
+
+To set it up for the first time:
+1. `copy email_agent\config\.env.example email_agent\config\.env` and fill in Azure AD + Anthropic keys
+2. Double-click `email_agent\scripts\start_email_agent.bat` — dashboard opens at http://127.0.0.1:8765
+3. Click **Run Now** for an immediate pull, or wait for 6:00 AM
+
+To start everything at once (backend + frontend + Email Agent), use `email_agent\scripts\start.bat`.
+
+Current projects tracked: **800 E Farrel**, **Trimble Sight Rollout**. Add more in `email_agent/config/settings.yaml`.
+
 ### Asking Claude Code to do things
 When you open this project in VS Code with Claude Code installed, you can ask it to do things like:
 - "Start up the backend and frontend servers for me"
@@ -47,6 +59,7 @@ When you open this project in VS Code with Claude Code installed, you can ask it
 - "Add a page to the dashboard that shows a weekly summary"
 - "Change the status logic so projects with a closeout folder are marked Complete"
 - "Add an email notification when a project goes stale"
+- "Add a project to the Email Agent"
 
 Claude Code can read every file in this project, understands how it all connects, and can make changes for you. Just describe what you want in plain English.
 
@@ -66,6 +79,7 @@ Everything below is for Claude Code to understand the codebase. You don't need t
 - **Backend**: ASP.NET Core Web API (C#) in `backend/`
 - **Frontend**: React + Vite in `frontend/`
 - **MCP Server**: Built into the backend, exposes project tools to Claude Desktop via stdio
+- **Email Agent**: Python FastAPI service in `email_agent/` — daily M365 mail pull, project classification, Claude summarization, PROJECTS/ context regeneration
 - Backend serves React build output from `wwwroot/` as static files
 - Single self-contained deployment — client runs one exe, opens browser
 
@@ -113,3 +127,15 @@ When the user asks you to start, run, or spin up the app:
 ### Status logic
 - Project status is determined in `SharePointService.DetermineProjectStatus()` and `DetermineLeadStatus()`
 - Based on folder structure: warranty folder → Complete, punch list files → PunchList, job costs + progress reports + schedules → Active, etc.
+
+### Email Agent (technical)
+- Entry point: `python -m email_agent.run [serve|once|dry-run]`
+- Dashboard: FastAPI on http://127.0.0.1:8765 with APScheduler (6 AM America/Chicago)
+- Auth: MSAL client-credentials — same Azure AD app as the backend
+- Pipeline stages: `core/graph_client.py` → `core/fetcher.py` → `core/classifier.py` → `core/summarizer.py` → `core/repo_writer.py`
+- Fetch state (seen IDs, last run time): `email_agent/config/fetch_state.json`
+- Run history: `email_agent/config/run_history.json`
+- Project context output: `PROJECTS/<slug>/CLAUDE.md` (auto-generated, commit freely)
+- Per-email files: `PROJECTS/<slug>/emails/<date>_<subject>.md`
+- To add a project: add entry under `projects:` in `email_agent/config/settings.yaml`
+- Summarizer uses `claude-sonnet-4-6`; falls back to rule-based extraction if no API key

@@ -1,0 +1,69 @@
+azure:
+  tenant_id: "${AZURE_TENANT_ID}"
+  client_id: "${AZURE_CLIENT_ID}"
+  client_secret: "${AZURE_CLIENT_SECRET}"
+  scopes:
+    - "https://graph.microsoft.com/.default"
+
+mailbox: "chase@chasegroupcc.com"
+
+anthropic:
+  api_key: "${ANTHROPIC_API_KEY}"
+  model: "claude-sonnet-4-6"
+
+scheduler:
+  cron: "0 6 * * *"          # 6:00 AM daily
+  timezone: "America/Chicago"
+
+dashboard:
+  host: "127.0.0.1"
+  port: 8765
+
+repo:
+  projects_dir: "PROJECTS"   # relative to repo root — created if missing
+
+projects:
+  - name: "800 E Farrel"
+    slug: "800-e-farrel"
+    aliases:
+      - "800 e farrel"
+      - "800 farrel"
+      - "farrel"
+    keywords:
+      - "800 E Farrel"
+
+  - name: "Trimble Sight Rollout"
+    slug: "trimble-sight-rollout"
+    aliases:
+      - "trimble sight"
+      - "trimble"
+      - "sight rollout"
+    keywords:
+      - "Trimble Sight"
+      - "Trimble"
+
+classifier:
+  priority_signals:
+    - "urgent"
+    - "asap"
+    - "immediately"
+    - "critical"
+    - "emergency"
+    - "stop work"
+    - "lien"
+    - "lawsuit"
+  budget_signals:
+    - "change order"
+    - "co #"
+    - "invoice"
+    - "pay app"
+    - "budget"
+    - "overage"
+    - "cost"
+  schedule_signals:
+    - "delay"
+    - "behind schedule"
+    - "completion date"
+    - "milestone"
+    - "inspection"
+    - "punch list"
