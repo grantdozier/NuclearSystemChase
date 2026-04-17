@@ -56,6 +56,9 @@ builder.Services.AddHttpClient();
 builder.Services.AddSingleton<GraphAuthService>();
 builder.Services.AddSingleton<SharePointService>();
 builder.Services.AddHostedService(sp => sp.GetRequiredService<SharePointService>());
+builder.Services.AddSingleton<EmailService>();
+builder.Services.AddSingleton<EmailSchedulerService>();
+builder.Services.AddHostedService(sp => sp.GetRequiredService<EmailSchedulerService>());
 
 var app = builder.Build();
 
@@ -98,7 +101,6 @@ static void LoadEnvFile(IConfigurationBuilder config, string contentRoot)
 
     var clientSecret = Environment.GetEnvironmentVariable("AZURE_CLIENT_SECRET");
     if (!string.IsNullOrEmpty(clientSecret))
-    {
         manager["AzureAd:ClientSecret"] = clientSecret;
-    }
+    // ANTHROPIC_API_KEY is read directly from Environment by EmailService
 }

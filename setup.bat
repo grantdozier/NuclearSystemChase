@@ -90,9 +90,12 @@ echo ============================================
 echo.
 echo  Next steps:
 echo   1. Edit backend\.env and add your AZURE_CLIENT_SECRET
-echo   2. Run the backend:   cd backend ^&^& dotnet run
-echo   3. Run the frontend:  cd frontend ^&^& npm run dev
-echo   4. Open browser:      http://localhost:3879
+echo      (optionally add ANTHROPIC_API_KEY for Claude email summaries)
+echo   2. Double-click start.bat to launch both servers
+echo      — or run manually:  cd backend ^&^& dotnet run
+echo                           cd frontend ^&^& npm run dev
+echo   3. Open browser:      http://localhost:3879
+echo   4. Email dashboard:   http://localhost:3879/email
 echo.
 echo  MCP Server (for Claude Desktop):
 echo   1. Copy claude-desktop-config.example.json settings

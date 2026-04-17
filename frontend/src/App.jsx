@@ -8,6 +8,7 @@ import Explorer from './pages/Explorer'
 import Settings from './pages/Settings'
 import AutomationOpportunities from './pages/AutomationOpportunities'
 import AutomationArchitecture from './pages/AutomationArchitecture'
+import Email from './pages/Email'
 import './App.css'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/explorer" element={<Explorer />} />
           <Route path="/automation" element={<AutomationOpportunities />} />
           <Route path="/architecture" element={<AutomationArchitecture />} />
+          <Route path="/email" element={<Email />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </main>

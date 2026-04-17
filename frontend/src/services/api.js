@@ -63,6 +63,13 @@ export const settingsApi = {
   updateRootPath: (path, label) => api.put('/settings/root-path', { path, label }),
 };
 
+export const emailApi = {
+  getStatus: () => api.get('/email/status'),
+  getHistory: () => api.get('/email/history'),
+  getEmails: (project, tag) => api.get('/email/emails', { params: { project, tag } }),
+  runNow: (dryRun = false) => api.post('/email/run', null, { params: { dryRun } }),
+};
+
 /**
  * High-level data fetchers with automatic mock fallback.
  * These are the preferred way to fetch data in the new dashboards.
