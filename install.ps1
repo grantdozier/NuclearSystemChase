@@ -114,5 +114,5 @@ Write-Host "======================================" -ForegroundColor Green
 Write-Host " App installed to : $InstallPath"
 Write-Host " Desktop shortcut : $AppName"
 Write-Host " Auto-start       : On every login"
-Write-Host " To uninstall     : Unregister-ScheduledTask '$AppName' -Confirm:`$false"
+Write-Host " To uninstall     : Unregister-ScheduledTask '$AppName' -Confirm:$false"
 Write-Host ""
