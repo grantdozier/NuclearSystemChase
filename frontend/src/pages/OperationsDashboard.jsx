@@ -19,6 +19,7 @@ export default function OperationsDashboard() {
   const [activities, setActivities] = useState([]);
   const [filterStatus, setFilterStatus] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [scanning, setScanning] = useState(false);
 
   useEffect(() => {
     loadData();
@@ -26,14 +27,16 @@ export default function OperationsDashboard() {
 
   async function loadData() {
     try {
-      const [countsData, stageData, activityData] = await Promise.all([
+      const [countsData, stageData, activityData, statusData] = await Promise.all([
         dataService.getProjectCounts(),
         dataService.getProjectsByStage(),
         dataService.getActivityFeed(20),
+        dataService.getDirectoryStatus(),
       ]);
       setCounts(countsData);
       setProjectsByStage(stageData);
       setActivities(activityData);
+      setScanning(statusData?.isScanning === true);
     } catch (err) {
       console.error('Failed to load dashboard data:', err);
     } finally {
@@ -65,6 +68,12 @@ export default function OperationsDashboard() {
           Refresh
         </button>
       </div>
+
+      {scanning && (
+        <div className="scan-banner">
+          Syncing with SharePoint — live data loading...
+        </div>
+      )}
 
       {/* Pipeline Summary */}
       <section className="dashboard-section">

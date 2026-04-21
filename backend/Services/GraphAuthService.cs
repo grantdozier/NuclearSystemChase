@@ -12,6 +12,7 @@ public class GraphAuthService
 {
     private readonly AzureAdConfig _config;
     private readonly HttpClient _http;
+    private readonly IHttpClientFactory _httpFactory;
     private readonly ILogger<GraphAuthService> _logger;
     private string? _cachedToken;
     private DateTime _tokenExpiry = DateTime.MinValue;
@@ -21,6 +22,7 @@ public class GraphAuthService
     {
         _config = config.GetSection("AzureAd").Get<AzureAdConfig>() ?? new AzureAdConfig();
         _http = httpFactory.CreateClient("GraphAuth");
+        _httpFactory = httpFactory;
         _logger = logger;
     }
 
@@ -75,7 +77,8 @@ public class GraphAuthService
     public async Task<HttpClient> GetAuthenticatedClientAsync()
     {
         var token = await GetAccessTokenAsync();
-        var client = new HttpClient { BaseAddress = new Uri("https://graph.microsoft.com/v1.0/") };
+        var client = _httpFactory.CreateClient("GraphApi");
+        client.BaseAddress = new Uri("https://graph.microsoft.com/v1.0/");
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
         return client;
     }

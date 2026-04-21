@@ -63,6 +63,11 @@ export const settingsApi = {
   updateRootPath: (path, label) => api.put('/settings/root-path', { path, label }),
 };
 
+export const adminApi = {
+  rescan: () => api.post('/admin/rescan'),
+  restart: () => api.post('/admin/restart'),
+};
+
 export const emailApi = {
   getStatus: () => api.get('/email/status'),
   getHistory: () => api.get('/email/history'),
@@ -70,18 +75,26 @@ export const emailApi = {
   runNow: (dryRun = false) => api.post('/email/run', null, { params: { dryRun } }),
 };
 
+// Module-level cache so navigating away and back doesn't wipe data
+// while a scan is in progress. Only real API results are stored here.
+let _projectsCache = null;
+
 /**
  * High-level data fetchers with automatic mock fallback.
  * These are the preferred way to fetch data in the new dashboards.
  */
 export const dataService = {
-  /** Fetch all projects — falls back to mock data */
+  /** Fetch all projects — uses cache when backend returns empty mid-scan */
   async getAllProjects() {
-    const data = await withFallback(
-      () => projectsApi.getAll(),
-      MOCK_PROJECTS
-    );
-    return Array.isArray(data) ? data.map(normalizeProject) : data;
+    try {
+      const res = await projectsApi.getAll();
+      const raw = res.data;
+      const projects = Array.isArray(raw) ? raw.map(normalizeProject) : raw;
+      if (projects.length > 0) _projectsCache = projects;
+      return projects.length > 0 ? projects : (_projectsCache ?? MOCK_PROJECTS);
+    } catch {
+      return _projectsCache ?? MOCK_PROJECTS;
+    }
   },
 
   /** Fetch a single project by ID */

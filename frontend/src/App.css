@@ -1416,6 +1416,16 @@
   border-color: #9ca3af;
 }
 
+.btn-danger {
+  background: #7f1d1d;
+  color: #fca5a5;
+  border: 1px solid #991b1b;
+}
+
+.btn-danger:hover {
+  background: #991b1b;
+}
+
 .btn-sm {
   padding: 5px 12px;
   font-size: 12px;
@@ -1592,6 +1602,16 @@
   margin: 4px 0;
   font-size: 13px;
   color: var(--text-light);
+}
+
+/* ─── Scan Banner ────────────────────────────────────────────── */
+.scan-banner {
+  background: #1e3a5f;
+  color: #93c5fd;
+  font-size: 0.8rem;
+  padding: 6px 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
 }
 
 /* ─── Loading & Empty States ─────────────────────────────────── */

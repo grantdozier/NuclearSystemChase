@@ -14,6 +14,10 @@ if (args.Contains("--mcp"))
     LoadEnvFile(mcpBuilder.Configuration, mcpBuilder.Environment.ContentRootPath);
 
     mcpBuilder.Services.AddHttpClient();
+    mcpBuilder.Services.AddHttpClient("GraphAuth")
+        .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler { CheckCertificateRevocationList = false });
+    mcpBuilder.Services.AddHttpClient("GraphApi")
+        .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler { CheckCertificateRevocationList = false });
     mcpBuilder.Services.AddSingleton<GraphAuthService>();
     mcpBuilder.Services.AddSingleton<SharePointService>();
     mcpBuilder.Services.AddHostedService(sp => sp.GetRequiredService<SharePointService>());
@@ -53,6 +57,10 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddHttpClient();
+builder.Services.AddHttpClient("GraphAuth")
+    .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler { CheckCertificateRevocationList = false });
+builder.Services.AddHttpClient("GraphApi")
+    .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler { CheckCertificateRevocationList = false });
 builder.Services.AddSingleton<GraphAuthService>();
 builder.Services.AddSingleton<SharePointService>();
 builder.Services.AddHostedService(sp => sp.GetRequiredService<SharePointService>());
@@ -68,12 +76,26 @@ app.UseCors();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
 
-if (!app.Environment.IsDevelopment())
+if (!app.Environment.IsDevelopment() && !args.Contains("--no-browser"))
 {
     app.Lifetime.ApplicationStarted.Register(() =>
     {
-        var url = "http://localhost:5000";
-        try { Process.Start(new ProcessStartInfo(url) { UseShellExecute = true }); }
+        const string url = "http://localhost:5000";
+        string[] chromePaths = [
+            @"C:\Program Files\Google\Chrome\Application\chrome.exe",
+            @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                @"Google\Chrome\Application\chrome.exe"),
+        ];
+        var chrome = chromePaths.FirstOrDefault(File.Exists);
+        try
+        {
+            if (chrome != null)
+                Process.Start(new ProcessStartInfo(chrome, $"--app={url} --window-size=1440,900")
+                    { UseShellExecute = false });
+            else
+                Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+        }
         catch { }
     });
 }
