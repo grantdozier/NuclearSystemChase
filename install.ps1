@@ -6,7 +6,7 @@
 param(
     [string]$InstallPath = "C:\ChaseGroupCRM",
     [string]$AppName     = "Chase Group CRM",
-    [int]   $Port        = 5000,
+    [int]   $Port        = 5050,
     [switch]$Build
 )
 

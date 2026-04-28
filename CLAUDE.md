@@ -17,7 +17,7 @@ You need two terminals open. In VS Code, click Terminal > New Terminal twice.
 cd backend
 dotnet run
 ```
-You should see "Now listening on http://localhost:5000". Leave this running.
+You should see "Now listening on http://localhost:5050". Leave this running.
 
 **Terminal 2 — start the frontend:**
 ```
@@ -64,7 +64,7 @@ When you open this project in VS Code with Claude Code installed, you can ask it
 Claude Code can read every file in this project, understands how it all connects, and can make changes for you. Just describe what you want in plain English.
 
 ### If something breaks
-- If the backend won't start: make sure `backend\.env` has the client secret, and check that port 5000 isn't already in use
+- If the backend won't start: make sure `backend\.env` has the client secret, and check that port 5050 isn't already in use (`start.bat` will try to free it automatically)
 - If the frontend won't start: run `cd frontend && npm install` then try again
 - If Claude Desktop doesn't show project tools: check that the path in your Claude Desktop config matches where this repo lives on your machine
 - If projects aren't loading: the SharePoint scan runs every 60 seconds on startup — wait a moment and refresh
@@ -93,8 +93,8 @@ Everything below is for Claude Code to understand the codebase. You don't need t
 - `frontend/src/pages/` — Dashboard, Projects, Explorer, Settings
 
 ### Running the app
-- Backend: `cd backend && dotnet run` (runs on http://localhost:5000)
-- Frontend: `cd frontend && npm run dev` (runs on http://localhost:3879, proxies /api to :5000)
+- Backend: `cd backend && dotnet run` (runs on http://localhost:5050)
+- Frontend: `cd frontend && npm run dev` (runs on http://localhost:3879, proxies /api to :5050)
 - MCP mode: `cd backend && dotnet run -- --mcp` (stdio server for Claude Desktop)
 - Build for deployment: `publish.bat` (outputs to `./dist/`)
 

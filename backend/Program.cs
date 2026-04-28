@@ -36,6 +36,34 @@ if (args.Contains("--mcp"))
     return;
 }
 
+// ─── Gmail Takeout Import Mode ─────────────────────────────────
+// Run with: dotnet run -- --import-gmail <path-to-takeout.zip OR .mbox>
+// One-shot: parses mbox, runs signal extractor, appends to SignalStore, exits.
+if (args.Contains("--import-gmail"))
+{
+    var idx = Array.IndexOf(args, "--import-gmail");
+    if (idx < 0 || idx + 1 >= args.Length)
+    {
+        Console.Error.WriteLine("Usage: dotnet run -- --import-gmail <path-to-takeout.zip OR .mbox>");
+        return;
+    }
+    var importPath = args[idx + 1];
+
+    var importBuilder = Host.CreateApplicationBuilder(args);
+    LoadEnvFile(importBuilder.Configuration, importBuilder.Environment.ContentRootPath);
+    importBuilder.Services.AddSingleton<SignalStore>();
+    importBuilder.Services.AddSingleton<SignalExtractorService>();
+    importBuilder.Services.AddSingleton<GmailImportService>();
+    importBuilder.Logging.SetMinimumLevel(LogLevel.Information);
+
+    var importHost = importBuilder.Build();
+    var importer = importHost.Services.GetRequiredService<GmailImportService>();
+    var importResult = await importer.ImportAsync(importPath);
+    Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(importResult,
+        new System.Text.Json.JsonSerializerOptions { WriteIndented = true }));
+    return;
+}
+
 // ─── Web Server Mode (default) ─────────────────────────────────
 var builder = WebApplication.CreateBuilder(args);
 
@@ -64,6 +92,8 @@ builder.Services.AddHttpClient("GraphApi")
 builder.Services.AddSingleton<GraphAuthService>();
 builder.Services.AddSingleton<SharePointService>();
 builder.Services.AddHostedService(sp => sp.GetRequiredService<SharePointService>());
+builder.Services.AddSingleton<SignalStore>();
+builder.Services.AddSingleton<SignalExtractorService>();
 builder.Services.AddSingleton<EmailService>();
 builder.Services.AddSingleton<EmailSchedulerService>();
 builder.Services.AddHostedService(sp => sp.GetRequiredService<EmailSchedulerService>());
@@ -80,7 +110,7 @@ if (!app.Environment.IsDevelopment() && !args.Contains("--no-browser"))
 {
     app.Lifetime.ApplicationStarted.Register(() =>
     {
-        const string url = "http://localhost:5000";
+        const string url = "http://localhost:5050";
         string[] chromePaths = [
             @"C:\Program Files\Google\Chrome\Application\chrome.exe",
             @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",

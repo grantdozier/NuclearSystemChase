@@ -2,7 +2,7 @@ import axios from 'axios';
 import { MOCK_PROJECTS, getActivityFeed, getProjectCounts, getProjectsByStage } from '../data/mockData';
 
 const API_BASE = import.meta.env.DEV
-  ? 'http://localhost:5000/api'
+  ? 'http://localhost:5050/api'
   : '/api';
 
 /** Map API enum names to frontend display names */

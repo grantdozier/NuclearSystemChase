@@ -24,4 +24,4 @@ echo.
 echo === Build complete ===
 echo Output folder: .\dist\
 echo To run: .\dist\NuclearSystemChase.Api.exe
-echo Then open http://localhost:5000 in a browser
+echo Then open http://localhost:5050 in a browser
